@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
+.navbar {
+    height: 100%;
+    width: 200px; /* Adjust the width as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #8C3941;
+    padding-top: 0px;
+  }
+  
+  .navbar-left {
+    color: white;
+    list-style-type: none;
+    margin-top: 0px;
+    padding: 0px;
+    margin: 10px;
+    top: 0;
+    left: 0;
+    display: flex;
+    margin-bottom: 20px;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  .navbar-left img {
+    left: 10px;
+    width: 45px; /* Adjust the width of the image */
+    height: 45px; /* Adjust the height of the image */
+    margin-right: 10px; /* Adjust the margin between the image and text */
+  }
+  
+  .navbar-nav {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    float: left;
+  }
+  
+  .nav-item {
+    margin-bottom: 50px; /* Adjust vertical spacing between items */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  .nav-item img {
+    left: 10px;
+    width: 20px; /* Adjust the width of the image */
+    height: 20px; /* Adjust the height of the image */
+    margin-right: 10px; /* Adjust the margin between the image and text */
+  }
+  
+  .nav-link {
+    color: white; /* Example link color */
+    text-decoration: none;
+    flex-grow: 1; /* Allow text to take up remaining space */
+  }
+  
+  .nav-link:hover {
+    text-decoration-color: #d9d9d9; /* Example link hover effect */
+  }

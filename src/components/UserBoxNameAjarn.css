@@ -1,0 +1,30 @@
+.UserBoxNameAjarn-userbox {
+
+    width: 500px;
+    height: 713px;
+    background: linear-gradient(180deg, #CAE1CB -13.96%, rgba(225, 225, 225, 0) 86.04%);
+    border-radius: 10px;
+    border: none;
+
+
+}
+
+.UserBoxNameAjarn-NameAjarn {
+
+    font-family: 'Kanit';
+    color:  #8C3941;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+    
+
+
+}
+
+.UserBoxNameAjarn-buttonadd{
+    display: flex;
+    justify-content: end;
+    margin: 20px;
+    padding-top: 10px;
+}
