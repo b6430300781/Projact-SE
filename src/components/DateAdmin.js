@@ -70,7 +70,7 @@ function DateAdmin() {
                                     <DatePicker
                                         selected={startDate}
                                         onChange={handleStartDateChange}
-                                        dateFormat="dd/MM/yyyy"
+                                        dateFormat="yyyy-MM-dd"
                                         showYearDropdown
                                         showMonthDropdown
                                         dropdownMode="select"
@@ -86,7 +86,7 @@ function DateAdmin() {
                                     <DatePicker
                                         selected={endDate}
                                         onChange={handleEndDateChange}
-                                        dateFormat="dd/MM/yyyy"
+                                        dateFormat="yyyy-MM-dd"
                                         showYearDropdown
                                         showMonthDropdown
                                         dropdownMode="select"
