@@ -1,0 +1,68 @@
+/* Popup.css */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* สีหลังของ Popup แบบทึบๆ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .popup-content {
+    background: white;
+    padding: auto; 
+    border-radius: 8px;
+  }
+  
+  .left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  
+  .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-left: 20px;
+  }
+  
+  .out{
+    display: flex;
+    justify-content: end;
+  }
+  
+  .btExit{
+    color: #127151;
+    font-size: 40px;
+  }
+  .in{
+    display: flex;
+    margin : 5px 30px 30px 30px;
+  }
+  .btn{
+    margin-top: 15px;
+    padding: auto;
+    background-color: #127151;
+    color: #fff;
+    border: 0px;
+    border-radius: 2px;
+    text-align: center;
+  }
+  
+  .drop-area{
+    margin-right: 10px;
+    border: 2px dashed #127151;
+    text-align: center;
+    background-color: #CCDCD7;
+  }
+  
+  .file{
+    display: none;
+  }
+  
+  

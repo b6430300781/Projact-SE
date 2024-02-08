@@ -1,0 +1,57 @@
+/* @import url('https://fonts.googleapis.com/css?family=kanit'); */
+
+.ButtonUser-textfont {
+    font-family: 'kanit';
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: 25px;
+
+}
+
+.ButtonUser-buttonbox {
+    display: flex;
+    gap: 35px;
+    flex-direction: row;
+    
+   
+
+}
+
+.ButtonUser-buttonAjarn{
+    color: white;
+    background: #127151;
+    background-image: url('../assets/carbon--user-profile.svg');
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: right 0% top 25px ;
+    font-size: 15px;
+    font-family: 'kanit';
+    font-weight: 350;
+    padding: 10px 25px 10px 25px;
+    top: 178px;
+    left: 364px;
+    border-radius: 10px;
+    border: none;
+    /* border-color: rgb(145, 143, 143); */
+
+}
+
+.ButtonUser-buttonAdmin{
+
+    color: white;
+    background: #8C3941;
+    background-image: url('../assets/carbon--user-profile.svg');
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: right 0% top 25px ;
+    font-size: 15px;
+    font-family: 'kanit';
+    font-weight: 350;
+    padding: 10px 6px 10px 6px;
+    top: 178px;
+    left: 364px;
+    border-radius: 10px;
+    border: none;
+    /* border-color: rgb(145, 143, 143); */
+    
+}
