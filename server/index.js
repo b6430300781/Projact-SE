@@ -11,7 +11,6 @@ const db = mysql.createConnection({
     host: "localhost",
     password: "12345678",
     database: "dbtest"
-    
 })
 
 app.get('/box', (req, res) => {
