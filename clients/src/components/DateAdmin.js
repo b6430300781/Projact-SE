@@ -7,7 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import dayjs from 'dayjs'; // นำเข้า dayjs เพื่อใช้ในการจัดการกับวันเวลา
 import customParseFormat from 'dayjs/plugin/customParseFormat'; // นำเข้า plugin สำหรับการ parse วันเวลาในรูปแบบที่กำหนดเอง
 import { TimePicker } from 'antd'; // นำเข้า TimePicker จาก Ant Design
-
+import SaveTime from './saveTime';
 
 // เพิ่ม plugin สำหรับการ parse วันเวลาในรูปแบบที่กำหนดเอง ในที่นี้คือ HH:mm:ss
 dayjs.extend(customParseFormat);
@@ -107,7 +107,8 @@ function DateAdmin() {
                                     <IconTime className="icon-date" />
 
                                     <TimePicker
-                                        onChange={onChange}
+                                        selected={startTime}
+                                        onChange={handleStartTimeChange}
                                         defaultOpenValue={dayjs('00:00:00', 'HH:mm:ss')}
                                         showNow={false} // ไม่แสดงตัวเลือก "เวลาปัจจุบัน"
                                         format="HH:mm:ss" // กำหนดรูปแบบการแสดงผลของเวลา
@@ -123,7 +124,8 @@ function DateAdmin() {
                                     <IconTime className="icon-date" />
 
                                     <TimePicker
-                                        onChange={onChange}
+                                        selected={endTime}
+                                        onChange={handleEndTimeChange}
                                         defaultOpenValue={dayjs('00:00:00', 'HH:mm:ss')}
                                         showNow={false}
                                         format="HH:mm:ss"
@@ -137,7 +139,9 @@ function DateAdmin() {
                     </div>
 
                 </div>
-
+                <div style={{marginTop:'10px',marginLeft:'20em'}}>
+                    <SaveTime/>
+                </div>
             </div>
 
         </div>
