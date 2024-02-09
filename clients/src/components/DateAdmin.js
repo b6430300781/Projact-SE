@@ -8,14 +8,10 @@ import dayjs from 'dayjs'; // นำเข้า dayjs เพื่อใช้�
 import customParseFormat from 'dayjs/plugin/customParseFormat'; // นำเข้า plugin สำหรับการ parse วันเวลาในรูปแบบที่กำหนดเอง
 import { TimePicker } from 'antd'; // นำเข้า TimePicker จาก Ant Design
 import SaveTime from './saveTime';
+import Axios from 'axios'; // เพิ่ม import Axios เพื่อใช้งาน
 
 // เพิ่ม plugin สำหรับการ parse วันเวลาในรูปแบบที่กำหนดเอง ในที่นี้คือ HH:mm:ss
 dayjs.extend(customParseFormat);
-
-// ฟังก์ชัน onChange ที่ถูกเรียกเมื่อมีการเปลี่ยนแปลงใน TimePicker
-const onChange = (time, timeString) => {
-    console.log(time, timeString);
-};
 
 
 function DateAdmin() {
@@ -23,22 +19,61 @@ function DateAdmin() {
     const [endDate, setEndDate] = useState(null);
     const [startTime, setStartTime] = useState(null); // เพิ่ม startTime
     const [endTime, setEndTime] = useState(null); // เพิ่ม endTime
+    const [timeList, setTimeList] = useState([]);
+    const [dayS, setDayS] = useState(""); // ประกาศตัวแปร dayS
+    const [timeS, setTimeS] = useState(""); // ประกาศตัวแปร timeS
+    const [dayF, setDayF] = useState(""); // ประกาศตัวแปร dayF
+    const [timeF, setTimeF] = useState(""); // ประกาศตัวแปร timeF
 
-    const handleStartDateChange = (date) => {
+    const handleButtonSave = () => {
+        Axios.post("http://localhost:3001/time1", {
+          dayS: dayS,
+          timeS: timeS,
+          dayF: dayF,
+          timeF: timeF,
+        }).then(response => {
+            setTimeList([])
+            console.log(response.data);
+            // ทำการรีเซ็ตค่าในฟอร์มหลังจากส่งข้อมูลเรียบร้อย
+            setDayS("");
+            setTimeS("");
+            setDayF("");
+            setTimeF("");
+        })
+        .catch(error => {
+          console.error(error);
+        });
+        
+        console.log("save");
+        console.log(dayS);
+        console.log(dayF);
+        console.log(timeS);
+        console.log(timeF);
+      };
+
+      
+
+
+      const handleStartDateChange = (date) => {
         setStartDate(date);
+        setDayS(dayjs(date).format("YYYY-MM-DD")); // เก็บค่าวันที่เริ่มต้นลงในตัวแปร dayS
     };
-
+    
     const handleEndDateChange = (date) => {
         setEndDate(date);
+        setDayF(dayjs(date).format("YYYY-MM-DD")); // เก็บค่าวันที่สิ้นสุดลงในตัวแปร dayF
     };
-
-    const handleStartTimeChange = (time) => { // เพิ่มฟังก์ชัน handleStartTimeChange
+    
+    const handleStartTimeChange = (time) => {
         setStartTime(time);
+        setTimeS(dayjs(time).format("HH:mm:ss")); // เก็บค่าเวลาเริ่มต้นลงในตัวแปร timeS
     };
-
-    const handleEndTimeChange = (time) => { // เพิ่มฟังก์ชัน handleEndTimeChange
+    
+    const handleEndTimeChange = (time) => {
         setEndTime(time);
+        setTimeF(dayjs(time).format("HH:mm:ss")); // เก็บค่าเวลาสิ้นสุดลงในตัวแปร timeF
     };
+    
 
     return (
         <div>
@@ -69,6 +104,7 @@ function DateAdmin() {
                                     <IconDate className="icon-date" />
                                     <DatePicker
                                         selected={startDate}
+                                        // value={dayS}
                                         onChange={handleStartDateChange}
                                         dateFormat="yyyy-MM-dd"
                                         showYearDropdown
@@ -85,6 +121,7 @@ function DateAdmin() {
                                     <IconDate className="icon-date" />
                                     <DatePicker
                                         selected={endDate}
+                                        // value={dayF}
                                         onChange={handleEndDateChange}
                                         dateFormat="yyyy-MM-dd"
                                         showYearDropdown
@@ -108,6 +145,7 @@ function DateAdmin() {
 
                                     <TimePicker
                                         selected={startTime}
+                                        // value={timeS}
                                         onChange={handleStartTimeChange}
                                         defaultOpenValue={dayjs('00:00:00', 'HH:mm:ss')}
                                         showNow={false} // ไม่แสดงตัวเลือก "เวลาปัจจุบัน"
@@ -125,6 +163,7 @@ function DateAdmin() {
 
                                     <TimePicker
                                         selected={endTime}
+                                        // value={timeF}
                                         onChange={handleEndTimeChange}
                                         defaultOpenValue={dayjs('00:00:00', 'HH:mm:ss')}
                                         showNow={false}
@@ -140,7 +179,7 @@ function DateAdmin() {
 
                 </div>
                 <div style={{marginTop:'10px',marginLeft:'20em'}}>
-                    <SaveTime/>
+                    <SaveTime onClick={handleButtonSave} />
                 </div>
             </div>
 
