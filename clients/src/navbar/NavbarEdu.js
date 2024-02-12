@@ -25,6 +25,7 @@ const NavbarEdu = () => {
           'a',
           { href: '/', className: 'nav-link' },
           'ประกาศ'
+          
         )
       ),
       React.createElement(
