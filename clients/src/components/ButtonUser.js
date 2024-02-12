@@ -17,7 +17,7 @@ function ButtonUser() {
         setTab(tabIndex);
     };
     return (
-
+        <div className="ButtonUser">
         <div>
             <h1 className='ButtonUser-textfont' >ข้อมูลผู้ใช้งาน</h1>
             <div className='ButtonUser-buttonbox'>
@@ -38,6 +38,7 @@ function ButtonUser() {
             </div>
 
            {tab === 0?<UserBoxNameAjarn></UserBoxNameAjarn>:<UserBoxNameEduca></UserBoxNameEduca>}
+        </div >
         </div >
     );
 }

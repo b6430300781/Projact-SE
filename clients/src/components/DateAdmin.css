@@ -1,4 +1,10 @@
 /* DateAdmin.css */
+.DateAdmin-container {
+  top: 50px;
+  left: 210px; /* Adjust the left positioning as needed */
+  position: absolute;
+}
+
 .DateAdmin-text {
   font-family: 'Kanit';
   font-weight: 1000;

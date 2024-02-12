@@ -1,5 +1,11 @@
 /* @import url('https://fonts.googleapis.com/css?family=kanit'); */
 
+.ButtonUser {
+    top: 45px;
+    left: 250px; /* Adjust the left positioning as needed */
+    position: absolute;
+}
+
 .ButtonUser-textfont {
     font-family: 'kanit';
     color: rgb(0, 0, 0);
@@ -10,7 +16,7 @@
 
 .ButtonUser-buttonbox {
     display: flex;
-    gap: 35px;
+    gap: 60px;
     flex-direction: row;
     
    

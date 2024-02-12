@@ -3,6 +3,7 @@ import Pop from './Pop';
 
 export default function UserBoxNameEduca(props) {
     return (
+        
         <div>
             <div className="UserBoxNameEduca-userbox">
                 {props.children}

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Navbar.css';
+import './NavbarEdu.css';
 
 
 
@@ -25,6 +25,7 @@ const NavbarEdu = () => {
           'a',
           { href: '/', className: 'nav-link' },
           'ประกาศ'
+          
         )
       ),
       React.createElement(

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
 .UserBoxNameAjarn-userbox {
 
     width: 500px;
@@ -21,6 +23,7 @@
 
 
 }
+
 
 .UserBoxNameAjarn-buttonadd{
     display: flex;
