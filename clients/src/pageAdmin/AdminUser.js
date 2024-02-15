@@ -7,10 +7,10 @@ import UserBoxNameAjarn from "../components/UserBoxNameAjarn";
 function AdminUser() {
     return (
       <div>
-        {/* <HeaderAdmin />
-        <NavbarAdmin /> */}
+        <HeaderAdmin />
+        <NavbarAdmin />
         <BottonUser />
-        
+        <UserBoxNameAjarn />
   
       </div>
     );
