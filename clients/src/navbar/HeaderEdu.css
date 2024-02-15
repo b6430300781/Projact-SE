@@ -29,3 +29,12 @@
 .Ed-text{
     font-family: 'Kanit', sans-serif;
 }
+
+.Ed-text-font{
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    position: relative;
+    right: 520px;
+    top: 20px;
+    
+}

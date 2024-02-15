@@ -17,28 +17,29 @@ function ButtonUser() {
         setTab(tabIndex);
     };
     return (
+        <div className="bg-gray">
+            <div className="turnleft-all">
+                <h1 className='ButtonUser-textfont' >ข้อมูลผู้ใช้งาน</h1>
+                <div className='ButtonUser-buttonbox'>
+                    <button className='ButtonUser-buttonAjarn' onClick={() => {
+                        setTab(0);
+                    }}>จำนวนอาจารย์
+                        <br></br> 80
+                    </button>
+                    <button className='ButtonUser-buttonAdmin' onClick={() => {
+                        setTab(1);
+                    }}>จำนวนฝ่ายการศึกษา
+                        <br></br> 2
+                    </button>
 
-        <div className="turnleft-all">
-            <h1 className='ButtonUser-textfont' >ข้อมูลผู้ใช้งาน</h1>
-            <div className='ButtonUser-buttonbox'>
-                <button className='ButtonUser-buttonAjarn' onClick={() => {
-                    setTab(0);
-                }}>จำนวนอาจารย์
-                    <br></br> 80
-                </button>
-                <button className='ButtonUser-buttonAdmin' onClick={() => {
-                    setTab(1);
-                }}>จำนวนฝ่ายการศึกษา
-                    <br></br> 2
-                </button>
-                
+                </div>
 
-                
+                {tab === 0 ? <UserBoxNameAjarn></UserBoxNameAjarn> : <UserBoxNameEduca></UserBoxNameEduca>}
+            </div >
 
-            </div>
+        </div>
 
-           {tab === 0?<UserBoxNameAjarn></UserBoxNameAjarn>:<UserBoxNameEduca></UserBoxNameEduca>}
-        </div >
+
     );
 }
 

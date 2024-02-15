@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
+
+.container {
+    position: relative;
+    /* ตั้งค่าเป็น relative เพื่อเป็นพื้นที่ให้สำหรับตำแหน่งของกล่องและข้อความ */
+    height: 100vh;
+    /* ตั้งค่าความสูงเต็มหน้าจอ */
+}
+
+.top-left {
+    position: fixed;
+    /* ตั้งค่าเป็น fixed เพื่อให้ข้อความติดตรึงตลอดเวลา */
+    top: 0;
+    /* ตั้งค่าให้อยู่ที่ด้านบนสุดของหน้าจอ */
+    left: 0;
+    /* ตั้งค่าให้อยู่ที่ด้านซ้ายของหน้าจอ */
+}
+
+
+.overlay-box {
+    position: fixed;
+    /* ตั้งค่าเป็น fixed เพื่อให้กล่องสี่เหลี่ยมติดตรึงตลอดเวลา */
+    top: 0;
+    /* ตั้งค่าให้อยู่ที่ด้านบนสุดของหน้าจอ */
+    left: 0;
+    /* ตั้งค่าให้อยู่ที่ด้านซ้ายของหน้าจอ */
+    width: 100%;
+    /* กำหนดความกว้างให้เต็มหน้าจอ */
+    height: 100%;
+    /* กำหนดความสูงให้เต็มหน้าจอ */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* กำหนดสีพื้นหลังเป็นสีดำโปร่งใส */
+    display: flex;
+    /* ใช้ flexbox เพื่อจัดวางข้อความกลางในกล่องสี่เหลี่ยม */
+    justify-content: center;
+    /* จัดวางตำแหน่งแนวนอนของข้อความกลางในกล่องสี่เหลี่ยม */
+    align-items: center;
+    /* จัดวางตำแหน่งแนวตั้งของข้อความกลางในกล่องสี่เหลี่ยม */
+}
+
+.overlay-box p {
+    color: white;
+    /* ตั้งค่าสีข้อความเป็นสีขาว */
+    font-size: 24px;
+    /* ตั้งค่าขนาดตัวอักษรของข้อความ */
+}
+
+.bottom-rectangle {
+    position: relative;
+    width: 900px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.bottom-rectangle p {
+    position: absolute;
+    /* กำหนดให้ข้อความเป็นอิสระและเป็นตัวหลักของพื้นที่ */
+    bottom: -50px;
+    /* ตำแหน่งข้อความจากด้านล่าง */
+    left: 50%;
+    /* กำหนดให้ข้อความอยู่กึ่งกลาง */
+    transform: translateX(-390%);
+    /* ย้ายข้อความให้อยู่กึ่งกลาง */
+    color: black;
+    /* สีข้อความ */
+    font-size: 16px;
+    /* ขนาดตัวอักษรข้อความ */
+}
+
+.bottom-rectangle r {
+    position: absolute;
+    /* กำหนดให้ข้อความเป็นอิสระและเป็นตัวหลักของพื้นที่ */
+    bottom: 260px;
+    /* ตำแหน่งข้อความจากด้านล่าง */
+    left: 45%;
+    /* กำหนดให้ข้อความอยู่กึ่งกลาง */
+    transform: translateX(-425%);
+    /* ย้ายข้อความให้อยู่กึ่งกลาง */
+    color: #8C3941;
+    /* สีข้อความ */
+    font-size: 16px;
+    /* ขนาดตัวอักษรข้อความ */
+}
+
+.bottom-rectangle g {
+    position: absolute;
+    /* กำหนดให้ข้อความเป็นอิสระและเป็นตัวหลักของพื้นที่ */
+    bottom: 260px;
+    /* ตำแหน่งข้อความจากด้านล่าง */
+    left: 60%;
+    /* กำหนดให้ข้อความอยู่กึ่งกลาง */
+    transform: translateX(-425%);
+    /* ย้ายข้อความให้อยู่กึ่งกลาง */
+    color: #838383;
+    /* สีข้อความ */
+    font-size: 16px;
+    /* ขนาดตัวอักษรข้อความ */
+}
+
+.bottom-rectangle b {
+    position: absolute;
+    /* กำหนดให้ข้อความเป็นอิสระและเป็นตัวหลักของพื้นที่ */
+    bottom: 235px;
+    /* ตำแหน่งข้อความจากด้านล่าง */
+    left: 62%;
+    /* กำหนดให้ข้อความอยู่กึ่งกลาง */
+    transform: translateX(-1050%);
+    /* ย้ายข้อความให้อยู่กึ่งกลาง */
+    color: #000000;
+    /* สีข้อความ */
+    font-size: 13px;
+    /* ขนาดตัวอักษรข้อความ */
+}
+
+.bottom-rectangle w {
+    position: absolute;
+    /* กำหนดให้ข้อความเป็นอิสระและเป็นตัวหลักของพื้นที่ */
+    bottom: 255px;
+    /* ตำแหน่งข้อความจากด้านล่าง */
+    left: 60%;
+    /* กำหนดให้ข้อความอยู่กึ่งกลาง */
+    transform: translateX(-80%);
+    /* ย้ายข้อความให้อยู่กึ่งกลาง */
+    color: #8C3941;
+    /* สีข้อความ */
+    font-size: 16px;
+    /* ขนาดตัวอักษรข้อความ */
+}
+
+.bottom-rectangle t {
+    position: absolute;
+    /* กำหนดให้ข้อความเป็นอิสระและเป็นตัวหลักของพื้นที่ */
+    bottom: 255px;
+    /* ตำแหน่งข้อความจากด้านล่าง */
+    left: 61%;
+    /* กำหนดให้ข้อความอยู่กึ่งกลาง */
+    transform: translateX(15%);
+    /* ย้ายข้อความให้อยู่กึ่งกลาง */
+    color: #838383;
+    /* สีข้อความ */
+    font-size: 16px;
+    /* ขนาดตัวอักษรข้อความ */
+}
+
+.bottom-rectangle e {
+    position: absolute;
+    /* กำหนดให้ข้อความเป็นอิสระและเป็นตัวหลักของพื้นที่ */
+    bottom: 255px;
+    /* ตำแหน่งข้อความจากด้านล่าง */
+    left: 60%;
+    /* กำหนดให้ข้อความอยู่กึ่งกลาง */
+    transform: translateX(15%);
+    /* ย้ายข้อความให้อยู่กึ่งกลาง */
+    color: #838383;
+    /* สีข้อความ */
+    font-size: 16px;
+    /* ขนาดตัวอักษรข้อความ */
+}
+
+.bottom-rectangle f {
+    position: absolute;
+    /* กำหนดให้ข้อความเป็นอิสระและเป็นตัวหลักของพื้นที่ */
+    bottom: 230px;
+    /* ตำแหน่งข้อความจากด้านล่าง */
+    left: 60%;
+    /* กำหนดให้ข้อความอยู่กึ่งกลาง */
+    transform: translateX(-90%);
+    /* ย้ายข้อความให้อยู่กึ่งกลาง */
+    color: #000000;
+    /* สีข้อความ */
+    font-size: 13px;
+    /* ขนาดตัวอักษรข้อความ */
+}
+
+.bottom-rectangle a {
+    position: absolute;
+    /* กำหนดให้ข้อความเป็นอิสระและเป็นตัวหลักของพื้นที่ */
+    bottom: 230px;
+    /* ตำแหน่งข้อความจากด้านล่าง */
+    left: 60%;
+    /* กำหนดให้ข้อความอยู่กึ่งกลาง */
+    transform: translateX(155%);
+    /* ย้ายข้อความให้อยู่กึ่งกลาง */
+    color: #000000;
+    /* สีข้อความ */
+    font-size: 13px;
+    /* ขนาดตัวอักษรข้อความ */
+}
+
+.bottom-rectangle c {
+    position: absolute;
+    /* กำหนดให้ข้อความเป็นอิสระและเป็นตัวหลักของพื้นที่ */
+    bottom: 230px;
+    /* ตำแหน่งข้อความจากด้านล่าง */
+    left: 60%;
+    /* กำหนดให้ข้อความอยู่กึ่งกลาง */
+    transform: translateX(450%);
+    /* ย้ายข้อความให้อยู่กึ่งกลาง */
+    color: #000000;
+    /* สีข้อความ */
+    font-size: 13px;
+    /* ขนาดตัวอักษรข้อความ */
+}
+
+.bottom-rectangle x {
+    position: absolute;
+    /* กำหนดให้ข้อความเป็นอิสระและเป็นตัวหลักของพื้นที่ */
+    bottom: 160px;
+    /* ตำแหน่งข้อความจากด้านล่าง */
+    left: 60%;
+    /* กำหนดให้ข้อความอยู่กึ่งกลาง */
+    transform: translateX(-95%);
+    /* ย้ายข้อความให้อยู่กึ่งกลาง */
+    color: #000000;
+    /* สีข้อความ */
+    font-size: 13px;
+    /* ขนาดตัวอักษรข้อความ */
+}
+
+.bottom-rectangle y {
+    position: absolute;
+    /* กำหนดให้ข้อความเป็นอิสระและเป็นตัวหลักของพื้นที่ */
+    bottom: 90px;
+    /* ตำแหน่งข้อความจากด้านล่าง */
+    left: 60%;
+    /* กำหนดให้ข้อความอยู่กึ่งกลาง */
+    transform: translateX(-110%);
+    /* ย้ายข้อความให้อยู่กึ่งกลาง */
+    color: #000000;
+    /* สีข้อความ */
+    font-size: 13px;
+    /* ขนาดตัวอักษรข้อความ */
+}
+
+.course-table {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    /* ปรับตำแหน่งตารางตามความเหมาะสม */
+    flex-basis: calc(51% - 10px);
+    /* ความกว้างของแต่ละคอลัมน์ */
+    padding: 0px;
+    width: 900px;
+}
+
+.column {
+    flex: 1;
+    padding: 1px;
+    border: 1px solid #000000;
+    /* เพิ่มเส้นขอบให้กับคอลัม*/
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    /* จัดให้ข้อความอยู่ตรงกลางตามแนวนอน */
+    align-items: center;
+    /* จัดให้ข้อความอยู่ตรงกลางตามแนวตั้ง */
+    background-color: #D9D9D9;
+    /* กำหนดสีพื้นหลังเป็นสีเทา */
+    height: 50px;
+}
+
+.course-table1 {
+    margin-top: 0px;
+    /* ระยะห่างด้านบนของตาราง */
+    display: flex;
+    justify-content: space-between;
+    /* แบ่งส่วนว่างระหว่างคอลัมน์ */
+    width: 900px;
+}
+
+.column1 {
+    flex-basis: calc(51% - 10px);
+    /* ความกว้างของแต่ละคอลัมน์ */
+    padding: 1px;
+    border: 1px solid #000;
+    /* เส้นขอบของแต่ละคอลัมน์ */
+    background-color: #ffffff;
+    display: flex;
+    /* ทำให้เนื้อหาอยู่ในคอลัมน์เรียงตรงกลาง */
+    align-items: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวตั้ง */
+    justify-content: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวนอน */
+
+}
+
+.column2 {
+    flex-basis: calc(51% - 10px);
+    /* ความกว้างของแต่ละคอลัมน์ */
+    padding: 1px;
+    border: 1px solid #000;
+    /* เส้นขอบของแต่ละคอลัมน์ */
+    background-color: #ffffff;
+}
+
+.course-table2 {
+    margin-top: 0px;
+    /* ระยะห่างด้านบนของตาราง */
+    display: flex;
+    justify-content: space-between;
+    /* แบ่งส่วนว่างระหว่างคอลัมน์ */
+    width: 900px;
+}
+
+.column3 {
+    flex-basis: calc(51% - 10px);
+    /* ความกว้างของแต่ละคอลัมน์ */
+    padding: 1px;
+    border: 1px solid #000;
+    /* เส้นขอบของแต่ละคอลัมน์ */
+    background-color: #ffffff;
+    display: flex;
+    /* ทำให้เนื้อหาอยู่ในคอลัมน์เรียงตรงกลาง */
+    align-items: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวตั้ง */
+    justify-content: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวนอน */
+
+}
+
+.column4 {
+    flex-basis: calc(51% - 10px);
+    /* ความกว้างของแต่ละคอลัมน์ */
+    padding: 1px;
+    border: 1px solid #000;
+    /* เส้นขอบของแต่ละคอลัมน์ */
+    background-color: #ffffff;
+}
+
+.course-table3 {
+    margin-top: 0px;
+    /* ระยะห่างด้านบนของตาราง */
+    display: flex;
+    justify-content: space-between;
+    /* แบ่งส่วนว่างระหว่างคอลัมน์ */
+    height: 50px;
+    width: 900px;
+}
+
+.column5 {
+    flex-basis: calc(51% - 10px);
+    /* ความกว้างของแต่ละคอลัมน์ */
+    padding: 1px;
+    border: 1px solid #000;
+    /* เส้นขอบของแต่ละคอลัมน์ */
+    background-color: #ffffff;
+    display: flex;
+    /* ทำให้เนื้อหาอยู่ในคอลัมน์เรียงตรงกลาง */
+    align-items: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวตั้ง */
+    justify-content: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวนอน */
+
+}
+
+.column6 {
+    flex-basis: calc(51% - 10px);
+    /* ความกว้างของแต่ละคอลัมน์ */
+    padding: 1px;
+    border: 1px solid #000;
+    /* เส้นขอบของแต่ละคอลัมน์ */
+    background-color: #ffffff;
+}
+
+.course-table4 {
+    margin-top: 0px;
+    /* ระยะห่างด้านบนของตาราง */
+    display: flex;
+    justify-content: space-between;
+    /* แบ่งส่วนว่างระหว่างคอลัมน์ */
+    width: 900px;
+}
+
+.column7 {
+    flex-basis: calc(51% - 10px);
+    /* ความกว้างของแต่ละคอลัมน์ */
+    padding: 1px;
+    border: 1px solid #000;
+    /* เส้นขอบของแต่ละคอลัมน์ */
+    background-color: #ffffff;
+    display: flex;
+    /* ทำให้เนื้อหาอยู่ในคอลัมน์เรียงตรงกลาง */
+    align-items: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวตั้ง */
+    justify-content: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวนอน */
+
+}
+
+.column8 {
+    flex-basis: calc(51% - 10px);
+    /* ความกว้างของแต่ละคอลัมน์ */
+    padding: 1px;
+    border: 1px solid #000;
+    /* เส้นขอบของแต่ละคอลัมน์ */
+    background-color: #ffffff;
+}
+
+.container,
+.overlay-box,
+.bottom-rectangle,
+.course-table,
+.column,
+.course-table1,
+.column1,
+.column2,
+.course-table2,
+.column3,
+.column4,
+.course-table3,
+.column5,
+.column6,
+.course-table4,
+.column7,
+.column8 {
+    font-family: 'Kanit', sans-serif;
+}
+
+.turnleft-all {
+    position: relative;
+    left: 350px;
+    margin-top: 75px;
+    
+}
+
+.text-font-header{
+    font-family: 'Kanit', sans-serif;
+    font-size: 26px;
+    position: relative;
+    left: 20px;
+    top: 35px;
+}
+
+.text-font {
+    font-family: 'Kanit', sans-serif;
+    font-size: 15px;
+    color: #000;
+}
+
+.bg-gray{
+    background:  hsl(0, 0%, 98%);
+    width: 100%;
+    height: 100%;
+}

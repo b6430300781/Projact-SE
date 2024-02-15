@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import plus from '../assets/plus.svg';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import './box.css';
+import './BoxNoti.css';
 import axios from 'axios';
 
-function Box() {
+function BoxNoti() {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [boxes, setBoxes] = useState([]);
@@ -143,4 +143,4 @@ function Box() {
   );
 }
 
-export default Box;
+export default BoxNoti;
