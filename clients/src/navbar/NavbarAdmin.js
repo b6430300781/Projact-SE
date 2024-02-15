@@ -3,13 +3,16 @@ import './NavbarAdmin.css';
 import { Link } from 'react-router-dom';
 
 const NavbarAdmin = () => {
+  
   return (
     <nav className="navbar">
-     
-        <div className="navbar-left">
-          <img src="profile.png" alt="" />
-          <span>:admin #####</span>
-        </div>
+
+      <div className="navbar-left">
+        <img src="profile.png" alt="" />
+        <span>:admin<br />######</span>
+      </div>
+
+      <div className='nav-turnlefts'>
         <ul className="navbar-nav">
           <li className="nav-item">
             <img src="index.png" alt="index" />
@@ -30,6 +33,9 @@ const NavbarAdmin = () => {
             </Link>
           </li>
         </ul>
+
+      </div>
+
 
     </nav>
   );

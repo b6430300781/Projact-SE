@@ -5,9 +5,12 @@ import DateAdmin from '../components/DateAdmin';
 function AdminTimeDate() {
     return (
         <div>
-            {/* <HeaderAdmin />
-            <NavbarAdmin /> */}
-            <DateAdmin />
+            {/* <HeaderAdmin /> */}
+            {/* <NavbarAdmin /> */}
+            <div>
+                <DateAdmin />
+            </div>
+           
             {/* Add your AdminTimeDate component content here */}
             
         </div>
