@@ -61,4 +61,5 @@ const NavbarEdu = () => {
   );
 };
 
+
 export default NavbarEdu;
