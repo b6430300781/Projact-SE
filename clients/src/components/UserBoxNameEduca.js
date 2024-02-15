@@ -1,5 +1,6 @@
 import "./UserBoxNameEduca.css";
-import Pop from './Pop';
+import Pop1 from './Pop1';
+import UserList from './get1';
 
 export default function UserBoxNameEduca(props) {
     return (
@@ -8,11 +9,11 @@ export default function UserBoxNameEduca(props) {
                 {props.children}
                 <div>
                     <div className="UserBoxNameEduca-buttonadd">
-                        <Pop></Pop>
+                        <Pop1></Pop1>
 
                     </div>
                     <body className="UserBoxNameEduca-NameEduca">
-                        <p>สมรัก  ใจดี</p>
+                    <UserList></UserList>
                     </body>
 
                 </div>

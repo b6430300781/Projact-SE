@@ -1,7 +1,14 @@
 import "./UserBoxNameAjarn.css";
 import Pop from './Pop';
+import UserList from './get';
 
-export default function UserBoxNameAjarn(props) {
+// const getuser = () => {
+//     Axios.get("http://127.0.0.1:3001/add").then((response) => {
+//         setuserList(response.data);
+//     });
+//   };
+
+export default function UserBoxNameAjarn(props) { 
     return (
         <div>
             <div className="UserBoxNameAjarn-userbox">
@@ -13,7 +20,7 @@ export default function UserBoxNameAjarn(props) {
                     </div>
                 <div>
                     <body className="UserBoxNameAjarn-NameAjarn">
-                        <p>สมเกียรติ  ใจดี</p>
+                    <UserList></UserList>
                     </body>
 
 
