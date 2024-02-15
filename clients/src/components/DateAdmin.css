@@ -89,7 +89,7 @@
 
 
 .line {
-  width: 80%;
+  width: 60%;
   height: 1px;
   background-color:  #CBC8C8;
   margin-top: 20px;
@@ -99,4 +99,10 @@
 .left{
   margin-left: 60px;
   margin-top: 70px;
+}
+
+.turnleft-all{
+  position: relative;
+  left: 350px;
+  margin-top: 128px;
 }

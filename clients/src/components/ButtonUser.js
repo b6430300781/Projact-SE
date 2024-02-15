@@ -18,7 +18,7 @@ function ButtonUser() {
     };
     return (
 
-        <div>
+        <div className="turnleft-all">
             <h1 className='ButtonUser-textfont' >ข้อมูลผู้ใช้งาน</h1>
             <div className='ButtonUser-buttonbox'>
                 <button className='ButtonUser-buttonAjarn' onClick={() => {

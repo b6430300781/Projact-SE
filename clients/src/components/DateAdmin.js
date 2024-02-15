@@ -76,7 +76,7 @@ function DateAdmin() {
     
 
     return (
-        <div>
+        <div className='turnleft-all'>
             <h className='DateAdmin-text' >ตั้งเวลาการใช้งานระบบ</h>
             <div className='custom-date-picker-all2'>
                 <div className='Down-picker'>

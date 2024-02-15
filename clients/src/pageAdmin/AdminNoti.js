@@ -5,8 +5,8 @@ import HeaderAdmin from "../navbar/HeaderAdmin";
 function AdminNoti() {
   return (
     <div>
-      <NavbarAdmin />
-      <HeaderAdmin />
+      {/* <NavbarAdmin />
+      <HeaderAdmin /> */}
     </div>
   );
 }

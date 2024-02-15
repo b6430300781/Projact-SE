@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
 .navbar {
     height: 100%;
-    width: 200px; /* Adjust the width as needed */
+    width: 250px; /* Adjust the width as needed */
     position: fixed;
     top: 0;
     left: 0;
     background-color: #8C3941;
     padding-top: 0px;
+    z-index: 999;
+
   }
   
   .navbar-left {
@@ -14,7 +16,7 @@
     list-style-type: none;
     margin-top: 0px;
     padding: 0px;
-    margin: 10px;
+    margin: 20px;
     top: 0;
     left: 0;
     display: flex;
