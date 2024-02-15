@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import plus from '../assets/plus.svg';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import './box.css';
+import './Boxnoti.css';
 import axios from 'axios';
 
 function Box() {

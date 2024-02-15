@@ -76,6 +76,7 @@ function DateAdmin() {
     
 
     return (
+        <div className='left'>
         <div className="DateAdmin-container">
         <div>
             <h className='DateAdmin-text' >ตั้งเวลาการใช้งานระบบ</h>
@@ -184,6 +185,7 @@ function DateAdmin() {
                 </div>
             </div>
 
+        </div>
         </div>
         </div>
     );
