@@ -76,8 +76,6 @@ function DateAdmin() {
     
 
     return (
-        <div className='left'>
-        <div className="DateAdmin-container">
         <div>
             <h className='DateAdmin-text' >ตั้งเวลาการใช้งานระบบ</h>
             <div className='custom-date-picker-all2'>
@@ -185,8 +183,6 @@ function DateAdmin() {
                 </div>
             </div>
 
-        </div>
-        </div>
         </div>
     );
 }
