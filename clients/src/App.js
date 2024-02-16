@@ -12,7 +12,6 @@ import EduNoti from './pageEdu/EduNoti';
 import RegisResults from './pageEdu/RegisResults';
 import CoursesTaught from './pageEdu/CoursesTaught';
 import AllRoom from './pageEdu/AllRoom';
-import BoxNoti2 from './oanchisa/BoxNoti2';
 
 
 
@@ -21,16 +20,27 @@ function App() {
   return (
     // <Router>
     //   <div>
-    //     <NavbarEdu />
-    //     <HeaderEdu />
+    //     <NavbarAdmin />
+    //     <HeaderAdmin />
     //     <Routes>
-    //       <Route exact path="/" element={<EduNoti />} />
-    //       <Route exact path="/ผลการลงทะเบียน" element={<RegisResults />} />
-    //       <Route exact path="/รายวิชาที่เปิดสอน" element={<CoursesTaught />} />
-    //       <Route exact path="/ห้องเรียนทั้งหมด" element={<AllRoom />} />
+    //       <Route exact path="/" element={<AdminNoti />} />
+    //       <Route exact path="/กำหนดการ" element={<AdminTimeDate />} />
+    //       <Route exact path="/ข้อมูลผู้ใช้งาน" element={<AdminUser />} />
     //     </Routes>
     //   </div>
     // </Router>
+    <Router>
+      <div>
+        <NavbarEdu />
+        <HeaderEdu />
+        <Routes>
+          <Route exact path="/" element={<EduNoti />} />
+          <Route exact path="/ผลการลงทะเบียน" element={<RegisResults />} />
+          <Route exact path="/รายวิชาที่เปิดสอน" element={<CoursesTaught />} />
+          <Route exact path="/ห้องเรียนทั้งหมด" element={<AllRoom />} />
+        </Routes>
+      </div>
+    </Router>
 
     
     // <div>
