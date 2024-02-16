@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
-
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
 .container {
     position: relative;
     /* ตั้งค่าเป็น relative เพื่อเป็นพื้นที่ให้สำหรับตำแหน่งของกล่องและข้อความ */
@@ -290,6 +295,9 @@
 }
 
 .column2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-basis: calc(51% - 10px);
     /* ความกว้างของแต่ละคอลัมน์ */
     padding: 1px;
@@ -324,6 +332,9 @@
 }
 
 .column4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-basis: calc(51% - 10px);
     /* ความกว้างของแต่ละคอลัมน์ */
     padding: 1px;
@@ -359,6 +370,9 @@
 }
 
 .column6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-basis: calc(51% - 10px);
     /* ความกว้างของแต่ละคอลัมน์ */
     padding: 1px;
@@ -393,6 +407,9 @@
 }
 
 .column8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-basis: calc(51% - 10px);
     /* ความกว้างของแต่ละคอลัมน์ */
     padding: 1px;
@@ -447,3 +464,15 @@
     width: 100%;
     height: 100%;
 }
+
+.file-button {
+    background-color: transparent;
+    border: none; /* ลบกรอบ */
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .file-button:hover{
+    animation: flash 1s;
+    color: #127151;
+  }
