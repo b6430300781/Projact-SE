@@ -103,7 +103,7 @@ function BoxNoti2() {
                     />
                     <div className="button-container">
                       <button type="submit" className="btn btn-primary" onClick={handleSaveButtonClick}>Submit</button>
-                      <button onClick={handlePopupClose} className="btn btn-secondary ml-auto" background-Color= 'red'>Cancel</button>
+                      <button onClick={handlePopupClose} className="btn btn-secondary ml-auto" >Cancel</button>
                     </div>
                   </div>
                 </form>

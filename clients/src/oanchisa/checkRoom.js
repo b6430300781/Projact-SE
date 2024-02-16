@@ -16,10 +16,10 @@ function handleClick(event) {
   });
 }
 
-function RoomImport() {
+function CheckRoom() {
   return (
     <div className='turnleft-all'>
-      <h className='DateAdmin-text'>นำข้อมูลห้องเรียนเข้าสู่ระบบ</h>
+      <h className='DateAdmin-text'>ตรวจสอบห้องเรียนที่สามารถเปิดสอนได้</h>
       <div className="course-table">
         <div className="column">
           <p>ปีการศึกษา/ภาคเรียน</p>
@@ -46,4 +46,4 @@ function RoomImport() {
   );
 }
 
-export default RoomImport;
+export default CheckRoom;
