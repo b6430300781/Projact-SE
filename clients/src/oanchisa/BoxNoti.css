@@ -34,10 +34,10 @@
   }
   
   .popup {
-    /* position: fixed; */
-    top: 5%;
-    left: 25%;
-    /* transform: translate(50%, 5%); */
+    position: fixed; /* ให้ popup อยู่ตรงกลางของหน้าจอ */
+    top: 50%; /* จุดเริ่มต้นของ popup ที่ตรงกลางของหน้าจอ */
+    left: 50%; /* จุดเริ่มต้นของ popup ที่ตรงกลางของหน้าจอ */
+    transform: translate(50%, 5%); /* ปรับตำแหน่งของ popup ให้อยู่ตรงกลาง */
     background-color: white;
     padding: 100px;
     border: 1px solid #127151;
@@ -49,6 +49,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
+  
   
   .popup button {
     position: absolute;
