@@ -5,7 +5,7 @@ import HeaderEdu from '../navbar/HeaderEdu';
 function CoursesTaught() {
   return (
     <div>
-
+   
       <BoxImportCourse />
    
     </div>
