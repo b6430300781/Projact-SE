@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Pop.css';
 import { IoIosAddCircleOutline, IoIosClose } from 'react-icons/io';
 import { CgFileDocument } from "react-icons/cg";
@@ -31,15 +31,9 @@ const Pop = ({ onClose }) => {
 
     reader.readAsArrayBuffer(file);
   };
-  
-  const getuser = () => {
-    Axios.get("http://127.0.0.1:3001/add").then((response) => {
-        setuserList(response.data);
-    });
-  };
 
   const handleButtonClick = () => {
-    Axios.post("http://127.0.0.1:3001/upload",{
+    Axios.post("http://127.0.0.1:3001/uploads",{
       excelData:excelData,
 
     }).then(() => {
@@ -56,7 +50,7 @@ const Pop = ({ onClose }) => {
   };
 
   const handleButtonAdd = () => {
-    Axios.post("http://127.0.0.1:3001/create",{
+    Axios.post("http://127.0.0.1:3001/creates",{
       email: email,
       fullName:fullName,
     }).then(() => {
@@ -67,11 +61,6 @@ const Pop = ({ onClose }) => {
         fullName:fullName
       },
       ]);
-      setEmail('');
-      setFullName('');
-
-      // ปิด popup
-      onClose();
     });
   };
 
@@ -83,12 +72,6 @@ const Pop = ({ onClose }) => {
       handleFileUpload(file);
     }
   };
-  
-  useEffect(() => {
-    // ทำสั่งการที่คุณต้องการที่นี่ เช่น อัพเดต UI
-    console.log("User list updated:", userList);
-  }, [userList]);
-
 
   return (
     <div className="Pop" style={{ textAlign: 'left' }}>
@@ -101,7 +84,7 @@ const Pop = ({ onClose }) => {
 
         <div className='left' onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
           <h1 style={{ fontFamily: 'Kanit, sans-serif' ,color: '#838383', fontSize: 'small' }}>
-            <span style={{ fontFamily: 'Kanit, sans-serif' , color: '#8C3941' }}>นำเข้ารายชื่อผู้ใช้อาจารย์</span> (*ครั้งละ 1 file)
+            <span style={{ fontFamily: 'Kanit, sans-serif' , color: '#8C3941' }}>นำเข้ารายชื่อผู้ใช้ฝ่ายการศึกษา</span> (*ครั้งละ 1 file)
           </h1>
 
           <div

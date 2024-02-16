@@ -7,11 +7,138 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    user: "root",
-    host: "localhost",
-    password: "12345678",
-    database: "dbtest"
+  host: '127.0.0.1',
+  user: 'root',
+  password: '123456',
+  database: 'db',
+  port: '3306'
 })
+
+db.connect((err)=>{
+  if(err){
+    console.log('Error connecting to MySQL database =',err)
+    return;
+  }
+  console.log('MySQL successfully')
+})
+
+app.post("/create", (req, res) => {
+    const fullName = req.body.fullName;
+    const email = req.body.email;
+  
+    db.query(
+      "INSERT INTO usersaj (email,name ) VALUES (?,?)",
+      [email,fullName],
+      (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+          res.send("Values Inserted");
+        }
+      }
+    );
+  });
+
+  app.post("/upload", (req, res) => {
+    const excelData = req.body.excelData;
+
+    const values = excelData.map(() => "( ?)").join(", ");
+  
+    const sql = `INSERT INTO usersaj (email, name) VALUES ${values}`;
+  
+    db.query(sql,excelData, (err, result) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send("Error inserting values");
+      } else {
+        res.send("Values Inserted");
+      }
+    });
+  });
+  
+  app.post("/creates", (req, res) => {
+    const fullName = req.body.fullName;
+    const email = req.body.email;
+  
+    db.query(
+      "INSERT INTO usersed (email,name ) VALUES (?,?)",
+      [email,fullName],
+      (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+          res.send("Values Inserted");
+        }
+      }
+    );
+  });
+  
+
+  app.post("/uploads", (req, res) => {
+    const excelData = req.body.excelData;
+
+    const values = excelData.map(() => "( ?)").join(", ");
+  
+    const sql = `INSERT INTO usersed (email, name) VALUES ${values}`;
+  
+    db.query(sql,excelData, (err, result) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send("Error inserting values");
+      } else {
+        res.send("Values Inserted");
+      }
+    });
+  });
+
+
+
+app.get('/get',(req,res)=>{
+    db.query("SELECT*FROM usersaj",(err,result)=>{
+        if(err){
+            console.log(err);
+        }else{
+            res.send(result);
+        }
+    })
+})
+app.get('/get1',(req,res)=>{
+  db.query("SELECT*FROM usersed",(err,result)=>{
+      if(err){
+          console.log(err);
+      }else{
+          res.send(result);
+      }
+  })
+})
+app.get('/api/rowCount', (req, res) => {
+  const query = 'SELECT COUNT(*) AS rowCount FROM usersaj';
+
+  db.query(query, (err, result) => {
+    if (err) {
+      console.error('Query error:', err);
+      res.status(500).send('Internal Server Error');
+    } else {
+      const rowCount = result[0].rowCount;
+      res.json({ rowCount });
+    }
+  });
+});
+
+app.get('/api/rowCount1', (req, res) => {
+  const query = 'SELECT COUNT(*) AS rowCount FROM usersed';
+
+  db.query(query, (err, result) => {
+    if (err) {
+      console.error('Query error:', err);
+      res.status(500).send('Internal Server Error');
+    } else {
+      const rowCount = result[0].rowCount;
+      res.json({ rowCount });
+    }
+  });
+});
+
 
 app.get('/box', (req, res) => {
     db.query("SELECT * FROM box", (err, result) => {

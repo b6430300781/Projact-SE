@@ -6,6 +6,8 @@ import UserBoxNameAjarn from "./UserBoxNameAjarn";
 import UserBoxNameEduca from "./UserBoxNameEduca";
 import React from 'react';
 import { ReactComponent as Icon } from '../assets/carbon--user-profile.svg';
+import App from "./count";
+import App1 from "./count1";
 
 
 
@@ -24,12 +26,12 @@ function ButtonUser() {
                     <button className='ButtonUser-buttonAjarn' onClick={() => {
                         setTab(0);
                     }}>จำนวนอาจารย์
-                        <br></br> 80
+                        <App></App>
                     </button>
                     <button className='ButtonUser-buttonAdmin' onClick={() => {
                         setTab(1);
                     }}>จำนวนฝ่ายการศึกษา
-                        <br></br> 2
+                        <App1></App1>
                     </button>
 
                 </div>
