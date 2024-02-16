@@ -19,18 +19,6 @@ import BoxNoti2 from './oanchisa/BoxNoti2';
 
 function App() {
   return (
-    // <BoxNoti2/>
-    <Router>
-      <div>
-        <NavbarAdmin />
-        <HeaderAdmin />
-        <Routes>
-          <Route exact path="/" element={<AdminNoti />} />
-          <Route exact path="/กำหนดการ" element={<AdminTimeDate />} />
-          <Route exact path="/ข้อมูลผู้ใช้งาน" element={<AdminUser />} />
-        </Routes>
-      </div>
-    </Router>
     // <Router>
     //   <div>
     //     <NavbarEdu />
