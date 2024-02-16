@@ -1,0 +1,66 @@
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.turnleft-all{
+    position: relative;
+    left: 350px;
+    margin-top: 128px;
+  }
+
+.course-table {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    /* ปรับตำแหน่งตารางตามความเหมาะสม */
+    flex-basis: calc(51% - 10px);
+    /* ความกว้างของแต่ละคอลัมน์ */
+    padding: 0px;
+    width: 900px;
+}
+
+.column1 {
+    flex-basis: calc(51% - 10px);
+    /* ความกว้างของแต่ละคอลัมน์ */
+    padding: 1px;
+    border: 1px solid #000;
+    /* เส้นขอบของแต่ละคอลัมน์ */
+    background-color: #ffffff;
+    display: flex;
+    /* ทำให้เนื้อหาอยู่ในคอลัมน์เรียงตรงกลาง */
+    align-items: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวตั้ง */
+    justify-content: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวนอน */
+
+}
+
+.column2 {
+    display: flex;
+    flex-basis: calc(51% - 10px);
+    /* ความกว้างของแต่ละคอลัมน์ */
+    padding: 1px;
+    border: 1px solid #000;
+    /* เส้นขอบของแต่ละคอลัมน์ */
+    background-color: #ffffff;
+    align-items: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวตั้ง */
+    justify-content: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวนอน */
+
+}
+
+
+.file-button {
+    background-color: transparent;
+    border: none; /* ลบกรอบ */
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .file-button:hover{
+    animation: flash 1s;
+    color: #127151;
+  }
