@@ -1,6 +1,21 @@
 import React from 'react';
 import './BoxImportCourse.css'; // นี่คือไฟล์ CSS ของคุณ
+import { FaFileLines } from "react-icons/fa6";
+import { Link } from 'react-router-dom'; // เพิ่มการนำเข้า Link ที่นี่
 
+
+function handleClick(event) {
+    const button = event.currentTarget;
+  
+    // เพิ่ม animation class เมื่อคลิก
+    button.classList.add('flash-animation');
+  
+    // ลบ animation class เมื่อ animation เสร็จสิ้น
+    button.addEventListener('animationend', () => {
+      button.classList.remove('flash-animation');
+    });
+  }
+  
 function BoxImportCourse() {
     // สร้างข้อมูลตาราง
     const tableData = [66, 65, 64, 63];
@@ -48,7 +63,9 @@ function BoxImportCourse() {
                             {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                         </div>
                         <div className="column2">
-                            <p></p>
+                        <Link to="/หลักสูตรปี_66" className="file-button" onClick={handleClick}>
+                            <FaFileLines style={{ fontSize: '35px',color:'black' }} />
+                        </Link>
                             {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                         </div>
                     </div>
@@ -59,7 +76,9 @@ function BoxImportCourse() {
                             {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                         </div>
                         <div className="column4">
-                            <p></p>
+                        <Link to="/หลักสูตรปี_65" className="file-button" onClick={handleClick}>
+                            <FaFileLines style={{ fontSize: '35px',color:'black' }} />
+                        </Link>
                             {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                         </div>
                     </div>
@@ -70,7 +89,9 @@ function BoxImportCourse() {
                             {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                         </div>
                         <div className="column6">
-                            <p></p>
+                        <Link to="/หลักสูตรปี_64" className="file-button" onClick={handleClick}>
+                            <FaFileLines style={{ fontSize: '35px',color:'black' }} />
+                        </Link>
                             {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                         </div>
                     </div>
@@ -80,7 +101,9 @@ function BoxImportCourse() {
                             {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                         </div>
                         <div className="column8">
-                            <p></p>
+                        <Link to="/หลักสูตรปี_63" className="file-button" onClick={handleClick}>
+                            <FaFileLines style={{ fontSize: '35px',color:'black' }} />
+                        </Link>
                             {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                         </div>
                     </div>
