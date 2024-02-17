@@ -1,0 +1,32 @@
+.turnleft-all{
+    position: relative;
+    left: 350px;
+    margin-top: 128px;
+  }
+
+.row {
+    display: flex;
+    justify-content: center;
+    /* จัดให้ข้อความอยู่ตรงกลางตามแนวนอน */
+    align-items: center;
+    /* จัดให้ข้อความอยู่ตรงกลางตามแนวตั้ง */
+    background-color: #D9D9D9;
+    /* กำหนดสีพื้นหลังเป็นสีเทา */
+    height: 50px;
+}
+
+.row1 {
+    flex-basis: calc(51% - 10px);
+    /* ความกว้างของแต่ละคอลัมน์ */
+    padding: 1px;
+    border: 1px solid #000;
+    /* เส้นขอบของแต่ละคอลัมน์ */
+    background-color: #ffffff;
+    display: flex;
+    /* ทำให้เนื้อหาอยู่ในคอลัมน์เรียงตรงกลาง */
+    align-items: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวตั้ง */
+    justify-content: center;
+    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวนอน */
+
+}

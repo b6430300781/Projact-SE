@@ -7,11 +7,16 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  host: '127.0.0.1',
+  // host: '127.0.0.1',
+  // user: 'root',
+  // password: '123456',
+  // database: 'db',
+  // port: '3306'
+
+  host: 'localhost',
   user: 'root',
-  password: '123456',
-  database: 'db',
-  port: '3306'
+  password: '12345678',
+  database: 'dbtest',
 })
 
 db.connect((err)=>{
@@ -220,6 +225,17 @@ app.get('/time', (req, res) => {
     });
   });
   
+app.get('/room', (req, res) => {
+    db.query("SELECT * FROM room", (err, result) => {
+      if (err) {
+        console.log(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+      } else {
+        res.json(result); // ส่งผลลัพธ์กลับไปยังผู้ใช้
+        console.log("อ่านข้อมูลสำเร็จ")
+      }
+    });
+  });
 
 app.listen("3001", () => {
     console.log('Server is running on port 3001');
