@@ -17,23 +17,17 @@
 
 }
 .bordered-table th {
-  background-color: #CCDCD7; /* เพิ่มสีเขียวอ่อนให้กับหัวของตาราง */
+  background-color: #CCDCD7; /* เพิ่มสีเขียวอ่อนให้กับหัวของตาราง /
   text-align: center;
 }
 .image-container {
   display: flex;
-  justify-content: center; /* จัดให้ content อยู่ตรงกลาง */
-  align-items: center; /* จัดให้ content อยู่ตรงกลาง */
-  height: 10vh; /* สูงเต็มหน้าจอ */
+  justify-content: center; / จัดให้ content อยู่ตรงกลาง /
+  align-items: center; / จัดให้ content อยู่ตรงกลาง /
+  height: 10vh; / สูงเต็มหน้าจอ /
 }
 
 .centered-image {
-  max-width: 100%; /* กว้างไม่เกินพื้นที่ของ container */
-  max-height: 100%; /* สูงไม่เกินพื้นที่ของ container */
-}
-
-.turnleft-all{
-  position: relative;
-  left: 200px;
-  margin-top: 128px;
+  max-width: 100%; / กว้างไม่เกินพื้นที่ของ container /
+  max-height: 100%; / สูงไม่เกินพื้นที่ของ container */
 }

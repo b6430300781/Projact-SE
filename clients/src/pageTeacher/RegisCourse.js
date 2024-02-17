@@ -4,7 +4,7 @@ import RegisResultTable from '../components/RegisResultTable';
 function RegisCourse() {
   return (
     <div>
-      <RegisResultTable></RegisResultTable>
+      
 
    
     </div>
