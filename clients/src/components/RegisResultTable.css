@@ -31,3 +31,9 @@
   max-width: 100%; /* กว้างไม่เกินพื้นที่ของ container */
   max-height: 100%; /* สูงไม่เกินพื้นที่ของ container */
 }
+
+.turnleft-all{
+  position: relative;
+  left: 200px;
+  margin-top: 128px;
+}
