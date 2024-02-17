@@ -1,6 +1,6 @@
 import React from 'react';
-import './RegisResultAjarn.css'; // Import CSS file for table styling
-import MyImage from './Vector.png';
+import './RegisResultTable.css'; // Import CSS file for table styling
+import MyImage from '../assets/Vector.png';
 
 class BorderedTable extends React.Component {
   render() {
