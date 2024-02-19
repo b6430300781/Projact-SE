@@ -2,6 +2,7 @@ import React from 'react';
 import './BoxImportCourse.css'; // นี่คือไฟล์ CSS ของคุณ
 import { FaFileLines } from "react-icons/fa6";
 import { Link } from 'react-router-dom'; // เพิ่มการนำเข้า Link ที่นี่
+import UploadEdu from '../Wawa/Upload/UploadEdu';
 
 
 function handleClick(event) {
@@ -29,13 +30,13 @@ function BoxImportCourse() {
                     </div>
 
                     <div className="container">
-                        <div className="top-left">
-                            <p>นำข้อมูลรายวิชาเข้าสู่ระบบ</p>
-                        </div>
                         <div className="bottom-rectangle">
                             <r style={{ color: '#8C3941' }}>นำเข้ารายวิชา</r>
                             <g style={{ color: '#838383' }}>(*ครั้งละ 1 ไฟล์)</g>
                             <b style={{ color: '#000000' }}>หลักสูตร</b>
+                                <div>
+                                    <UploadEdu/>
+                                </div>
                             <w style={{ color: '#8C3941' }}>เพิ่มรายวิชา</w>
                             <t style={{ color: '#838383' }}>(*ครั้งละ 1 วิชา)</t>
                             <f style={{ color: '#000000' }}>หลักสูตร</f>

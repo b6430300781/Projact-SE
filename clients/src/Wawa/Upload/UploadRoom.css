@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=kanit');
+
+.box-Room-position{
+    padding-top: 1%;
+    margin-left: 50px;
+    
+}
+
+.size-area{
+    width: 200px;
+    height: 155px;
+}
+
+.btn-Edu{
+    margin-top: 15px;
+    padding: auto;
+    background-color: #127151;
+    color: #fff;
+    border: 0px;
+    border-radius: 2px;
+    text-align: center;
+    margin-left: 15px;
+  }
