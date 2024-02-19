@@ -3,6 +3,8 @@ import './RoomImport.css';
 import axios from 'axios';
 import { FaFileLines } from "react-icons/fa6";
 import { Link } from 'react-router-dom'; // เพิ่มการนำเข้า Link ที่นี่
+import UploadRoom from '../Wawa/Upload/UploadRoom';
+
 
 function handleClick(event) {
   const button = event.currentTarget;
@@ -20,6 +22,9 @@ function RoomImport() {
   return (
     <div className='turnleft-all'>
       <h className='DateAdmin-text'>นำข้อมูลห้องเรียนเข้าสู่ระบบ</h>
+        <div>
+          <UploadRoom/>
+        </div>
       <div className="course-table">
         <div className="column">
           <p>ปีการศึกษา/ภาคเรียน</p>
