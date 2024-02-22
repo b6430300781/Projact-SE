@@ -476,4 +476,40 @@
     animation: flash 1s;
     color: #127151;
   }
+  select {
+    width: 80px; /* Adjust the width as needed */
+    height: 30px;
+    padding: 5px; /* Adjust padding as needed */
+    font-size: 12px; /* Adjust font size as needed */
+    border: 1px solid #000; /* Ensure the border is always visible */
+    border-radius: 4px; /* Border radius */
+    background-color: #fff; /* Background color */
+    color: #000; /* Text color */
+    margin-top: 70px;
+    
+}
 
+/* Style for dropdown menu options */
+option {
+    background-color: #fff; /* Background color */
+    color: #000; /* Text color */
+}
+
+.dropdown1 {
+    margin-left: 70px;
+    margin-right: 300px; /* Adjust the space between dropdown1 and dropdown2 */
+    display: inline-block;
+}
+.dropdown2 {
+    margin-left: 47px;
+    display: inline-block;
+}
+
+.dropdown3 {
+    margin-left: 41px; /* Adjust the space between dropdown2 and dropdown3 */
+    display: inline-block;
+}
+.dropdown4 {
+    margin-left: 48px; /* Adjust the space between dropdown2 and dropdown3 */
+    display: inline-block;
+}

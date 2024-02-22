@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
 .navbar {
+    position: fixed;
     height: 100%;
     width: 250px; /* Adjust the width as needed */
     position: fixed;
@@ -8,6 +9,7 @@
     background-color: #8C3941;
     padding-top: 0px;
     z-index: 999;
+    overflow: hidden;
 
   }
   
@@ -21,6 +23,8 @@
     left: 0;
     display: flex;
     margin-bottom: 20px;
+
+    align-items: flex-start;
     font-family: 'Kanit', sans-serif;
   }
 
@@ -40,9 +44,13 @@
   
   .nav-item {
     margin-bottom: 50px; /* Adjust vertical spacing between items */
-    display: flex; /* Use flexbox */
-    align-items: center; /* Center vertically */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflowing text */
+    text-align: left; /* Align text to the left */
     font-family: 'Kanit', sans-serif;
+    
+
   }
   
   .nav-item img {

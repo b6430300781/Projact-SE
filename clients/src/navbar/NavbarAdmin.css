@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
 
 .navbar {
+    position: fixed;
     height: 100%;
     width: 250px;
     position: fixed;
