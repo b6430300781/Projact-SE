@@ -57,17 +57,6 @@ function BoxImportCourse() {
                             <r style={{ color: '#8C3941' }}>นำเข้ารายวิชา</r>
                             <g style={{ color: '#838383' }}>(*ครั้งละ 1 ไฟล์)</g>
                             <b style={{ color: '#000000' }}>หลักสูตร</b>
-                            <div>
-                                <UploadEdu />
-                            </div>
-                            <w style={{ color: '#8C3941' }}>เพิ่มรายวิชา</w>
-                            <t style={{ color: '#838383' }}>(*ครั้งละ 1 วิชา)</t>
-                            <f style={{ color: '#000000' }}>หลักสูตร</f>
-                            <a style={{ color: '#000000' }}>หมวดวิชา</a>
-                            <c style={{ color: '#000000' }}>หน่วยกิต</c>
-                            <x style={{ color: '#000000' }}>รหัสวิชา</x>
-                            <y style={{ color: '#000000' }}>ชื่อวิชา</y>
-                            <p style={{ color: '#8C3941' }}>รายวิชาที่เปิดสอน</p>
                             <div className='dropdown1'>
                                 <select value={selectedValue1} onChange={handleDropdownChange1}>
                                     <option value=""></option>
@@ -83,6 +72,18 @@ function BoxImportCourse() {
                                     <option value="57">ปี 57</option>
                                 </select>
                             </div>
+                            <div>
+                                <UploadEdu />
+                            </div>
+                            <w style={{ color: '#8C3941' }}>เพิ่มรายวิชา</w>
+                            <t style={{ color: '#838383' }}>(*ครั้งละ 1 วิชา)</t>
+                            <f style={{ color: '#000000' }}>หลักสูตร</f>
+                            <a style={{ color: '#000000' }}>หมวดวิชา</a>
+                            <c style={{ color: '#000000' }}>หน่วยกิต</c>
+                            <x style={{ color: '#000000' }}>รหัสวิชา</x>
+                            <y style={{ color: '#000000' }}>ชื่อวิชา</y>
+                            <p style={{ color: '#8C3941' }}>รายวิชาที่เปิดสอน</p>
+                            
                             <div className='dropdown2'>
                                 <select value={selectedValue2} onChange={handleDropdownChange2}>
                                     <option value=""></option>
