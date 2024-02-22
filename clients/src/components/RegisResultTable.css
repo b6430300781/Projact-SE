@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
 .bordered-table {
   border-collapse: collapse;
-  width: 80%;
-  margin-top: 25px;
+  width: 100%;
+  margin-top: 30px;
 }
 
 .bordered-table th, .bordered-table td {
@@ -12,22 +12,141 @@
 }
 .Texthead {
   margin-top: 70px;
-  margin-left: 180px;
+  margin-left: 10px;
   font-family: 'Kanit', sans-serif;
 
 }
 .bordered-table th {
-  background-color: #CCDCD7; /* เพิ่มสีเขียวอ่อนให้กับหัวของตาราง /
+  background-color: #CCDCD7; 
   text-align: center;
 }
 .image-container {
   display: flex;
-  justify-content: center; / จัดให้ content อยู่ตรงกลาง /
-  align-items: center; / จัดให้ content อยู่ตรงกลาง /
-  height: 10vh; / สูงเต็มหน้าจอ /
+  justify-content: center; 
+  align-items: center; 
+  height: 10vh; 
 }
 
 .centered-image {
-  max-width: 100%; / กว้างไม่เกินพื้นที่ของ container /
-  max-height: 100%; / สูงไม่เกินพื้นที่ของ container */
+  max-width: 100%; 
+  max-height: 100%; 
 }
+.toptap{
+  
+  margin-left: 350px;
+  margin-top: 100px;
+}
+.text5{
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-bottom: 0%;
+  
+}
+.text5 a{
+  position: relative;
+  font-size: 16px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  margin-right: 120px;
+}
+.text7{
+
+  margin-left: 50px;
+  margin-top: 50px;
+  
+}
+.text7 a{
+  font-size: 16px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  margin-right: 120px;
+}
+.dropdown14 select {
+  width: 80px; /* Adjust the width as needed */
+  height: 30px;
+  padding: 5px; /* Adjust padding as needed */
+  font-size: 12px; /* Adjust font size as needed */
+  border: 1px solid #000; /* Ensure the border is always visible */
+  border-radius: 4px; /* Border radius */
+  background-color: #fff; /* Background color */
+  color: #000; /* Text color */
+}
+.dropdown15 select {
+  width: 80px; /* Adjust the width as needed */
+  height: 30px;
+  padding: 5px; /* Adjust padding as needed */
+  font-size: 12px; /* Adjust font size as needed */
+  border: 1px solid #000; /* Ensure the border is always visible */
+  border-radius: 4px; /* Border radius */
+  background-color: #fff; /* Background color */
+  color: #000; /* Text color */
+}
+.dropdown16 select {
+  width: 80px; /* Adjust the width as needed */
+  height: 30px;
+  padding: 5px; /* Adjust padding as needed */
+  font-size: 12px; /* Adjust font size as needed */
+  border: 1px solid #000; /* Ensure the border is always visible */
+  border-radius: 4px; /* Border radius */
+  background-color: #fff; /* Background color */
+  color: #000; /* Text color */
+}
+.dropdown17 select {
+  width: 80px; /* Adjust the width as needed */
+  height: 30px;
+  padding: 5px; /* Adjust padding as needed */
+  font-size: 12px; /* Adjust font size as needed */
+  border: 1px solid #000; /* Ensure the border is always visible */
+  border-radius: 4px; /* Border radius */
+  background-color: #fff; /* Background color */
+  color: #000; /* Text color */
+}
+.dropdown18 select {
+  width: 80px; /* Adjust the width as needed */
+  height: 30px;
+  padding: 5px; /* Adjust padding as needed */
+  font-size: 12px; /* Adjust font size as needed */
+  border: 1px solid #000; /* Ensure the border is always visible */
+  border-radius: 4px; /* Border radius */
+  background-color: #fff; /* Background color */
+  color: #000; /* Text color */
+}
+
+/* Style for dropdown menu options */
+option {
+  background-color: #fff; /* Background color */
+  color: #000; /* Text color */
+}
+
+.dropdown14 {
+  float: left;
+  margin-top: 0px;
+  margin-left: 50px;
+  display: inline-block; /* Change to block to move below text */
+}
+
+.dropdown15 {
+  position: static;
+  margin-top: 0px;
+  margin-left: 100px;
+  margin-right: 800px;
+  display: inline-block; /* Change to block to move below text */
+}
+.dropdown16 {
+  position: static;
+  margin-top: 20px;
+  margin-left: 50px;
+  display: inline-block;
+}
+
+.dropdown17 {
+  position: static;
+  margin-top: 20px;
+  margin-left: 100px;
+  display: inline-block;
+}
+.dropdown18 {
+  margin-left: 175px; /* Adjust left margin */
+  display: inline-block; /* Change to block to move below text */
+}
+

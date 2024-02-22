@@ -44,35 +44,35 @@ function App() {
     // </Router>
 
 
-    <Router>
-      <div>
-        <NavbarEdu />
-        <HeaderEdu />
-        <Routes>
-          <Route exact path="/" element={<EduNoti />} />
-          <Route exact path="/ผลการลงทะเบียน" element={<RegisResults />} />
-          <Route exact path="/รายวิชาที่เปิดสอน" element={<CoursesTaught />} />
-          <Route exact path="/ห้องเรียนทั้งหมด" element={<AllRoom />} />
-        </Routes>
-      </div>
-    </Router>
-
     // <Router>
     //   <div>
-    //     <NavbarTeacher />
-    //     <HeaderTeacher />
+    //     <NavbarEdu />
+    //     <HeaderEdu />
     //     <Routes>
-          
-    //       <Route exact path="/" element={<TeacherNoti />} />
-    //       <Route exact path="/ลงทะเบียนรายวิชา" element={<RegisCourse />} />
-    //       <Route exact path="/ผลการลงทะเบียนอาจารย์" element={<RegisResultsTeacher />} />
-    //       <Route exact path="/รายวิชาที่สามารถเปิดสอน" element={<CoursesTaughtTeacher />} />
-    //       <Route exact path="/ห้องเรียนทั้งหมดอาจารย์" element={<AllRoomTeacher />} />
-    //       <Route exact path="/2566_ต้น" element={<RoomDetail />} />
-    //       <Route exact path="/ตรวจสอบผลการลงทะเบียน" element={<CheackRegisResults />} />
+    //       <Route exact path="/" element={<EduNoti />} />
+    //       <Route exact path="/ผลการลงทะเบียน" element={<RegisResults />} />
+    //       <Route exact path="/รายวิชาที่เปิดสอน" element={<CoursesTaught />} />
+    //       <Route exact path="/ห้องเรียนทั้งหมด" element={<AllRoom />} />
     //     </Routes>
     //   </div>
     // </Router>
+
+    <Router>
+      <div>
+        <NavbarTeacher />
+        <HeaderTeacher />
+        <Routes>
+          
+          <Route exact path="/" element={<TeacherNoti />} />
+          <Route exact path="/ลงทะเบียนรายวิชา" element={<RegisCourse />} />
+          <Route exact path="/ผลการลงทะเบียนอาจารย์" element={<RegisResultsTeacher />} />
+          <Route exact path="/รายวิชาที่สามารถเปิดสอน" element={<CoursesTaughtTeacher />} />
+          <Route exact path="/ห้องเรียนทั้งหมดอาจารย์" element={<AllRoomTeacher />} />
+          <Route exact path="/2566_ต้น" element={<RoomDetail />} />
+          <Route exact path="/ตรวจสอบผลการลงทะเบียน" element={<CheackRegisResults />} />
+        </Routes>
+      </div>
+    </Router>
     
 
 
