@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './BoxImportCourse.css'; // นี่คือไฟล์ CSS ของคุณ
 import { FaFileLines } from "react-icons/fa6";
 import { Link } from 'react-router-dom'; // เพิ่มการนำเข้า Link ที่นี่
+import UploadEdu from '../Wawa/Upload/UploadEdu';
 
 
 function handleClick(event) {
@@ -18,7 +19,7 @@ function handleClick(event) {
 
 function BoxImportCourse() {
     // สร้างข้อมูลตาราง
-    const tableData = [66, 65, 64, 63,62,61,60,59,58,57,'วิชาบังคับ','วิชาเลือก','วิชาเสรี',1,2,3,4];
+    const tableData = [66, 65, 64, 63, 62, 61, 60, 59, 58, 57, 'วิชาบังคับ', 'วิชาเลือก', 'วิชาเสรี', 1, 2, 3, 4];
     const [selectedValue1, setSelectedValue1] = useState('');
     const [selectedValue2, setSelectedValue2] = useState('');
     const [selectedValue3, setSelectedValue3] = useState('');
@@ -56,6 +57,9 @@ function BoxImportCourse() {
                             <r style={{ color: '#8C3941' }}>นำเข้ารายวิชา</r>
                             <g style={{ color: '#838383' }}>(*ครั้งละ 1 ไฟล์)</g>
                             <b style={{ color: '#000000' }}>หลักสูตร</b>
+                            <div>
+                                <UploadEdu />
+                            </div>
                             <w style={{ color: '#8C3941' }}>เพิ่มรายวิชา</w>
                             <t style={{ color: '#838383' }}>(*ครั้งละ 1 วิชา)</t>
                             <f style={{ color: '#000000' }}>หลักสูตร</f>
@@ -100,7 +104,7 @@ function BoxImportCourse() {
                                     <option value="วิชาบังคับ">วิชาบังคับ</option>
                                     <option value="วิชาเลือก">วิชาเลือก</option>
                                     <option value="วิชาเสรี">วิชาเสรี</option>
-                                    
+
                                 </select>
                             </div>
                             <div className='dropdown4'>
@@ -110,11 +114,11 @@ function BoxImportCourse() {
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-                                    
+
                                 </select>
                             </div>
                         </div> {/* เพิ่มกล่องสี่เหลี่ยม */}
-                        
+
                         <div className="course-table">
                             <div className="column">
                                 <p>หลักสูตร</p>
@@ -127,7 +131,7 @@ function BoxImportCourse() {
                                 {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                             </div>
                         </div>
-                        
+
 
                         {/* เพิ่มตารางอีก 3 ตาราง */}
                         <div className="course-table1">
