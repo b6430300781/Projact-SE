@@ -5,6 +5,7 @@ function RegisResultsTeacher() {
   return (
     <div>
       <ResultRegisT />
+      
    
    
     </div>

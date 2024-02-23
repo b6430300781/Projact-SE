@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import './ResultTech.css'; // นี่คือไฟล์ CSS ของคุณ
+import CheckRegisCoruse from './CheckRegisCoruse';
+
 
 function ResultTeach() {
     const tableData = [2566, 2565, 2564, 2563,2562,2561,2560,2559,2558,2557,'ภาคต้น','ภาคปลาย','ภาคฤดูร้อน'];
@@ -85,7 +87,11 @@ function ResultTeach() {
                 <option value="T23">T23</option>
             </select>
             </div>
-        </div>    
+            
+        </div>
+        <div>
+             <CheckRegisCoruse></CheckRegisCoruse>
+        </div>
     </div>
   );
 }

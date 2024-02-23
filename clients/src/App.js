@@ -16,7 +16,7 @@ import AllRoom from './pageEdu/AllRoom';
 ///////////
 import NavbarTeacher from './navbar/NavbarTeacher';
 import HeaderTeacher from './navbar/HeaderTeacher';
-import CheackRegisResults from './pageTeacher/CheackRegisResults';
+import CheckRegisResults from './pageTeacher/CheckRegisResults';
 import TeacherNoti from './pageTeacher/TeacherNoti';
 import RegisCourse from './pageTeacher/RegisCourse';
 import RegisResultsTeacher from './pageTeacher/RegisResultsTeacher';
@@ -72,7 +72,7 @@ function App() {
           <Route exact path="/รายวิชาที่สามารถเปิดสอน" element={<CoursesTaughtTeacher />} />
           <Route exact path="/ห้องเรียนทั้งหมดอาจารย์" element={<AllRoomTeacher />} />
           <Route exact path="/2566_ต้น" element={<RoomDetail />} />
-          <Route exact path="/ตรวจสอบผลการลงทะเบียน" element={<CheackRegisResults />} />
+          <Route exact path="/ตรวจสอบผลการลงทะเบียน" element={<CheckRegisResults />} />
         </Routes>
       </div>
     </Router>
