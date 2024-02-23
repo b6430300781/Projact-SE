@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
+.bordered-table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-top: 25px;
+}
+
+.bordered-table th, .bordered-table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+.Texthead {
+  margin-top: 70px;
+  margin-left: 180px;
+  font-family: 'Kanit', sans-serif;
+
+}
+.bordered-table th {
+  background-color: #CCDCD7; /* เพิ่มสีเขียวอ่อนให้กับหัวของตาราง */
+  text-align: center;
+}
+.image-container {
+  display: flex;
+  justify-content: center; /* จัดให้ content อยู่ตรงกลาง */
+  align-items: center; /* จัดให้ content อยู่ตรงกลาง */
+  height: 10vh; /* สูงเต็มหน้าจอ */
+}
+
+.centered-image {
+  max-width: 100%; /* กว้างไม่เกินพื้นที่ของ container */
+  max-height: 100%; /* สูงไม่เกินพื้นที่ของ container */
+}
+
+
+/* .turnleft-all{
+    position: relative;
+    left: 200px;
+    margin-top: 110px;
+  } */
+
