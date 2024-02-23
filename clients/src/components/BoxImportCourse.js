@@ -83,7 +83,6 @@ function BoxImportCourse() {
                             <a style={{ color: '#000000' }}>หมวดวิชา</a>
                             <c style={{ color: '#000000' }}>หน่วยกิต</c>
                             {/* <x style={{ color: '#000000' }}>รหัสวิชา</x>
-                            
                             <y style={{ color: '#000000' }}>ชื่อวิชา</y> */}
                             <div className='test'>
                                 

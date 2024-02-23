@@ -7,24 +7,24 @@ import * as XLSX from 'xlsx';
 import Axios from "axios";
 
 const InputEdu = () => {
-    const [email, setEmail] = useState('');
-    const [fullName, setFullName] = useState('');
+    const [idSubject, setIdSubject] = useState('');
+    const [subjectName, setSubjectName] = useState('');
     const [userList, setuserList] = useState([]);
 
     const handleButtonAdd = () => {
         Axios.post("http://127.0.0.1:3001/create", {
-          email: email,
-          fullName: fullName,
+          idSubject: idSubject,
+          subjectName: subjectName,
         }).then(() => {
           setuserList([
             ...userList,
             {
-              email: email,
-              fullName: fullName
+              idSubject: idSubject,
+              subjectName: subjectName
             },
           ]);
-          setEmail('');
-          setFullName('');
+          setIdSubject('');
+          setSubjectName('');
           
         });
       };
@@ -42,25 +42,22 @@ const InputEdu = () => {
 
                 <div className='box-Input-position'>
 
-                    <h1 style={{ fontFamily: 'Kanit', color: '#838383', fontSize: 'small' }}>
-                        <span style={{ color: '#8C3941' }}>เพิ่มรายชื่อผู้ใช้งาน</span> (*ครั้งละ 1 USER)
-                    </h1>
-
                     <div>
-                        <label style={{ fontFamily: 'Kanit', fontSize: '15px', display: 'block', fontweight: 'bold', marginBottom: '5px' }}>EMAIL:</label>
+                        <label style={{ fontFamily: 'Kanit', fontSize: '15px', display: 'block', fontweight: 'bold', marginBottom: '5px' }}>รหัสวิชา:</label>
                         <input
                             type="text"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            style={{ marginBottom: '10px' }}
+                            value={idSubject}
+                            onChange={(e) => setIdSubject(e.target.value)}
+                            style={{ marginBottom: '10px', width: '300px' }}
                         />
                     </div>
                     <div>
-                        <label style={{ fontFamily: 'Kanit', fontSize: '15px', display: 'block', fontweight: 'bold', marginBottom: '5px' }}>ชื่อ-สกุล:</label>
+                        <label style={{ fontFamily: 'Kanit', fontSize: '15px', display: 'block', fontweight: 'bold', marginBottom: '5px' }}>ชื่อวิชา:</label>
                         <input
                             type="text"
-                            value={fullName}
-                            onChange={(e) => setFullName(e.target.value)}
+                            value={subjectName}
+                            onChange={(e) => setSubjectName(e.target.value)}
+                            style={{ width: '300px' }}
                         />
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'end', marginTop: 'auto' }}>

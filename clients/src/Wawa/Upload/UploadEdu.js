@@ -5,6 +5,7 @@ import { CgFileDocument } from "react-icons/cg";
 import { FaRegSave } from "react-icons/fa";
 import * as XLSX from 'xlsx';
 import Axios from "axios";
+import InputEdu from '../Input/InputEdu';
 
 const UploadEdu = () => {
   const [excelData, setExcelData] = useState(null);
@@ -69,7 +70,7 @@ const UploadEdu = () => {
   return (
     <div className="Pop ">
 
-      <div className='in '>
+      <div className='in-Edu '>
 
         <div className='box-Edu-position' onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
 
@@ -102,6 +103,9 @@ const UploadEdu = () => {
           )}
 
         </div>
+        {/* <div>
+          <InputEdu/>
+        </div> */}
       </div>
     </div>
   );
