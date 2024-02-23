@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
+
+.ResultTableTeacherRed-bordered-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 25px;
+}
+
+.ResultTableTeacherRed-bordered-table th,
+.ResultTableTeacherRed-bordered-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    height: 10vh;
+    /* สูงเต็มหน้าจอ */
+    text-align: center;
+}
+
+.ResultTableTeacherRed-Texthead {
+    margin-top: 70px;
+    margin-left: 180px;
+    font-family: 'Kanit', sans-serif;
+
+}
+
+.ResultTableTeacherRed-bordered-table th {
+    background-color: #DCCCCC;
+    /* เพิ่มสีเขียวอ่อนให้กับหัวของตาราง */
+    text-align: center;
+}
+
+
+.ResultTableTeacherRed-left {
+    position: relative;
+    left: 170px;
+    margin-top: 20px;
+
+}

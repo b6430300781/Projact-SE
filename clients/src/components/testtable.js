@@ -17,12 +17,12 @@ class RegisTa extends React.Component {
   render() {
     
     return (
-      <div>
+      <div className='testtable-turnleft-all'>
         {/* <RegisResultTable></RegisResultTable> */}
         {/* ตารางภาคปฏิบัติ */}
-        <header className="Texthead">
+        <header className="testtable-Texthead">
         <div>ภาคปฏิบัติ</div>
-        <table className="bordered-table">
+        <table className="testtable-bordered-table">
           <thead>
             <tr>
               <th>   </th>
@@ -41,8 +41,8 @@ class RegisTa extends React.Component {
           <tbody>
             <tr>
               <td>
-                <div className="image-container">
-                  <img src={MyImage} alt=" " className="centered-image" onClick={this.handleDeleteRow} />
+                <div className="testtable-image-container">
+                  <img src={MyImage} alt=" " className="testtable-centered-image" onClick={this.handleDeleteRow} />
                 </div>
               </td>
               <td>01420112</td>
@@ -61,9 +61,9 @@ class RegisTa extends React.Component {
         </header>
 
         {/* ตารางภาคบรรยาย */}
-        <header className="Texthead">
+        <header className="testtable-Texthead">
         <div>ภาคบรรยาย</div>
-        <table className="bordered-table">
+        <table className="testtable-bordered-table">
           <thead>
             <tr>
               <th>   </th>
@@ -82,8 +82,8 @@ class RegisTa extends React.Component {
           <tbody>
             <tr>
               <td>
-                <div className="image-container">
-                  <img src={MyImage} alt=" " className="centered-image" onClick={this.handleDeleteRow} />
+                <div className="testtable-image-container">
+                  <img src={MyImage} alt=" " className="testtable-centered-image" onClick={this.handleDeleteRow} />
                 </div>
               </td>
               <td>03603423-60</td>
@@ -102,9 +102,9 @@ class RegisTa extends React.Component {
         </header>
 
         {/* ตารางผลการลงทะเบียน */}
-        <header className="Texthead">
+        <header className="testtable-Texthead">
           <div>ผลการลงทะเบียนเบื้องต้น</div>
-          <table className="bordered-table">
+          <table className="testtable-bordered-table">
             <thead>
               <tr>
                 <th>   </th>
@@ -123,8 +123,8 @@ class RegisTa extends React.Component {
             <tbody>
               <tr>
                 <td> 
-                  <div className="image-container">
-                  <img src={MyImage} alt=" "className="centered-image"onClick={this.handleDeleteRow}/> 
+                  <div className="testtable-image-container">
+                  <img src={MyImage} alt=" "className="testtable-centered-image"onClick={this.handleDeleteRow}/> 
                   </div></td>
                 <td>03603213-65</td>
                 <td>Algorithm Design and Analysis</td>
@@ -139,8 +139,8 @@ class RegisTa extends React.Component {
               </tr>
               <tr>
                 <td>              
-                  <div className="image-container">
-                  <img src={MyImage} alt=" "className="centered-image"onClick={this.handleDeleteRow}/>
+                  <div className="testtable-image-container">
+                  <img src={MyImage} alt=" "className="testtable-centered-image"onClick={this.handleDeleteRow}/>
                   </div></td>
                 <td>03600390-00</td>
                 <td>Co-operative Education</td>
@@ -155,8 +155,8 @@ class RegisTa extends React.Component {
               </tr>
               <tr>
                 <td>              
-                  <div className="image-container">
-                  <img src={MyImage} alt=" "className="centered-image"onClick={this.handleDeleteRow}/> 
+                  <div className="testtable-image-container">
+                  <img src={MyImage} alt=" "className="testtable-centered-image"onClick={this.handleDeleteRow}/> 
                   </div></td>
                 <td>03603423-60</td>
                 <td>Network Programming</td>
@@ -171,8 +171,8 @@ class RegisTa extends React.Component {
               </tr>
               <tr>
                 <td>             
-                  <div className="image-container">
-                  <img src={MyImage} alt=" "className="centered-image"onClick={this.handleDeleteRow}/> 
+                  <div className="testtable-image-container">
+                  <img src={MyImage} alt=" "className="testtable-centered-image"onClick={this.handleDeleteRow}/> 
                   </div></td>
                 <td>01420114-60</td>
                 <td>Laboratory in Physics</td>

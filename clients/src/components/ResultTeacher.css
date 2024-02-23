@@ -42,3 +42,21 @@ tr:nth-child(even) {
     max-width: 500px; /* Limit the maximum width of the table */
     border-radius: 50px;
 }
+
+
+.ResultTeacher-texthead {
+    margin-bottom: 10px;
+    font-family: 'Kanit';
+    font-size: 18px;
+
+}
+
+.ResultTeacher-nametext {
+    margin-bottom: 10px;
+    font-family: 'Kanit';
+    font-size: 18px;
+    font-weight: 1000;
+
+}
+
+
