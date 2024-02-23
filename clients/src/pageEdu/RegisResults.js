@@ -6,8 +6,7 @@ import NavbarEdu from '../navbar/NavbarEdu';
 function RegisResults() {
   return (
     <div>
-      <NavbarEdu />
-      <HeaderEdu />
+      
       <ResultRegisEdu />
    
     </div>
