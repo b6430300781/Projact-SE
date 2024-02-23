@@ -1,0 +1,50 @@
+import React from 'react';
+import './login.css'
+import { FaUserCircle } from "react-icons/fa";
+import Google from './google';
+
+const Login = () => {
+    const handleButtonLogin = () => {
+        //รอเชื่อมปุ่มlogin
+        console.log('hello');
+    };
+    return (
+        <div className='body-login'>
+            {/* <img   src='https://www.eng.src.ku.ac.th/wp-content/uploads/2022/08/banner_Robot_1024x480_edit-01-1024x480.jpg'/> */}
+            <div className='root-login'>
+
+                <div className='top-login'>
+                    <div className='title-login'>
+                        <div className='logo-login'>
+                            <img className='logoimg-login' src='https://www.eng.src.ku.ac.th/wp-content/uploads/2020/06/eng-ku-logo.png' />
+                        </div>
+                        <div className='text-login'>
+                            <div className='head-login'>วิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์</div>
+                            <div>คณะวิศวกรรมศาสตร์ ศรีราชา</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='center-login'>
+
+                    <div className='boxlogin'>
+
+                        <FaUserCircle className='imgUser-login' />
+                        <p className='textlogin'>ระบบจัดตารางสอน</p>
+                        {/* <button className='btnLogin' onClick={handleButtonLogin} >Sign in with Google</button> */}
+                        <Google/>
+                    </div>
+
+                </div>
+
+                <div className='foot'>
+                    {/* <h>foot</h> */}
+                </div>
+
+            </div>
+
+        </div>
+    );
+};
+
+export default Login;

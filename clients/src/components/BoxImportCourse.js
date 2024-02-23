@@ -3,6 +3,7 @@ import './BoxImportCourse.css'; // นี่คือไฟล์ CSS ของ�
 import { FaFileLines } from "react-icons/fa6";
 import { Link } from 'react-router-dom'; // เพิ่มการนำเข้า Link ที่นี่
 import UploadEdu from '../Wawa/Upload/UploadEdu';
+import InputEdu from '../Wawa/Input/InputEdu';
 
 
 function handleClick(event) {
@@ -72,16 +73,21 @@ function BoxImportCourse() {
                                     <option value="57">ปี 57</option>
                                 </select>
                             </div>
-                            <div>
+                            <div className='test'>
                                 <UploadEdu />
+                                <InputEdu/>
                             </div>
                             <w style={{ color: '#8C3941' }}>เพิ่มรายวิชา</w>
                             <t style={{ color: '#838383' }}>(*ครั้งละ 1 วิชา)</t>
                             <f style={{ color: '#000000' }}>หลักสูตร</f>
                             <a style={{ color: '#000000' }}>หมวดวิชา</a>
                             <c style={{ color: '#000000' }}>หน่วยกิต</c>
-                            <x style={{ color: '#000000' }}>รหัสวิชา</x>
-                            <y style={{ color: '#000000' }}>ชื่อวิชา</y>
+                            {/* <x style={{ color: '#000000' }}>รหัสวิชา</x>
+                            
+                            <y style={{ color: '#000000' }}>ชื่อวิชา</y> */}
+                            <div className='test'>
+                                
+                            </div>
                             <p style={{ color: '#8C3941' }}>รายวิชาที่เปิดสอน</p>
                             
                             <div className='dropdown2'>

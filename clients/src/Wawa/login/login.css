@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
+
+.body-login {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://www.eng.src.ku.ac.th/wp-content/uploads/2022/08/banner_Robot_1024x480_edit-01-1024x480.jpg');
+    background-position: center;
+    background-size: 1550px 1100px;
+    background-repeat: no-repeat;
+    height: 1000px;
+    /* width: 1515px; */
+    
+}
+
+
+.root-login {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(2px);
+}
+
+.top-login {
+    display: flex;
+    padding: 1% 1% 1% 1%;
+    /* background-color: rgba(0, 255, 255, 0.526); */
+}
+
+.title-login {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 45rem;
+    height: 8.5rem;
+    
+}
+
+.logo-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1% 0% 1% 0%;
+}
+
+.logoimg-login {
+    height:  40%;
+    width: 70%;
+}
+
+.text-login {
+    font-family: 'Kanit', sans-serif;
+}
+
+
+.head-login {
+    font-size: x-large;
+    font-weight: bold;
+    color: #8C3941;
+}
+
+.center-login {
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+
+}
+
+.boxlogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 55%;
+    border-radius: 20px;
+    padding: 4.75%;
+}
+
+.imgUser-login{
+    height: 10rem;
+    width: 10rem;
+    color: #8C3941;
+}
+
+.textlogin {
+    font-family: 'Kanit', sans-serif;
+    font-size: x-large;
+}

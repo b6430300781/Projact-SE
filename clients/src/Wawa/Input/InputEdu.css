@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=kanit');
 
 
-.box-Edu-position{
-    padding-top: 10px;
-    margin-left: 100px;
-    width: 350px;
-    background-color: aquamarine;
+.box-Input-position{
+    /* padding-top: 10px; */
+    margin-left: 500px;
+    background-color: black;
 }
 
-.drop-area-Edu{
+/* .drop-area-Edu{
     margin-right: 10px;
     border: 3px dashed #127151;
     text-align: center;
@@ -17,4 +16,4 @@
     font-size: medium;
     height: 160px;
     width: 190px;
-  }
+  } */

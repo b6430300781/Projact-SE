@@ -24,6 +24,7 @@ import AllRoomTeacher from './pageTeacher/AllRoomTeacher';
 import CoursesTaughtTeacher from './pageTeacher/CoursesTaughtTeacher';
 import RoomDetail from './oanchisa/RoomDetail';
 import CheckRoom from './oanchisa/checkRoom';
+import Login from './Wawa/login/login';
 
 
 
@@ -31,31 +32,39 @@ import CheckRoom from './oanchisa/checkRoom';
 
 function App() {
   return (
-    <Router>
-      <div>
-        <NavbarAdmin />
-        <HeaderAdmin />
-        <Routes>
-          <Route exact path="/" element={<AdminNoti />} />
-          <Route exact path="/กำหนดการ" element={<AdminTimeDate />} />
-          <Route exact path="/ข้อมูลผู้ใช้งาน" element={<AdminUser />} />
-        </Routes>
-      </div>
-    </Router>
-
-
     // <Router>
     //   <div>
-    //     <NavbarEdu />
-    //     <HeaderEdu />
     //     <Routes>
-    //       <Route exact path="/" element={<EduNoti />} />
-    //       <Route exact path="/ผลการลงทะเบียน" element={<RegisResults />} />
-    //       <Route exact path="/รายวิชาที่เปิดสอน" element={<CoursesTaught />} />
-    //       <Route exact path="/ห้องเรียนทั้งหมด" element={<AllRoom />} />
+    //       <Route exact path="/" element={<Login/>} />
     //     </Routes>
     //   </div>
     // </Router>
+
+    // <Router>
+    //   <div>
+    //     <NavbarAdmin />
+    //     <HeaderAdmin />
+    //     <Routes>
+    //       <Route exact path="/" element={<AdminNoti />} />
+    //       <Route exact path="/กำหนดการ" element={<AdminTimeDate />} />
+    //       <Route exact path="/ข้อมูลผู้ใช้งาน" element={<AdminUser />} />
+    //     </Routes>
+    //   </div>
+    // </Router>
+
+
+    <Router>
+      <div>
+        <NavbarEdu />
+        <HeaderEdu />
+        <Routes>
+          <Route exact path="/" element={<EduNoti />} />
+          <Route exact path="/ผลการลงทะเบียน" element={<RegisResults />} />
+          <Route exact path="/รายวิชาที่เปิดสอน" element={<CoursesTaught />} />
+          <Route exact path="/ห้องเรียนทั้งหมด" element={<AllRoom />} />
+        </Routes>
+      </div>
+    </Router>
 
     // <Router>
     //   <div>

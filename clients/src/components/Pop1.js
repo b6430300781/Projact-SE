@@ -74,21 +74,21 @@ const Pop = ({ onClose }) => {
   };
 
   return (
-    <div className="Pop" style={{ textAlign: 'left' }}>
+    <div className="Pop-addmin" style={{ textAlign: 'left' }}>
 
-      <div className='out'>
+      <div className='out-addmin'>
         <IoIosClose onClick={onClose} className='btExit' />
       </div>
 
-      <div className='in'>
+      <div className='in-addmin'>
 
-        <div className='left' onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
+        <div className='left-addmin' onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
           <h1 style={{ fontFamily: 'Kanit, sans-serif' ,color: '#838383', fontSize: 'small' }}>
             <span style={{ fontFamily: 'Kanit, sans-serif' , color: '#8C3941' }}>นำเข้ารายชื่อผู้ใช้ฝ่ายการศึกษา</span> (*ครั้งละ 1 file)
           </h1>
 
           <div
-            className="drop-area "
+            className="drop-area-addmin "
             onClick={() => document.querySelector('input[type=file]').click()}
           >
             <CgFileDocument style={{ fontFamily: 'Kanit, sans-serif' , fontSize: '50px', marginTop: '10px' }} />
@@ -114,7 +114,7 @@ const Pop = ({ onClose }) => {
           )}
         </div>
 
-        <div className='right'>
+        <div className='right-addmin'>
 
           <h1 style={{ fontFamily: 'Kanit', color: '#838383', fontSize: 'small' }}>
             <span style={{ color: '#8C3941' }}>เพิ่มรายชื่อผู้ใช้งาน</span> (*ครั้งละ 1 USER)
@@ -168,8 +168,8 @@ const Popup = () => {
       />
 
       {isOpen && (
-        <div className="popup">
-          <div className="popup-content">
+        <div className="popup-addmin">
+          <div className="popup-content-addmin">
             {/* นำเข้าและแสดง Component pop ใน Popup */}
             <Pop onClose={togglePopup} />
           </div>

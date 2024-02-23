@@ -69,15 +69,15 @@ const UploadRoom = () => {
   return (
     <div className="Pop ">
 
-      <div className='in '>
+      <div className='in-Room'>
 
         <div className='box-Room-position ' onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
 
-          <div
-            className="drop-area size-area"
+        <div
+            className="drop-area-Edu size-area"
             onClick={() => document.querySelector('input[type=file]').click()}
           >
-            <CgFileDocument style={{ fontFamily: 'Kanit, sans-serif' , fontSize: '80px', marginTop: '15px' }} />
+            <CgFileDocument style={{ fontSize: '80px', marginTop: '15px' }} />
             <div style={{fontSize: '20px'}}>
               {fileName ? fileName : 'Import file excel'}
             </div>
@@ -94,7 +94,7 @@ const UploadRoom = () => {
             <div style={{ display: 'flex', justifyContent: 'end', marginTop: 'auto' }}>
               {/* <pre>{JSON.stringify(excelData, null, 2)}</pre> */}
 
-              <button onClick={handleButtonClick} className='btn'>
+              <button onClick={handleButtonClick} className='btn-Edu'>
                 <FaRegSave style={{ fontFamily: 'Kanit' ,fontSize: '15px', marginRight: '3px' ,paddingTop:'5px'}} />
                 SAVE
               </button>

@@ -513,3 +513,8 @@ option {
     margin-left: 48px; /* Adjust the space between dropdown2 and dropdown3 */
     display: inline-block;
 }
+
+.test{
+    display: flex;
+    flex-wrap: wrap;
+}
