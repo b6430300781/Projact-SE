@@ -39,3 +39,56 @@
     margin-top: 110px;
   }
 
+
+  .testtable-buttonchange{
+    position: absolute; /* ตั้งค่าเป็น absolute เพื่อให้สามารถใช้ right property ได้ */
+    right: 18%;
+    margin-top: 20px;
+
+  }
+
+
+  .testtable-inputNumNisit{
+    width: 80px; /* Adjust the width as needed */
+    height: 20px;
+    padding: 5px; /* Adjust padding as needed */
+    font-size: 12px; /* Adjust font size as needed */
+    border: 1px solid #000000; /* Ensure the border is always visible */
+    border-radius: 4px; /* Border radius */
+    background-color: #fff; /* Background color */
+    color: #000; /* Text color */
+    font-family: 'Kanit';
+  
+  
+  }
+  
+  .testtable-dropdownposition{
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+  }
+  
+  .testtable-dropdown{
+    width: 80px; /* Adjust the width as needed */
+    height: 30px;
+    padding: 5px; /* Adjust padding as needed */
+    font-size: 12px; /* Adjust font size as needed */
+    border: 1px solid #000000; /* Ensure the border is always visible */
+    border-radius: 4px; /* Border radius */
+    background-color: #fff; /* Background color */
+    color: #000; /* Text color */
+    font-family: 'Kanit';
+    
+  }
+
+
+  .RegisResultTable-container {
+    position: relative;
+    width: 1028px;
+    height: 338px;
+    top: 144px;
+    left: 345px;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+  

@@ -2,8 +2,33 @@ import React, { useState } from "react";
 import "./RegisResultTable.css"; // Import CSS file for table styling
 import MyImage from "../assets/Vector.png";
 import RegisTa from './testtable';
+// import SearchBar from "./SearchBar";
+import './SearchBar.css';
+import searchIcon from '../assets/searchbar.svg'; // Import รูปไอคอน
+
 
 function RegisResultTable() {
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // เพิ่มโค้ดที่ต้องการให้ทำงานหลังจากการโหลดหน้าเว็บเสร็จสมบูรณ์ที่นี่
+    var searchButton = document.getElementById('searchButton');
+    var saveButton = document.getElementById('saveButton');
+
+    if (searchButton) {
+      searchButton.addEventListener('click', function () {
+        var searchText = document.getElementById('searchInput').value.trim();
+        console.log('คำค้นหา:', searchText);
+        // ทำสิ่งที่ต้องการกับ searchText ที่ได้รับจากผู้ใช้
+      });
+    }
+
+    if (saveButton) {
+      saveButton.addEventListener('click', function () {
+        console.log("คุณกำลังคลิกปุ่มบันทึก");
+        // สามารถเพิ่มโค้ดอื่น ๆ ต่อจากนี้เพื่อทำงานตามที่ต้องการ
+      });
+    }
+  });
   // สร้างข้อมูลตาราง
   const tableData = [
     66,
@@ -51,8 +76,41 @@ function RegisResultTable() {
 
   return (
     <div>
+      <div class="searchBar-texthead">
+        <p1>ลงทะเบียนรายวิชา</p1>
+      </div>
+      <div>
+        <div class="searchBar-container">
+          <div>
+            <div>
+              <div className="RegisResultTable-searchbar-changposition">
+                <div class="searchBar-subjectBox">รายวิชา</div>
+                <div class="searchBar-searchBox">
+                  <input id="searchInput" type="text" placeholder="รหัสวิชา,ชื่อวิชา" /> {/* เพิ่ม id ให้กับ input */}
+                  <button id="searchButton">
+                    <img src={searchIcon} alt="Search Icon" /> {/* เพิ่มรูปไอคอน */}
+                  </button>
+                </div>
+              </div>
+
+              <div class="RegisResultTable-buttonchange">
+                <div class="RegisResultTable-saveButton">
+                  <button id="saveButton">
+                    <p class="RegisResultTable-saveButtontext">บันทึก</p></button>
+                </div>
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <SearchBar></SearchBar> */}
+
       <div className="toptap">
-        <h className="DateAdmin-text">ลงทะเบียนรายวิชา</h>
+        {/* <h className="DateAdmin-text">ลงทะเบียนรายวิชา</h> */}
         <div className="text5">
           <a>หลักสูตร</a>
           <a>ภาคการศึกษา</a>
@@ -121,9 +179,9 @@ function RegisResultTable() {
 
           {" "}
           {/* เพิ่มกล่องสี่เหลี่ยม */}
-          
+
         </div>
-        
+
 
       </div>
       <RegisTa></RegisTa>
