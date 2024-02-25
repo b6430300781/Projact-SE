@@ -70,6 +70,7 @@
   border-radius: 4px; /* Border radius */
   background-color: #fff; /* Background color */
   color: #000; /* Text color */
+  font-family: 'Kanit';
 }
 .dropdown15 select {
   width: 80px; /* Adjust the width as needed */
@@ -80,6 +81,7 @@
   border-radius: 4px; /* Border radius */
   background-color: #fff; /* Background color */
   color: #000; /* Text color */
+  font-family: 'Kanit';
 }
 .dropdown16 select {
   width: 80px; /* Adjust the width as needed */
@@ -90,6 +92,7 @@
   border-radius: 4px; /* Border radius */
   background-color: #fff; /* Background color */
   color: #000; /* Text color */
+  font-family: 'Kanit';
 }
 .dropdown17 select {
   width: 80px; /* Adjust the width as needed */
@@ -100,6 +103,7 @@
   border-radius: 4px; /* Border radius */
   background-color: #fff; /* Background color */
   color: #000; /* Text color */
+  font-family: 'Kanit';
 }
 .dropdown18 select {
   width: 80px; /* Adjust the width as needed */
@@ -110,6 +114,7 @@
   border-radius: 4px; /* Border radius */
   background-color: #fff; /* Background color */
   color: #000; /* Text color */
+  font-family: 'Kanit';
 }
 
 /* Style for dropdown menu options */
@@ -148,5 +153,49 @@ option {
 .dropdown18 {
   margin-left: 175px; /* Adjust left margin */
   display: inline-block; /* Change to block to move below text */
+}
+
+.RegisResultTable-container {
+  position: relative;
+  width: 1028px;
+  height: 338px;
+  top: 144px;
+  left: 345px;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+
+.RegisResultTable-saveButton button {
+  width: 75px; /* ลดความกว้างเพื่อให้พื้นที่สำหรับขอบเพียงพอ */
+  height: 28px; /* ลดความสูงเพื่อให้พื้นที่สำหรับขอบเพียงพอ */
+  padding: 2px; /* เพิ่มขอบฟิกซ์สำหรับปุ่ม */
+  border: 5px solid #127151; /* ขอบมน 5px สี #127151 */
+  border-radius: 5px;
+  background-color: #127151; /* พื้นหลังสี #127151 */
+  transition: transform 0.2s; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนแปลงเกิดขึ้นเรื่อยๆ */
+}
+
+.RegisResultTable-saveButton button:active {
+  transform: scale(0.95); /* เพิ่มการยืดเหยียดเล็กน้อยเมื่อมีการคลิก */
+}
+
+.RegisResultTable-saveButtontext{
+  color: white; /* สีตัวอักษรขาว */
+  font-size: 14px; /* ขนาดตัวอักษร */
+  font-family: 'Kanit';
+  margin-top: -4px;
+
+}
+
+.RegisResultTable-buttonchange{
+  margin-left: 90%;
+  margin-top: 20%;
+  
+
+}
+
+.RegisResultTable-searchbar-changposition{
+  margin-left: 7%;
 }
 

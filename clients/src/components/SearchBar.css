@@ -1,0 +1,69 @@
+/* SearchBar.css */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
+
+.searchBar-container {
+    position: relative;
+    width: 1100px;
+    height: 338px;
+    top: 20px;
+    left: 345px;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.searchBar-searchBox {
+    position: relative;
+    display: flex;
+    width: 80%;
+    align-items: center; /* จัดกล่อง input และ icon ตามแนวดิ่ง */
+}
+
+.searchBar-searchBox input {
+    flex-grow: 1;
+    width: 799px;
+    height: 35px;
+    background-color: #ffffff;
+    font-family: 'Kanit', sans-serif;
+    color: #000000;
+    border: 0.5px solid #000;
+    border-radius: 5px;
+    padding-right: 30px; /* ระยะห่างของ input กับ icon */
+}
+
+.searchBar-searchBox button {
+    position: absolute;
+    right: 5px; /* ปรับตำแหน่งให้อยู่ขวาสุดของ input */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.searchBar-searchBox button img {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+.searchBar-subjectBox {
+    font-family: 'Kanit', sans-serif;
+    font-size: 15px;
+}
+
+
+/* .searchBar-all-left{
+    position: relative;
+    left: 300px;
+    margin-top: 110px;
+} */
+
+.searchBar-texthead {
+    margin-top: 130px;
+    margin-left: 350px;
+    font-family: 'Kanit';
+    font-size: 18px;
+    font-weight: 1000;
+
+
+}
+
