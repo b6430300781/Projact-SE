@@ -3,10 +3,10 @@ import "./HeaderAdmin.css";
 
 const HeaderAdmin = () => {
   return (
-    <header className="header">
-      <img src="/noti.png" alt="Notification Icon" className="notification-icon" />
-      <span className="admin-text">admin</span>
-      <img src="/logout.png" alt="Logout Icon" className="logout-icon" />
+    <header className="HeaderAdmin-header">
+      <img src="/noti.png" alt="Notification Icon" className="HeaderAdmin-notification-icon" />
+      <span className="HeaderAdmin-HeaderAdmin-admin-text">admin</span>
+      <img src="/logout.png" alt="Logout Icon" className="HeaderAdmin-logout-icon" />
     </header>
   );
 };

@@ -36,7 +36,7 @@ tr:nth-child(even) {
 
 /* Style the container */
 .table-container {
-    margin-top: 100px; /* Add margin to the top */
+    margin-top: 120px; /* Add margin to the top */
     margin-left: 350px; /* Center the table horizontally */
     margin-right: auto; /* Center the table horizontally */
     max-width: 500px; /* Limit the maximum width of the table */
@@ -47,14 +47,14 @@ tr:nth-child(even) {
 .ResultTeacher-texthead {
     margin-bottom: 10px;
     font-family: 'Kanit';
-    font-size: 18px;
+    font-size: 20px;
 
 }
 
 .ResultTeacher-nametext {
     margin-bottom: 10px;
     font-family: 'Kanit';
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 1000;
 
 }

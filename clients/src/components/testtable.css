@@ -3,6 +3,7 @@
   border-collapse: collapse;
   width: 80%;
   margin-top: 25px;
+  background: white;
 }
 
 .testtable-bordered-table th, .testtable-bordered-table td {
@@ -65,8 +66,10 @@
   .testtable-dropdownposition{
     display: flex;
     justify-content: center;
-    justify-content: center;
   }
+
+  
+
   
   .testtable-dropdown{
     width: 80px; /* Adjust the width as needed */
@@ -78,6 +81,7 @@
     background-color: #fff; /* Background color */
     color: #000; /* Text color */
     font-family: 'Kanit';
+    margin: 0px 0px 0px 0px;
     
   }
 
@@ -92,3 +96,19 @@
     background-color: #F5F5F5;
   }
   
+
+  .bg-color-grey{
+    background-color: #F5F5F5;
+
+  }
+
+/* 
+  .box-table-container{
+    position: relative;
+    width: auto;
+    height: auto;
+    top: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+
+  } */
