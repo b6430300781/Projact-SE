@@ -1,8 +1,9 @@
 import React from 'react';
 import './testtable.css'; // Import CSS file for table styling
 import MyImage from "../assets/Vector.png";
-import RegisResultTable from './RegisResultTable';
+// import RegisResultTable from './RegisResultTable';
 import InputNumNisit from './compoRegisCourse';
+import TimePickerTa from './Timepicker';
 
 class RegisTa extends React.Component {
 
@@ -50,6 +51,7 @@ class RegisTa extends React.Component {
 
 
 
+
     });
 
     return (
@@ -59,6 +61,7 @@ class RegisTa extends React.Component {
         {/* ตารางภาคปฏิบัติ */}
         <header className="testtable-Texthead">
           <div>ภาคปฏิบัติ</div>
+          <div className='box-table-container'>
           <table className="testtable-bordered-table">
             <thead>
               <tr>
@@ -69,7 +72,7 @@ class RegisTa extends React.Component {
                 <th>lab</th>
                 <th>sec</th>
                 <th>จำนวนนิสิต</th>
-                <th>ชั้นปี</th>
+                <th>สาขา,ชั้นปี</th>
                 <th>วัน</th>
                 <th>เวลา</th>
                 <th>ห้องlab</th>
@@ -100,6 +103,7 @@ class RegisTa extends React.Component {
                   <div className='testtable-dropdownposition'>
                     <select className='testtable-dropdown'>
                       {/* 2. Dropdown เลือกวัน */}
+                      <option value=""></option>
                       <option value="Monday">Mon</option>
                       <option value="Tuesday">Tue</option>
                       <option value="Wednesday">Wed</option>
@@ -110,11 +114,14 @@ class RegisTa extends React.Component {
                     </select>
                   </div>
                 </td>
-                <td></td>
+                <td>
+                  <TimePickerTa />
+                </td>
                 <td>
                   <div className='testtable-dropdownposition'>
                     <select className='testtable-dropdown'>
                       {/* 3. Dropdown เลือกห้อง */}
+                      <option value=""></option>
                       <option value="Room1">ห้อง 1</option>
                       <option value="Room2">ห้อง 2</option>
                       <option value="Room3">ห้อง 3</option>
@@ -126,6 +133,9 @@ class RegisTa extends React.Component {
               </tr>
             </tbody>
           </table>
+            
+          </div>
+          
         </header>
         <div>
           <div class="testtable-buttonchange">
@@ -179,6 +189,7 @@ class RegisTa extends React.Component {
                   <div className='testtable-dropdownposition'>
                     <select className='testtable-dropdown'>
                       {/* 2. Dropdown เลือกวัน */}
+                      <option value=""></option>
                       <option value="Monday">Mon</option>
                       <option value="Tuesday">Tue</option>
                       <option value="Wednesday">Wed</option>
@@ -190,7 +201,15 @@ class RegisTa extends React.Component {
                   </div>
 
                 </td>
-                <td> </td>
+                <td>
+                  <div>
+                    <div>
+                      <TimePickerTa />
+                    </div>
+
+                  </div>
+
+                </td>
                 <td> </td>
               </tr>
             </tbody>

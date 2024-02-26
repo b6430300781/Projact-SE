@@ -29,9 +29,9 @@ function ResultTeacher() {
         <div>
 
             <div className="table-container">
-    
-                    <div><p className="ResultTeacher-texthead">ตารางสอนของ อาจารย์: <span className="ResultTeacher-nametext">สมเกียรติ  ใจดี</span> </p></div>
-            
+
+                <div><p className="ResultTeacher-texthead">ตารางสอนของ อาจารย์: <span className="ResultTeacher-nametext">สมเกียรติ  ใจดี</span> </p></div>
+
                 <table>
                     <thead>
                         <tr>

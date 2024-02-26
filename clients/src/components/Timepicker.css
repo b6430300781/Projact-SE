@@ -1,0 +1,37 @@
+.Timepicker-custom-date-picker {
+    font-family: 'Kanit';
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+    width: 120px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid #000;
+  }
+
+  .custom-time-picker2 {
+    font-family: 'Kanit';
+    font-size: 12px;
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin-top: 8px;
+    margin-left: 15px;
+  }
+  .custom-time-picker3 {
+    font-family: 'Kanit';
+    font-size: 12px;
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin-top: 8px;
+    margin-left: 18px;
+  }
+  
+  .timepicker-text{
+    font-family: 'Kanit';
+
+  }

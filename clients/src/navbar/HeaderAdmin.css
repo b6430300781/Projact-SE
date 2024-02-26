@@ -1,32 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
 
-.header {
+.HeaderAdmin-header {
     background-color: #d9d9d9;
     text-align: right;
     padding: 20px;
     font-size: 30px;
     height: 35px;
-    width: 99%; /* Change width to 100% */
-    position: fixed; /* Use fixed positioning */
+    width: 99%; 
+    position: fixed; 
     top: 0;
-    left: 0; /* Align header to the left edge of the viewport */
+    left: 0; 
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Align items to the end (right) */
+    justify-content: flex-end; 
+    z-index: 2;
 }
   
-.notification-icon {
+.HeaderAdmin-notification-icon {
     width: 45px;
     height: 45px;
     margin-right: 10px; /* Change margin-left to margin-right */
 }
   
-.logout-icon {
+.HeaderAdmin-logout-icon {
     width: 45px;
     height: 45px;
     margin-right: 10px; /* Change margin-left to margin-right */
 }
 
-.admin-text{
+.HeaderAdmin-admin-text{
     font-family: 'Kanit', sans-serif;
 }

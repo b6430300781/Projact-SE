@@ -31,13 +31,13 @@
   .right-addmin{
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     margin-left: 20px;
   }
   
   .out-addmin{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
   
   .btExit{

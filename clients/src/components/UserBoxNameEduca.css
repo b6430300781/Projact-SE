@@ -27,7 +27,7 @@
 
 .UserBoxNameEduca-buttonadd{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin: 20px;
     padding-top: 10px;
 }
