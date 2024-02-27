@@ -7,7 +7,7 @@
 }
 
 .testtable-bordered-table th, .testtable-bordered-table td {
-  border: 1px solid black;
+  border: 1px solid #828282;
   padding: 8px;
   text-align: left;
 }

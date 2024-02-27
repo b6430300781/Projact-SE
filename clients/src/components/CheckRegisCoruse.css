@@ -6,7 +6,7 @@
 }
 
 .CheckRegisCoruse-bordered-table th, .CheckRegisCoruse-bordered-table td {
-  border: 1px solid black;
+  border: 1px solid #828282;
   padding: 8px;
   text-align: left;
   height: 10vh; /* สูงเต็มหน้าจอ */

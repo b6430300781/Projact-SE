@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './ResultTech.css';
 import CheckRegisCoruse from './CheckRegisCoruse';
-import newSearchIcon from '../assets/newsearch.png';
+//import newSearchIcon from '../assets/newsearch.png';
 
 function ResultTeach() {
     const tableData = [2566, 2565, 2564, 2563, 2562, 2561, 2560, 2559, 2558, 2557, 'ภาคต้น', 'ภาคปลาย', 'ภาคฤดูร้อน'];

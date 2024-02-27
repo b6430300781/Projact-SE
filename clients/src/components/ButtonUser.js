@@ -21,7 +21,7 @@ function ButtonUser() {
     return (
         <div className="bg-gray">
             <div className="turnleft-all">
-                <h1 className='ButtonUser-textfont' >ข้อมูลผู้ใช้งาน</h1>
+                <h1 className='DateAdmin-text' >ข้อมูลผู้ใช้งาน</h1>
                 <div className='ButtonUser-buttonbox'>
                     <button className='ButtonUser-buttonAjarn' onClick={() => {
                         setTab(0);

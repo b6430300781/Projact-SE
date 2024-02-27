@@ -10,10 +10,10 @@ table {
 
 /* Style table header cells */
 th {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     text-align: center; /* Center-align text */
     padding: 5px; /* Increase padding */
-    border: 1px solid #ddd;
+    border: 1px solid #828282;
     font-weight: 400;
     font-size: 10px;
     font-family: 'Kanit', sans-serif;
@@ -21,7 +21,8 @@ th {
 
 /* Style table data cells */
 td {
-    border: 1px solid #ddd;
+    background-color: white;
+    border: 1px solid #828282;
     padding: 10px; /* Increase padding */
     text-align: center; /* Center-align text */
     font-weight: 400;
