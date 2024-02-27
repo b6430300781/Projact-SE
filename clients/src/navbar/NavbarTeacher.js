@@ -11,7 +11,7 @@ const NavbarTeacher = () => {
     <nav className="navbar">
       <div className="navbar-left">
         <img src="profile.png" alt="" />
-        <span>:อาจารย์<br />สมเกียรติ ใจดี</span>
+        <span>อาจารย์<br />: สมเกียรติ ใจดี</span>
       </div>
       <div className='nav-turnlefts'>
         <ul className="navbar-nav">

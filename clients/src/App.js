@@ -31,6 +31,7 @@ import CheckRoom from './oanchisa/checkRoom';
 
 function App() {
   return (
+    // =================================== ADMIN =========================================
     // <Router>
     //   <div>
     //     <NavbarAdmin />
@@ -52,10 +53,11 @@ function App() {
     //   </div>
     // </Router>
 
+    // =================================== ADMIN =========================================
     // <Router>
     //   <div>
     //     <NavbarAdmin />
-    //     <HeaderAdmin />
+    //     <HeaderTeacher /> {/* <HeaderAdmin /> */}
     //     <Routes>
     //       <Route exact path="/" element={<AdminNoti />} />
     //       <Route exact path="/กำหนดการ" element={<AdminTimeDate />} />
@@ -64,11 +66,11 @@ function App() {
     //   </div>
     // </Router>
 
-
+    // =================================== EDU =========================================
     // <Router>
     //   <div>
     //     <NavbarEdu />
-    //     <HeaderEdu />
+    //     <HeaderTeacher /> {/* <HeaderEdu /> */}
     //     <Routes>
     //       <Route exact path="/" element={<EduNoti />} />
     //       <Route exact path="/ผลการลงทะเบียน" element={<RegisResults />} />
@@ -78,6 +80,7 @@ function App() {
     //   </div>
     // </Router>
 
+    // =================================== TEACHER =========================================
     <Router>
       <div>
         <NavbarTeacher />

@@ -6,7 +6,7 @@ const NavbarEdu = () => {
     <nav className="navbar">
       <div className="navbar-left">
         <img src="profile.png" alt="" />
-        <span>:ฝ่ายการศึกษา<br />######</span>
+        <span>ฝ่ายการศึกษา<br />: ######</span>
       </div>
       <div className='nav-turnlefts'>
         <ul className="navbar-nav">

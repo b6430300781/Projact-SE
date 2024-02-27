@@ -9,7 +9,7 @@ const NavbarAdmin = () => {
 
       <div className="navbar-left">
         <img src="profile.png" alt="" />
-        <span>:admin<br />######</span>
+        <span>admin<br />: ######</span>
       </div>
 
       <div className='nav-turnlefts'>
