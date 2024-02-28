@@ -23,7 +23,7 @@ function RoomDetail() {
   return (
     <div className='turnleft-all'>
       <h className='DateAdmin-text'>ห้องเรียนที่สามารถเปิดสอนได้</h>
-      <div className="course-table">
+      <div className="course-table" style={{marginTop:'10px'}}>
         <div className="row">
           <h3>ตึก</h3>
           {roomData.map((item, index) => (

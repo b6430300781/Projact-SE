@@ -1,4 +1,4 @@
-  .box{
+  .box-noti{
       width: 1070px; 
       height: 150px; 
       background-color: white; 
@@ -6,13 +6,15 @@
       border-style: dashed;
       border-radius:40px;
       position: absolute;
-      /* left: 370px;
-      top: 100px; */
       align-items: center;
       justify-content: center;
       flex-direction: row;
       cursor: pointer;
+      flex-grow: 1; /* ให้กล่องขยายตามพื้นที่ที่เหลือ */
+      flex-shrink: 1; /* ให้กล่องหดตามพื้นที่ที่มีอยู่ */
+      flex-basis: 0; /* กำหนดขนาดพื้นฐานของกล่องเป็น 0 เพื่อให้มีขนาดเริ่มต้นเท่ากับส่วนเฉพาะของ flex-grow */
   }
+
   
   .plus {
     width: 70px;
@@ -33,11 +35,11 @@
     font-size: 16px; 
   }
   
-  .popup {
+  .popup-noti {
     position: fixed; /* ให้ popup อยู่ตรงกลางของหน้าจอ */
-    top: 50%; /* จุดเริ่มต้นของ popup ที่ตรงกลางของหน้าจอ */
-    left: 50%; /* จุดเริ่มต้นของ popup ที่ตรงกลางของหน้าจอ */
-    transform: translate(50%, 5%); /* ปรับตำแหน่งของ popup ให้อยู่ตรงกลาง */
+    top: 10%; /* จุดเริ่มต้นของ popup ที่ตรงกลางของหน้าจอ */
+    left: 25%; /* จุดเริ่มต้นของ popup ที่ตรงกลางของหน้าจอ */
+    
     background-color: white;
     padding: 100px;
     border: 1px solid #127151;
@@ -51,7 +53,7 @@
   }
   
   
-  .popup button {
+  .popup-buttonnoti {
     position: absolute;
     padding: 8px 16px;
     bottom: 100px; /* กำหนดระยะขอบล่าง */
@@ -62,11 +64,7 @@
     cursor: pointer;
     bottom: 20px; /* กำหนดระยะขอบล่าง */
     right: 20px; /* กำหนดระยะขอบขวา */
-  }
-  
-  .input {
-    width: 550px;
-    height: 400px;
+    flex-direction: row;
   }
   
   .custom-input {
@@ -78,30 +76,23 @@
     text-align: left;
     overflow-wrap: break-word;
   }
+
   
-  .custom-input::placeholder {
-    vertical-align: top; /* กำหนดให้ cursor อยู่ที่มุมซ้ายบนของกล่อง */
-  }
-  
-  .button-container button:hover{
-    margin-top: 10px; /* ระยะห่างระหว่างปุ่ม */
-    background-color: rgb(128, 128, 128);
-  }
-  
-  .btn-primary {
+  .btn-primary-noti {
     background-color: #127151;
+    margin-right:30px
   }
   
-  .btn-primary:active {
+  .btn-primary-noti:active {
     background-color: #127151 !important;
   }
   
-  .btn-secondary {
+  .btn-secondary-noti {
     background-color: rgb(255, 0, 0);
-    margin-right: 630px;
+    margin-right:520px;
   }
 
-  .delete-icon {
+  .delete-icon-noti {
   cursor: pointer;
   color: red; /* สีของไอคอนลบ */
   font-size: 20px; /* ขนาดของไอคอนลบ */
@@ -113,3 +104,16 @@
   left: 350px;
   margin-top: 128px;
 }
+
+.false-noti{
+  display: flex;
+  justify-content: end;;
+}
+
+.form-control {
+  width: 550px; /* กำหนดความกว้าง */
+  height: 400px; /* กำหนดความสูง */
+  overflow-wrap: break-word; /* หรือใช้ word-wrap: break-word; ก็ได้ */
+  word-wrap: break-word; /* ใส่แบบนี้เพื่อรองรับเบราว์เซอร์ที่เก่า */
+}
+
