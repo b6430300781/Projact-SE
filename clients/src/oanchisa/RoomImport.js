@@ -81,7 +81,7 @@ function RoomImport() {
         </div>
         <div className="column2">
           {/* ใช้ Link เพื่อเปลี่ยนหน้า */}
-          <Link to="/2566/ต้น" className="file-button" onClick={handleClick}>
+          <Link to="/2566_ต้น" className="file-button" onClick={handleClick}>
             <FaFileLines style={{ fontSize: '35px', color: 'black' }} />
           </Link>
         </div>

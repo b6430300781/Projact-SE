@@ -205,25 +205,27 @@ app.get('/time', (req, res) => {
     });
   });
 
-  app.delete('/box1/:inputValue', (req, res) => {
-    const inputValue = req.params.inputValue;
+  app.delete('/box1/:boxId', (req, res) => {
+    const boxId = req.params.boxId;
     // ทำการลบข้อมูลในฐานข้อมูล MySQL ตามดัชนีที่รับมาจาก params
     // ส่งคำตอบกลับไปว่าลบข้อมูลสำเร็จหรือไม่
 
-    if(!inputValue){
-      return res.status(400).json({ error: 'error'});
+    if(!boxId){
+        return res.status(400).json({ error: 'error'});
     }
   
-    db.query("DELETE FROM `box` WHERE id=?", [inputValue], (err, result) => {
-      if (err) {
-        console.log(err);
-        res.status(500).json({ error: 'Internal Server Error' });
-      } else {
-        res.json({ success: true, message: 'Data saved successfully' });
-        console.log("ลบสำเร็จ")
-      }
+    db.query("DELETE FROM `box` WHERE id=?", [boxId], (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).json({ error: 'Internal Server Error' });
+        } else {
+            res.json({ success: true, message: 'Data saved successfully' });
+            console.log("ลบสำเร็จ")
+        }
     });
-  });
+});
+
+
   
 app.get('/room', (req, res) => {
     db.query("SELECT * FROM room", (err, result) => {

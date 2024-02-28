@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import plus from '../assets/plus.svg';
 import './BoxNoti.css';
 import axios from 'axios';
@@ -7,134 +7,160 @@ function BoxNoti2() {
     const [isPopupVisible, setPopupVisible] = useState(false);
     const [inputValue, setInputValue] = useState('');
     const [boxes, setBoxes] = useState([]);
-  
+    const [isDataSaved, setDataSaved] = useState(false);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('http://localhost:3001/box');
+            setBoxes(response.data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
     const handleButtonClick = () => {
-      setPopupVisible(true);
+        setPopupVisible(true);
     };
-  
+
     const handlePopupClose = () => {
-      setPopupVisible(false);
-      setInputValue('');
-    };
-  
-    const handleSaveButtonClick = async() => {
-      try {
-        const response = await axios.post('http://localhost:3001/box1', { inputValue });
-        const savedData = response.data; // ข้อมูลที่ได้รับจากเซิร์ฟเวอร์
-        console.log('Saved value:', savedData);
-        setBoxes((prevBoxes) => [{ text: inputValue }, ...prevBoxes]);
+        setPopupVisible(false);
         setInputValue('');
-        handlePopupClose();
-      } catch (error) {
-        console.error('Error saving data:', error);
-        // ในกรณีเกิดข้อผิดพลาดในการบันทึกข้อมูล
-        // คุณสามารถทำการจัดการข้อผิดพลาดตามที่คุณต้องการได้ที่นี่
-      }
     };
-  
+
+    const handleSaveButtonClick = async () => {
+        try {
+            const response = await axios.post('http://localhost:3001/box1', { inputValue });
+            const savedData = response.data;
+            console.log('Saved value:', savedData);
+            setInputValue('');
+            handlePopupClose();
+            setPopupVisible(false);
+            setDataSaved(true);
+        } catch (error) {
+            console.error('Error saving data:', error);
+        }
+    };
+
     const handleInputChange = (event) => {
-      setInputValue(event.target.value);
+        setInputValue(event.target.value);
     };
-  
+
     const handleFormSubmit = (event) => {
-      event.preventDefault();
-      console.log('Submitted Value:', inputValue);
-      handleSaveButtonClick();
-      handlePopupClose();
-      setInputValue('');
+        event.preventDefault();
+        console.log('Submitted Value:', inputValue);
+        handleSaveButtonClick();
+        setInputValue('');
     };
-  
-    const handleDeleteBox = async (index) => {
-    try {
-      // ส่งคำร้องขอลบข้อมูลไปยังเซิร์ฟเวอร์
-      await axios.delete(`http://localhost:3001/box1/${index}`);
-      
-      // หลังจากลบข้อมูลเรียบร้อยแล้ว อัปเดต UI โดยการลบกล่องที่ถูกคลิกออกไป
-      setBoxes((prevBoxes) => prevBoxes.filter((_, i) => i !== index));
-    } catch (error) {
-      console.error('Error deleting data:', error);
-      // ในกรณีเกิดข้อผิดพลาดในการลบข้อมูล
-      // คุณสามารถทำการจัดการข้อผิดพลาดตามที่คุณต้องการได้ที่นี่
-    }
-  };
-  
+
+    const handleDeleteBox = async (boxId) => {
+        try {
+            await axios.delete(`http://localhost:3001/box1/${boxId}`);
+            setBoxes((prevBoxes) => prevBoxes.filter((box) => box.id !== boxId));
+            setDataSaved(true);
+        } catch (error) {
+            console.error('Error deleting data:', error);
+        }
+    };
+    
+    
+
     const newBoxStyle = {
-      width: '1070px',
-      height: '150px',
-      backgroundColor: '#127151',
-      border: '1px solid #127151',
-      borderStyle: 'dashed',
-      borderRadius: '40px',
-      display: 'flex',
-      alignItems: 'center', // เพิ่มบรรทัดนี้
-      position: 'relative',
-      top: '10px', // หรือค่าที่ต้องการให้ top คงที่
-      left: '136px',
-      flexDirection: 'row',
-      margin: '10px',
+        width: '1070px',
+        height: 'auto',
+        backgroundColor: '#127151',
+        border: '1px solid #127151',
+        borderStyle: 'dashed',
+        borderRadius: '40px',
+        display: 'flex',
+        marginTop:'5px',
+        marginLeft:'10px',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        top: '170px',
+        left: '44px',
+        flexDirection: 'row',
+        margin: '10px',
     };
-  
-    const containerStyle = {
-      display: 'flex',
-      flexDirection: 'column-reverse', // สลับลำดับของคอลัมน์
-      alignItems: 'center',
-    };
-    return(
+
+    return (
         <>
-          <div className='turnleft-all'>
-              <h className='DateAdmin-text' >สร้างประกาศ</h>
-              <button className='box' onClick={handleButtonClick} style={{ marginTop: '35px', marginLeft:'-40px' }}>
-                  <img src={plus} className="plus" alt="plus" />
-                  <p className="text-under-img">เพิ่มประกาศใหม่</p>
-              </button>
-          </div>
-          
-          {isPopupVisible && (
-              <div className="popup" style={{ width: '550px', height: '420px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                <form onSubmit={handleFormSubmit} style={{ width: '100%' }}>
-                  <div className="form-group" style={{ width: '100%' }}>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="inputField"
-                      value={inputValue}
-                      onChange={handleInputChange}
-                      style={{ width: '550px', height: '360px', wordWrap: 'break-word' }}
-                    />
-                    <div className="button-container">
-                      <button type="submit" className="btn btn-primary" onClick={handleSaveButtonClick}>Submit</button>
-                      <button onClick={handlePopupClose} className="btn btn-secondary ml-auto" >Cancel</button>
+        <div>
+            <div className='turnleft-all'>
+                <h className='DateAdmin-text'>สร้างประกาศ</h>
+                <button className='box-noti' onClick={handleButtonClick} style={{ marginTop: '35px', marginLeft: '-40px' }}>
+                    <img src={plus} className="plus" alt="plus" />
+                    <p className="text-under-img">เพิ่มประกาศใหม่</p>
+                </button>
+                <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
+                {boxes.map((box) => (
+                    <div key={box.id} className='box-noti' style={newBoxStyle}>
+                        <span
+                            className="delete-icon-noti"
+                            style={{ position: 'absolute', cursor: 'pointer', color: 'white' }}
+                            onClick={() => {
+                                if (window.confirm('คุณแน่ใจหรือไม่ว่าต้องการลบข้อมูลนี้?')) {
+                                    handleDeleteBox(box.id);
+                                }
+                            }}
+                        >
+                        </span>
+                        <p>{box.info}</p>
+                        <div>
+                            <div
+                                style={{ position: 'absolute', 
+                                cursor: 'pointer', 
+                                top: '5px',
+                                color: 'white', 
+                                right: '5px' ,
+                                backgroundColor:'#127151' }}
+                                onClick={() => {
+                                    if (window.confirm('คุณแน่ใจหรือไม่ว่าต้องการลบข้อมูลนี้?')) {
+                                        handleDeleteBox(box.id);
+                                    }
+                                }}
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </form>
-              </div>
-            )}
-            <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
-            {boxes.map((box, index) => (
-  
-              <div key={box.id} className='box' style={newBoxStyle}>
-                {/* ไอคอนลบ */}
-                <span
-                  className="delete-icon"
-                  style={{ position: 'absolute', cursor: 'pointer', color: 'white'}}
-                  onClick={() => handleDeleteBox(index)}
-                >
-                  {/* ตัวอย่าง SVG สีแดง */}
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </span>
-                <p>{box.text}</p>
-              </div>
-            ))}
-          {/* แสดงข้อความที่ได้จาก input หลังจากกด Submit */}
-          {inputValue && !boxes.length && (
-            <div className='box'>
-                 {/* style={{ ...newBoxStyle, color: 'red' }} */}
-              <p>{inputValue}</p>
+                ))}
+
             </div>
-          )}
+            </div>
+
+          {isPopupVisible && (
+              <div className='popup'>
+                <div className='false-noti'>
+                <div className="popup-noti" style={{ width: '550px', height: '420px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                    <form onSubmit={handleFormSubmit} style={{ width: '100%' }}>
+                        <div className="form-group" style={{ width: '100%' }}>
+                        <textarea
+                          className="form-control"
+                          id="inputField"
+                          value={inputValue}
+                          onChange={handleInputChange}
+                      />
+
+                            <div className="popup-buttonnoti">
+                                <button onClick={handlePopupClose} className="btn-secondary-noti ml-auto" >Cancel</button>
+                                <button type="submit" className="btn-primary-noti ml-auto" onClick={handleFormSubmit}>Submit</button>
+                                
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+                </div>
+            )}
+            
           </div>
         </>
     );
