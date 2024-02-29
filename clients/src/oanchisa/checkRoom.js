@@ -38,7 +38,7 @@ function CheckRoom() {
         <div className="column2">
           {/* ใช้ Link เพื่อเปลี่ยนหน้า */}
           <Link to="/2566_ต้น" className="file-button" onClick={handleClick}>
-            <FaFileLines style={{ fontSize: '35px',color:'black' }} />
+            <FaFileLines style={{ fontSize: '35px',color:'black' ,marginLeft:'110px'}} />
           </Link>
         </div>
       </div>

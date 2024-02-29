@@ -1,119 +1,108 @@
-  .box-noti{
-      width: 1070px; 
-      height: 150px; 
-      background-color: white; 
-      border: 1px solid #127151; 
-      border-style: dashed;
-      border-radius:40px;
-      position: absolute;
-      align-items: center;
-      justify-content: center;
-      flex-direction: row;
-      cursor: pointer;
-      flex-grow: 1; /* ให้กล่องขยายตามพื้นที่ที่เหลือ */
-      flex-shrink: 1; /* ให้กล่องหดตามพื้นที่ที่มีอยู่ */
-      flex-basis: 0; /* กำหนดขนาดพื้นฐานของกล่องเป็น 0 เพื่อให้มีขนาดเริ่มต้นเท่ากับส่วนเฉพาะของ flex-grow */
-  }
-
-  
-  .plus {
-    width: 70px;
-    height: 70px;
-    top: 30px;
-    left: 500px;
-    position: absolute;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  
-  .text-under-img {
-    color: #127151;
-    margin-top: 110px;
-    font-size: 16px; 
-  }
-  
-  .popup-noti {
-    position: fixed; /* ให้ popup อยู่ตรงกลางของหน้าจอ */
-    top: 10%; /* จุดเริ่มต้นของ popup ที่ตรงกลางของหน้าจอ */
-    left: 25%; /* จุดเริ่มต้นของ popup ที่ตรงกลางของหน้าจอ */
-    
-    background-color: white;
-    padding: 100px;
-    border: 1px solid #127151;
-    border-radius: 10px;
-    text-align: center;
-    z-index: 999; /* ให้ Popup อยู่บนสุด */
-    overflow: auto; /* ทำให้เกิดการเลื่อนถ้าขนาดของ Popup เกินกว่าขนาดหน้าจอ */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  
-  .popup-buttonnoti {
-    position: absolute;
-    padding: 8px 16px;
-    bottom: 100px; /* กำหนดระยะขอบล่าง */
-    right: 200px; /* กำหนดระยะขอบขวา */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    bottom: 20px; /* กำหนดระยะขอบล่าง */
-    right: 20px; /* กำหนดระยะขอบขวา */
-    flex-direction: row;
-  }
-  
-  .custom-input {
-    position: absolute;
-    bottom: 500px; /* กำหนดระยะขอบล่าง */
-    right: 70px; /* กำหนดระยะขอบขวา */
-    resize: both; /* ทำให้สามารถปรับขนาดของกล่องข้อความได้ */
-    text-indent: 10px;
-    text-align: left;
-    overflow-wrap: break-word;
-  }
-
-  
-  .btn-primary-noti {
-    background-color: #127151;
-    margin-right:30px
-  }
-  
-  .btn-primary-noti:active {
-    background-color: #127151 !important;
-  }
-  
-  .btn-secondary-noti {
-    background-color: rgb(255, 0, 0);
-    margin-right:520px;
-  }
-
-  .delete-icon-noti {
+.box-noti{
+  width: 1070px; 
+  height: 150px; 
+  background-color: white; 
+  border: 1px solid #127151; 
+  border-style: dashed;
+  border-radius:40px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   cursor: pointer;
-  color: red; /* สีของไอคอนลบ */
-  font-size: 20px; /* ขนาดของไอคอนลบ */
+  flex-grow: 1; /* ให้กล่องขยายตามพื้นที่ที่เหลือ */
+  flex-shrink: 1; /* ให้กล่องหดตามพื้นที่ที่มีอยู่ */
+  flex-basis: 0; /* กำหนดขนาดพื้นฐานของกล่องเป็น 0 เพื่อให้มีขนาดเริ่มต้นเท่ากับส่วนเฉพาะของ flex-grow */
 }
+
+
+.plus {
+width: 70px;
+height: 70px;
+top: 30px;
+left: 500px;
+position: absolute;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.text-under-img {
+color: #127151;
+margin-top: 110px;
+font-size: 16px; 
+}
+
+.popup-noti {
+position: fixed; /* ให้ popup อยู่ตรงกลางของหน้าจอ */
+top: 15%; /* จุดเริ่มต้นของ popup ที่ตรงกลางของหน้าจอ */
+left: 25%; /* จุดเริ่มต้นของ popup ที่ตรงกลางของหน้าจอ */
+background-color: white;
+padding: 100px;
+border-radius: 10px;
+text-align: center;
+overflow: auto; /* ทำให้เกิดการเลื่อนถ้าขนาดของ Popup เกินกว่าขนาดหน้าจอ */
+
+}
+
+
+.popup-buttonnoti {
+position: absolute;
+padding: 8px 16px;
+bottom: 100px; /* กำหนดระยะขอบล่าง */
+right: 200px; /* กำหนดระยะขอบขวา */
+display: flex;
+border-radius: 5px;
+cursor: pointer;
+bottom: 20px; /* กำหนดระยะขอบล่าง */
+right: 20px; /* กำหนดระยะขอบขวา */
+flex-direction: row;
+}
+
+.custom-input {
+position: absolute;
+bottom: 500px; /* กำหนดระยะขอบล่าง */
+right: 70px; /* กำหนดระยะขอบขวา */
+resize:both; /* ทำให้สามารถปรับขนาดของกล่องข้อความได้ */
+text-indent: 10px;
+text-align: left;
+overflow-wrap: break-word;
+}
+
+
+.btn-primary-noti {
+background-color: #127151;
+margin-right:15px
+}
+
+.btn-primary-noti:active {
+background-color: #127151 !important;
+}
+
+.btn-secondary-noti {
+background-color: rgb(255, 0, 0);
+margin-right:535px;
+}
+
 
 
 .turnleft-all{
-  position: relative;
-  left: 350px;
-  margin-top: 128px;
-}
-
-.false-noti{
-  display: flex;
-  justify-content: end;;
+position: relative;
+left: 350px;
+margin-top: 128px;
 }
 
 .form-control {
-  width: 550px; /* กำหนดความกว้าง */
-  height: 400px; /* กำหนดความสูง */
-  overflow-wrap: break-word; /* หรือใช้ word-wrap: break-word; ก็ได้ */
-  word-wrap: break-word; /* ใส่แบบนี้เพื่อรองรับเบราว์เซอร์ที่เก่า */
+width: 625px; /* กำหนดความกว้าง */
+height: 420px; /* กำหนดความสูง */
+margin-top: -50px;
+margin-left: -40px;
+overflow-wrap: break-word; /* หรือใช้ word-wrap: break-word; ก็ได้ */
+word-wrap: break-word; /* ใส่แบบนี้เพื่อรองรับเบราว์เซอร์ที่เก่า */
 }
 
+.delete-icon-noti{
+  background-color: white;
+}
