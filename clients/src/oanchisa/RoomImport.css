@@ -105,10 +105,12 @@ option {
 
 .dropdown8 {
   margin-left: 50px;
+  margin-top: 50px;
   display: inline-block; /* Change to block to move below text */
 }
 
 .dropdown9 {
   margin-left: 90px; /* Adjust left margin */
+  margin-top: 50px;
   display: inline-block; /* Change to block to move below text */
 }

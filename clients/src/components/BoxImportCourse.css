@@ -492,6 +492,7 @@ option {
 }
 
 .dropdown1 {
+    margin-top: 75px;
     margin-left: 70px;
     margin-right: 300px; /* Adjust the space between dropdown1 and dropdown2 */
     display: inline-block;

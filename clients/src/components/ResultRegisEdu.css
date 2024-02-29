@@ -1,9 +1,11 @@
 .text1 {
-    position: fixed;
-    top: 100px; /* Adjust the top position as needed */
+    margin-top: 100px; /* Adjust the top position as needed */
     left: 350px; /* Adjust the left position as needed */
     font-family: 'Kanit', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
+}
+.text1 a {
+    font-weight: 400;
 }
 
 a {
@@ -48,8 +50,8 @@ option {
 }
 
 .dropdown5 {
-    margin-left: 350px;
-    margin-top: 80px; /* Adjust the top position as needed */
+    margin-left: 5px;
+    
     display: inline-block; /* Change to block to move below text */
 }
 
@@ -63,4 +65,20 @@ option {
     margin-left: 100px; /* Adjust left margin */
     
     display: inline-block; /* Change to block to move below text */
+}
+.flex-container {
+    display: flex;
+    align-items: center; /* This will vertically center align the items */
+}
+.timepickers-container1 {
+    display: inline-block;
+    align-items: center; /* Aligns the time pickers in the middle vertically */
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+.timepickers-container2 {
+    display: inline-block;
+    align-items: center; /* Aligns the time pickers in the middle vertically */
+    margin-left: 45px;
 }

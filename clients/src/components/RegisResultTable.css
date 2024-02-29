@@ -37,16 +37,9 @@
   max-height: 100%;
 }
 
-.toptap {
-
-  margin-left: 350px;
-  margin-top: 100px;
-}
-
 .text5 {
   margin-top: 30px;
-  margin-left: 50px;
-  margin-bottom: 0%;
+  margin-left: 100px;
 
 }
 
@@ -54,22 +47,22 @@
   position: relative;
   font-size: 16px;
   font-family: 'Kanit', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   margin-right: 120px;
 }
 
 .text7 {
 
-  margin-left: 50px;
-  margin-top: 50px;
+  margin-left: 100px;
+  
 
 }
 
 .text7 a {
   font-size: 16px;
   font-family: 'Kanit', sans-serif;
-  font-weight: 600;
-  margin-right: 120px;
+  font-weight: 400;
+  margin-right: 110px;
 }
 
 .dropdown14 select {
@@ -175,39 +168,39 @@ option {
   /* Text color */
 }
 
+
 .dropdown14 {
-  float: left;
-  margin-top: 0px;
-  margin-left: 50px;
+  margin-top: 10px;
+  margin-left: 100px;
   display: inline-block;
+  margin-bottom: 20px;
   /* Change to block to move below text */
 }
 
 .dropdown15 {
-  position: static;
-  margin-top: 0px;
+ 
   margin-left: 100px;
-  margin-right: 800px;
+  margin-right: 100px;
+  margin-bottom: 20px;
   display: inline-block;
   /* Change to block to move below text */
 }
 
 .dropdown16 {
-  position: static;
   margin-top: 20px;
-  margin-left: 50px;
+  margin-left: 100px;
   display: inline-block;
 }
 
 .dropdown17 {
-  position: static;
   margin-top: 20px;
   margin-left: 100px;
   display: inline-block;
 }
 
 .dropdown18 {
-  margin-left: 175px;
+  margin-left: 150px;
+  margin-top: 20px;
   /* Adjust left margin */
   display: inline-block;
   /* Change to block to move below text */
