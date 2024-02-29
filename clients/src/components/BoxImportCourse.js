@@ -147,7 +147,7 @@ function BoxImportCourse() {
                             </div>
                             <div className="column2">
                                 <Link to="/หลักสูตรปี_66" className="file-button" onClick={handleClick}>
-                                    <FaFileLines style={{ fontSize: '35px', color: 'black' }} />
+                                    <FaFileLines style={{ fontSize: '35px', color: 'black',marginLeft:'110px' }} />
                                 </Link>
                                 {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                             </div>
@@ -160,7 +160,7 @@ function BoxImportCourse() {
                             </div>
                             <div className="column4">
                                 <Link to="/หลักสูตรปี_65" className="file-button" onClick={handleClick}>
-                                    <FaFileLines style={{ fontSize: '35px', color: 'black' }} />
+                                    <FaFileLines style={{ fontSize: '35px', color: 'black' ,marginLeft:'110px'}} />
                                 </Link>
                                 {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                             </div>
@@ -173,7 +173,7 @@ function BoxImportCourse() {
                             </div>
                             <div className="column6">
                                 <Link to="/หลักสูตรปี_64" className="file-button" onClick={handleClick}>
-                                    <FaFileLines style={{ fontSize: '35px', color: 'black' }} />
+                                    <FaFileLines style={{ fontSize: '35px', color: 'black' ,marginLeft:'110px'}} />
                                 </Link>
                                 {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                             </div>
@@ -185,7 +185,7 @@ function BoxImportCourse() {
                             </div>
                             <div className="column8">
                                 <Link to="/หลักสูตรปี_63" className="file-button" onClick={handleClick}>
-                                    <FaFileLines style={{ fontSize: '35px', color: 'black' }} />
+                                    <FaFileLines style={{ fontSize: '35px', color: 'black',marginLeft:'110px' }} />
                                 </Link>
                                 {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                             </div>

@@ -72,9 +72,9 @@ function BoxNoti2() {
         width: '1070px',
         height: 'auto',
         backgroundColor: '#127151',
-        border: '1px solid #127151',
+        border: '2px solid white',
         borderStyle: 'dashed',
-        borderRadius: '40px',
+        borderRadius: '30px',
         display: 'flex',
         marginTop:'5px',
         marginLeft:'10px',
@@ -97,7 +97,7 @@ function BoxNoti2() {
                     <p className="text-under-img">เพิ่มประกาศใหม่</p>
                 </button>
                 <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
-                {boxes.map((box) => (
+                {boxes.map((box, index) => (
                     <div key={box.id} className='box-noti' style={newBoxStyle}>
                         <span
                             className="delete-icon-noti"
@@ -109,22 +109,28 @@ function BoxNoti2() {
                             }}
                         >
                         </span>
-                        <p>{box.info}</p>
+                        <p style={{ marginBottom: '20px' ,marginLeft: '20px',marginRight: '20px',color:'white',whiteSpace: 'pre-line',textAlign:'center'}}>{box.info}</p> 
+                        {index !== boxes.length - 1 && <hr style={{ margin: '10px 0', border: '1px solid white' }} />} 
                         <div>
                             <div
-                                style={{ position: 'absolute', 
-                                cursor: 'pointer', 
-                                top: '5px',
-                                color: 'white', 
-                                right: '5px' ,
-                                backgroundColor:'#127151' }}
+                                style={{ 
+                                    position: 'absolute', 
+                                    cursor: 'pointer', 
+                                    top: '5px',
+                                    color: 'white', 
+                                    right: '5px' ,
+                                    border: 'none',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                }}
                                 onClick={() => {
                                     if (window.confirm('คุณแน่ใจหรือไม่ว่าต้องการลบข้อมูลนี้?')) {
                                         handleDeleteBox(box.id);
                                     }
                                 }}
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                                     <line x1="18" y1="6" x2="6" y2="18"></line>
                                     <line x1="6" y1="6" x2="18" y2="18"></line>
                                 </svg>
@@ -133,15 +139,17 @@ function BoxNoti2() {
                     </div>
                 ))}
 
+
             </div>
             </div>
 
           {isPopupVisible && (
-              <div className='popup'>
+              <div className='popup-addmin'>
                 <div className='false-noti'>
-                <div className="popup-noti" style={{ width: '550px', height: '420px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                <div className="popup-noti" style={{ width: '550px', height: '380px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                     <form onSubmit={handleFormSubmit} style={{ width: '100%' }}>
                         <div className="form-group" style={{ width: '100%' }}>
+                            
                         <textarea
                           className="form-control"
                           id="inputField"
