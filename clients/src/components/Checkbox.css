@@ -1,0 +1,24 @@
+.boxContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดให้ปุ่มตัวเลือกอยู่ตรงกลางตามแนวนอน */
+    margin-right: 15px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+  }
+  
+  .buttonGroup label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .buttonGroup label span {
+    margin-top: 5px; /* เพิ่มระยะห่างระหว่างปุ่มและตัวเลข/ตัวอักษร */
+  }
+  
+  

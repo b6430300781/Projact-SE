@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import './ResultTech.css';
 import CheckRegisCoruse from './CheckRegisCoruse';
-//import newSearchIcon from '../assets/newsearch.png';
+import searchIcon from '../assets/searchbar.svg';
+import TimePickerRe from "./TimepickerResultSearch";
+import newSearchIcon from '../assets/newsearch.png';
 
 function ResultTeach() {
-    const tableData = [2566, 2565, 2564, 2563, 2562, 2561, 2560, 2559, 2558, 2557, 'ภาคต้น', 'ภาคปลาย', 'ภาคฤดูร้อน'];
+    const [searching, setSearching] = useState(false);
     const [selectedValue10, setSelectedValue10] = useState('');
     const [selectedValue11, setSelectedValue11] = useState('');
     const [selectedValue12, setSelectedValue12] = useState('');
@@ -27,7 +29,9 @@ function ResultTeach() {
     };
 
     const handleAdvancedSearch = () => {
-        // Implement your advanced search logic here
+        setSearching(true);
+        console.log('Advanced Searching...');
+        // รหัสอื่นๆที่คุณต้องการทำ
     };
 
     return (
@@ -55,11 +59,11 @@ function ResultTeach() {
                 <div className='dropdown11'>
                     <select value={selectedValue11} onChange={handleDropdownChange11}>
                         <option value=""></option>
-                        <option value="ปี1">ปี1</option>
-                        <option value="ปี2">ปี2</option>
-                        <option value="ปี3">ปี3</option>
-                        <option value="ปี4">ปี4</option>
-                        <option value="ปี5-8">ปี5-8</option>
+                        <option value="ปี1">ปี 1</option>
+                        <option value="ปี2">ปี 2</option>
+                        <option value="ปี3">ปี 3</option>
+                        <option value="ปี4">ปี 4</option>
+                        <option value="ปี5-8">ปี 5-8</option>
                     </select>
                 </div>
                 <div className='dropdown12'>
@@ -94,10 +98,54 @@ function ResultTeach() {
                     </select>
 
                 </div>
-
             </div>
 
-            <div>
+            <div className="ChangePosition2">
+                <div style={{ width: '230px' }}>
+                    <div class="ResultTech-Text">ชื่อผู้สอน</div>
+                    <div class="ResultTechsearchBar-searchBox" style={{ display: 'flex', alignItems: 'center' }}>
+                        <input id="searchInput" type="text" placeholder="ชื่อผู้สอน" />
+                        <button id="searchButton" onClick={handleAdvancedSearch} disabled={searching} >
+                            <img src={searchIcon} alt="Search Icon" />
+                        </button>
+                    </div>
+                </div>
+              
+                    <div>
+                        <div class="ResultTech-Text">เวลาเริ่มต้น</div>
+                        <TimePickerRe></TimePickerRe>
+                    </div>
+
+                    <div>
+                        <div class="ResultTech-Text">เวลาสิ้นสุด</div>
+                        <TimePickerRe></TimePickerRe>
+                    </div>
+
+                    <div className="ButtonChange">
+                        <button
+                            style={{
+                                backgroundColor: '#127151',
+                                border: '5px',
+                                cursor: 'pointer',
+                                width: '110px',
+                                height: '37px',
+                                borderRadius: '10px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                                padding: '5px 10px'
+                            }}
+                            onClick={handleAdvancedSearch}
+                            disabled={searching}
+                        >
+                            <span style={{ color: 'white', fontSize: '16px', fontFamily: 'Kanit' }}>{searching ? 'Searching...' : 'search'}</span>
+                            <img src={newSearchIcon} alt="New Search Icon" style={{ width: '16px', height: '16px' }} />
+                        </button>
+                    </div>
+                </div>
+      
+
+            <div className="ChangePosition">
                 <CheckRegisCoruse></CheckRegisCoruse>
             </div>
         </div>

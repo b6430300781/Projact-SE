@@ -35,3 +35,14 @@
     font-family: 'Kanit';
 
   }
+
+  .custom-time-picker4 {
+    font-family: 'Kanit';
+    font-size: 12px;
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    
+  }

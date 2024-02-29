@@ -1,134 +1,186 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
+
 .bordered-table {
   border-collapse: collapse;
   width: 100%;
   margin-top: 30px;
 }
 
-.bordered-table th, .bordered-table td {
+.bordered-table th,
+.bordered-table td {
   border: 1px solid black;
   padding: 8px;
   text-align: left;
 }
+
 .Texthead {
   margin-top: 70px;
   margin-left: 10px;
   font-family: 'Kanit', sans-serif;
 
 }
+
 .bordered-table th {
-  background-color: #CCDCD7; 
+  background-color: #CCDCD7;
   text-align: center;
 }
+
 .image-container {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 10vh; 
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
 }
 
 .centered-image {
-  max-width: 100%; 
-  max-height: 100%; 
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.toptap{
-  
+.toptap {
+
   margin-left: 350px;
   margin-top: 100px;
 }
-.text5{
+
+.text5 {
   margin-top: 30px;
   margin-left: 50px;
   margin-bottom: 0%;
-  
+
 }
-.text5 a{
+
+.text5 a {
   position: relative;
   font-size: 16px;
   font-family: 'Kanit', sans-serif;
   font-weight: 600;
   margin-right: 120px;
 }
-.text7{
+
+.text7 {
 
   margin-left: 50px;
   margin-top: 50px;
-  
+
 }
-.text7 a{
+
+.text7 a {
   font-size: 16px;
   font-family: 'Kanit', sans-serif;
   font-weight: 600;
   margin-right: 120px;
 }
+
 .dropdown14 select {
-  width: 80px; /* Adjust the width as needed */
+  width: 80px;
+  /* Adjust the width as needed */
   height: 30px;
-  padding: 5px; /* Adjust padding as needed */
-  font-size: 12px; /* Adjust font size as needed */
-  border: 1px solid #000; /* Ensure the border is always visible */
-  border-radius: 4px; /* Border radius */
-  background-color: #fff; /* Background color */
-  color: #000; /* Text color */
+  padding: 5px;
+  /* Adjust padding as needed */
+  font-size: 12px;
+  /* Adjust font size as needed */
+  border: 1px solid #000;
+  /* Ensure the border is always visible */
+  border-radius: 4px;
+  /* Border radius */
+  background-color: #fff;
+  /* Background color */
+  color: #000;
+  /* Text color */
   font-family: 'Kanit';
 }
+
 .dropdown15 select {
-  width: 80px; /* Adjust the width as needed */
+  width: 80px;
+  /* Adjust the width as needed */
   height: 30px;
-  padding: 5px; /* Adjust padding as needed */
-  font-size: 12px; /* Adjust font size as needed */
-  border: 1px solid #000; /* Ensure the border is always visible */
-  border-radius: 4px; /* Border radius */
-  background-color: #fff; /* Background color */
-  color: #000; /* Text color */
+  padding: 5px;
+  /* Adjust padding as needed */
+  font-size: 12px;
+  /* Adjust font size as needed */
+  border: 1px solid #000;
+  /* Ensure the border is always visible */
+  border-radius: 4px;
+  /* Border radius */
+  background-color: #fff;
+  /* Background color */
+  color: #000;
+  /* Text color */
   font-family: 'Kanit';
 }
+
 .dropdown16 select {
-  width: 80px; /* Adjust the width as needed */
+  width: 80px;
+  /* Adjust the width as needed */
   height: 30px;
-  padding: 5px; /* Adjust padding as needed */
-  font-size: 12px; /* Adjust font size as needed */
-  border: 1px solid #000; /* Ensure the border is always visible */
-  border-radius: 4px; /* Border radius */
-  background-color: #fff; /* Background color */
-  color: #000; /* Text color */
+  padding: 5px;
+  /* Adjust padding as needed */
+  font-size: 12px;
+  /* Adjust font size as needed */
+  border: 1px solid #000;
+  /* Ensure the border is always visible */
+  border-radius: 4px;
+  /* Border radius */
+  background-color: #fff;
+  /* Background color */
+  color: #000;
+  /* Text color */
   font-family: 'Kanit';
 }
+
 .dropdown17 select {
-  width: 80px; /* Adjust the width as needed */
+  width: 80px;
+  /* Adjust the width as needed */
   height: 30px;
-  padding: 5px; /* Adjust padding as needed */
-  font-size: 12px; /* Adjust font size as needed */
-  border: 1px solid #000; /* Ensure the border is always visible */
-  border-radius: 4px; /* Border radius */
-  background-color: #fff; /* Background color */
-  color: #000; /* Text color */
+  padding: 5px;
+  /* Adjust padding as needed */
+  font-size: 12px;
+  /* Adjust font size as needed */
+  border: 1px solid #000;
+  /* Ensure the border is always visible */
+  border-radius: 4px;
+  /* Border radius */
+  background-color: #fff;
+  /* Background color */
+  color: #000;
+  /* Text color */
   font-family: 'Kanit';
 }
+
 .dropdown18 select {
-  width: 80px; /* Adjust the width as needed */
+  width: 80px;
+  /* Adjust the width as needed */
   height: 30px;
-  padding: 5px; /* Adjust padding as needed */
-  font-size: 12px; /* Adjust font size as needed */
-  border: 1px solid #000; /* Ensure the border is always visible */
-  border-radius: 4px; /* Border radius */
-  background-color: #fff; /* Background color */
-  color: #000; /* Text color */
+  padding: 5px;
+  /* Adjust padding as needed */
+  font-size: 12px;
+  /* Adjust font size as needed */
+  border: 1px solid #000;
+  /* Ensure the border is always visible */
+  border-radius: 4px;
+  /* Border radius */
+  background-color: #fff;
+  /* Background color */
+  color: #000;
+  /* Text color */
   font-family: 'Kanit';
 }
 
 /* Style for dropdown menu options */
 option {
-  background-color: #fff; /* Background color */
-  color: #000; /* Text color */
+  background-color: #fff;
+  /* Background color */
+  color: #000;
+  /* Text color */
 }
 
 .dropdown14 {
   float: left;
   margin-top: 0px;
   margin-left: 50px;
-  display: inline-block; /* Change to block to move below text */
+  display: inline-block;
+  /* Change to block to move below text */
 }
 
 .dropdown15 {
@@ -136,8 +188,10 @@ option {
   margin-top: 0px;
   margin-left: 100px;
   margin-right: 800px;
-  display: inline-block; /* Change to block to move below text */
+  display: inline-block;
+  /* Change to block to move below text */
 }
+
 .dropdown16 {
   position: static;
   margin-top: 20px;
@@ -151,9 +205,12 @@ option {
   margin-left: 100px;
   display: inline-block;
 }
+
 .dropdown18 {
-  margin-left: 175px; /* Adjust left margin */
-  display: inline-block; /* Change to block to move below text */
+  margin-left: 175px;
+  /* Adjust left margin */
+  display: inline-block;
+  /* Change to block to move below text */
 }
 
 .RegisResultTable-container {
@@ -168,35 +225,44 @@ option {
 
 
 .RegisResultTable-saveButton button {
-  width: 75px; /* ลดความกว้างเพื่อให้พื้นที่สำหรับขอบเพียงพอ */
-  height: 28px; /* ลดความสูงเพื่อให้พื้นที่สำหรับขอบเพียงพอ */
-  padding: 2px; /* เพิ่มขอบฟิกซ์สำหรับปุ่ม */
-  border: 5px solid #127151; /* ขอบมน 5px สี #127151 */
+  width: 75px;
+  /* ลดความกว้างเพื่อให้พื้นที่สำหรับขอบเพียงพอ */
+  height: 28px;
+  /* ลดความสูงเพื่อให้พื้นที่สำหรับขอบเพียงพอ */
+  padding: 2px;
+  /* เพิ่มขอบฟิกซ์สำหรับปุ่ม */
+  border: 5px solid #127151;
+  /* ขอบมน 5px สี #127151 */
   border-radius: 5px;
-  background-color: #127151; /* พื้นหลังสี #127151 */
-  transition: transform 0.2s; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนแปลงเกิดขึ้นเรื่อยๆ */
+  background-color: #127151;
+  /* พื้นหลังสี #127151 */
+  transition: transform 0.2s;
+  /* เพิ่ม transition เพื่อทำให้การเปลี่ยนแปลงเกิดขึ้นเรื่อยๆ */
+  cursor: pointer;
 }
 
 .RegisResultTable-saveButton button:active {
-  transform: scale(0.95); /* เพิ่มการยืดเหยียดเล็กน้อยเมื่อมีการคลิก */
+  transform: scale(0.95);
+  /* เพิ่มการยืดเหยียดเล็กน้อยเมื่อมีการคลิก */
 }
 
-.RegisResultTable-saveButtontext{
-  color: white; /* สีตัวอักษรขาว */
-  font-size: 14px; /* ขนาดตัวอักษร */
+.RegisResultTable-saveButtontext {
+  color: white;
+  /* สีตัวอักษรขาว */
+  font-size: 14px;
+  /* ขนาดตัวอักษร */
   font-family: 'Kanit';
   margin-top: -4px;
 
 }
 
-.RegisResultTable-buttonchange{
+.RegisResultTable-buttonchange {
   margin-left: 90%;
   margin-top: 20%;
-  
+
 
 }
 
-.RegisResultTable-searchbar-changposition{
+.RegisResultTable-searchbar-changposition {
   margin-left: 7%;
 }
-
