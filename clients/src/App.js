@@ -54,17 +54,17 @@ function App() {
     // </Router>
 
     // =================================== ADMIN =========================================
-    // <Router>
-    //   <div>
-    //     <NavbarAdmin />
-    //     <HeaderTeacher /> {/* <HeaderAdmin /> */}
-    //     <Routes>
-    //       <Route exact path="/" element={<AdminNoti />} />
-    //       <Route exact path="/กำหนดการ" element={<AdminTimeDate />} />
-    //       <Route exact path="/ข้อมูลผู้ใช้งาน" element={<AdminUser />} />
-    //     </Routes>
-    //   </div>
-    // </Router>
+    <Router>
+      <div>
+        <NavbarAdmin />
+        <HeaderTeacher /> {/* <HeaderAdmin /> */}
+        <Routes>
+          <Route exact path="/" element={<AdminNoti />} />
+          <Route exact path="/กำหนดการ" element={<AdminTimeDate />} />
+          <Route exact path="/ข้อมูลผู้ใช้งาน" element={<AdminUser />} />
+        </Routes>
+      </div>
+    </Router>
 
     // =================================== EDU =========================================
     // <Router>
@@ -76,27 +76,28 @@ function App() {
     //       <Route exact path="/ผลการลงทะเบียน" element={<RegisResults />} />
     //       <Route exact path="/รายวิชาที่เปิดสอน" element={<CoursesTaught />} />
     //       <Route exact path="/ห้องเรียนทั้งหมด" element={<AllRoom />} />
+    //       <Route exact path="/2566_ต้น" element={<RoomDetail />} />
     //     </Routes>
     //   </div>
     // </Router>
 
     // =================================== TEACHER =========================================
-    <Router>
-      <div>
-        <NavbarTeacher />
-        <HeaderTeacher />
-        <Routes>
+    // <Router>
+    //   <div>
+    //     <NavbarTeacher />
+    //     <HeaderTeacher />
+    //     <Routes>
           
-          <Route exact path="/" element={<TeacherNoti />} />
-          <Route exact path="/ลงทะเบียนรายวิชา" element={<RegisCourse />} />
-          <Route exact path="/ผลการลงทะเบียนอาจารย์" element={<RegisResultsTeacher />} />
-          <Route exact path="/รายวิชาที่สามารถเปิดสอน" element={<CoursesTaughtTeacher />} />
-          <Route exact path="/ห้องเรียนทั้งหมดอาจารย์" element={<AllRoomTeacher />} />
-          <Route exact path="/2566_ต้น" element={<RoomDetail />} />
-          <Route exact path="/ตรวจสอบผลการลงทะเบียน" element={<CheckRegisResults />} />
-        </Routes>
-      </div>
-    </Router>
+    //       <Route exact path="/" element={<TeacherNoti />} />
+    //       <Route exact path="/ลงทะเบียนรายวิชา" element={<RegisCourse />} />
+    //       <Route exact path="/ผลการลงทะเบียนอาจารย์" element={<RegisResultsTeacher />} />
+    //       <Route exact path="/รายวิชาที่สามารถเปิดสอน" element={<CoursesTaughtTeacher />} />
+    //       <Route exact path="/ห้องเรียนทั้งหมดอาจารย์" element={<AllRoomTeacher />} />
+    //       <Route exact path="/2566_ต้น" element={<RoomDetail />} />
+    //       <Route exact path="/ตรวจสอบผลการลงทะเบียน" element={<CheckRegisResults />} />
+    //     </Routes>
+    //   </div>
+    // </Router>
     
     
     
