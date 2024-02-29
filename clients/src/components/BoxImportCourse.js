@@ -46,7 +46,7 @@ function BoxImportCourse() {
         <div className='scrollable-content'>
             <div className='bg-gray'>
                 <div className='turnleft-all'>
-                    <div className='text-font-header'>
+                    <div className='DateAdmin-text'>
                         <h>นำข้อมูลรายวิชาเข้าสู่ระบบ</h>
                     </div>
 

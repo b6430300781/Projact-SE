@@ -6,8 +6,6 @@ import NavbarEdu from '../navbar/NavbarEdu';
 function CoursesTaught() {
   return (
     <div>
-      <NavbarEdu />
-      <HeaderEdu />
    
       <BoxImportCourse />
    
