@@ -18,6 +18,7 @@
     align-items: center; /* จัดกล่อง input และ icon ตามแนวดิ่ง */
 }
 
+
 .searchBar-searchBox input {
     flex-grow: 1;
     width: 799px;
@@ -28,6 +29,8 @@
     border: 0.5px solid #000;
     border-radius: 5px;
     padding-right: 30px; /* ระยะห่างของ input กับ icon */
+    padding-left: 15px;
+    box-sizing: border-box;
 }
 
 .searchBar-searchBox button {

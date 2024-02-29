@@ -1,70 +1,217 @@
-.top{
-    position: relative;
-    left: 350px;
-    margin-top: 128px;
-  }
-  .dropdown10 select {
-    width: 80px; /* Adjust the width as needed */
-    height: 30px;
-    padding: 5px; /* Adjust padding as needed */
-    font-size: 12px; /* Adjust font size as needed */
-    border: 1px solid #000; /* Ensure the border is always visible */
-    border-radius: 4px; /* Border radius */
-    background-color: #fff; /* Background color */
-    color: #000; /* Text color */
-  }
-  .dropdown11 select {
-    width: 80px; /* Adjust the width as needed */
-    height: 30px;
-    padding: 5px; /* Adjust padding as needed */
-    font-size: 12px; /* Adjust font size as needed */
-    border: 1px solid #000; /* Ensure the border is always visible */
-    border-radius: 4px; /* Border radius */
-    background-color: #fff; /* Background color */
-    color: #000; /* Text color */
-  }
-  .dropdown12 select {
-    width: 80px; /* Adjust the width as needed */
-    height: 30px;
-    padding: 5px; /* Adjust padding as needed */
-    font-size: 12px; /* Adjust font size as needed */
-    border: 1px solid #000; /* Ensure the border is always visible */
-    border-radius: 4px; /* Border radius */
-    background-color: #fff; /* Background color */
-    color: #000; /* Text color */
-  }
-  .dropdown13 select {
-    width: 80px; /* Adjust the width as needed */
-    height: 30px;
-    padding: 5px; /* Adjust padding as needed */
-    font-size: 12px; /* Adjust font size as needed */
-    border: 1px solid #000; /* Ensure the border is always visible */
-    border-radius: 4px; /* Border radius */
-    background-color: #fff; /* Background color */
-    color: #000; /* Text color */
-  }
-  
-  /* Style for dropdown menu options */
-  option {
-    background-color: #fff; /* Background color */
-    color: #000; /* Text color */
-  }
-  
-  .dropdown10 {
-    margin-left: 50px;
-    display: inline-block; /* Change to block to move below text */
-  }
-  
-  .dropdown11 {
-    margin-left: 55px; /* Adjust left margin */
-    display: inline-block; /* Change to block to move below text */
-  }
-  .dropdown12 {
-    margin-left: 70px;
-    display: inline-block; /* Change to block to move below text */
-  }
-  
-  .dropdown13 {
-    margin-left: 70px; /* Adjust left margin */
-    display: inline-block; /* Change to block to move below text */
-  }
+.top {
+  position: relative;
+  left: 350px;
+  margin-top: 128px;
+}
+
+.dropdown10 select {
+  width: 80px;
+  /* Adjust the width as needed */
+  height: 30px;
+  padding: 5px;
+  /* Adjust padding as needed */
+  font-size: 12px;
+  /* Adjust font size as needed */
+  border: 1px solid #000;
+  /* Ensure the border is always visible */
+  border-radius: 4px;
+  /* Border radius */
+  background-color: #fff;
+  /* Background color */
+  color: #000;
+  /* Text color */
+}
+
+.dropdown11 select {
+  width: 80px;
+  /* Adjust the width as needed */
+  height: 30px;
+  padding: 5px;
+  /* Adjust padding as needed */
+  font-size: 12px;
+  /* Adjust font size as needed */
+  border: 1px solid #000;
+  /* Ensure the border is always visible */
+  border-radius: 4px;
+  /* Border radius */
+  background-color: #fff;
+  /* Background color */
+  color: #000;
+  /* Text color */
+}
+
+.dropdown12 select {
+  width: 80px;
+  /* Adjust the width as needed */
+  height: 30px;
+  padding: 5px;
+  /* Adjust padding as needed */
+  font-size: 12px;
+  /* Adjust font size as needed */
+  border: 1px solid #000;
+  /* Ensure the border is always visible */
+  border-radius: 4px;
+  /* Border radius */
+  background-color: #fff;
+  /* Background color */
+  color: #000;
+  /* Text color */
+}
+
+.dropdown13 select {
+  width: 80px;
+  /* Adjust the width as needed */
+  height: 30px;
+  padding: 5px;
+  /* Adjust padding as needed */
+  font-size: 12px;
+  /* Adjust font size as needed */
+  border: 1px solid #000;
+  /* Ensure the border is always visible */
+  border-radius: 4px;
+  /* Border radius */
+  background-color: #fff;
+  /* Background color */
+  color: #000;
+  /* Text color */
+}
+
+/* Style for dropdown menu options */
+option {
+  background-color: #fff;
+  /* Background color */
+  color: #000;
+  /* Text color */
+}
+
+.dropdown10 {
+  margin-left: 50px;
+  display: inline-block;
+  /* Change to block to move below text */
+}
+
+.dropdown11 {
+  margin-left: 55px;
+  /* Adjust left margin */
+  display: inline-block;
+  /* Change to block to move below text */
+}
+
+.dropdown12 {
+  margin-left: 70px;
+  display: inline-block;
+  /* Change to block to move below text */
+}
+
+.dropdown13 {
+  margin-left: 70px;
+  /* Adjust left margin */
+  display: inline-block;
+  /* Change to block to move below text */
+}
+
+
+.ResultTech-Text {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px
+}
+
+.ResultTech-searchbar-changeposition {
+  margin-left: 3%;
+  grid-row: 1;
+
+
+}
+
+.ChangePosition {
+  margin-bottom: 10px;
+ 
+}
+
+.ChangePosition2 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px; /* เพิ่มช่องว่างระหว่างองค์ประกอบ */
+}
+
+
+
+
+.ResultTechsearchBar-searchBox {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  /* จัดกล่อง input และ icon ตามแนวดิ่ง */
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+
+}
+
+
+.ResultTechsearchBar-searchBox input {
+  flex-grow: 1;
+  width: 799px;
+  height: 35px;
+  background-color: #ffffff;
+  font-family: 'Kanit', sans-serif;
+  color: #000000;
+  border: 0.5px solid #000;
+  border-radius: 5px;
+  padding-right: 30px;
+  /* ระยะห่างของ input กับ icon */
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.ResultTechsearchBar-searchBox button {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  left: 192px;
+  cursor: pointer;
+}
+
+.ResultTechsearchBar-searchBox button img {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.ResultTechsearchBar-subjectBox {
+  font-family: 'Kanit', sans-serif;
+  font-size: 15px;
+}
+
+
+
+.RutTiesultTech-inputtime {
+  flex-grow: 1;
+  width: 799px;
+  height: 37px;
+  background-color: #be0000;
+  font-family: 'Kanit', sans-serif;
+  color: #000000;
+  border: 0.5px solid #000;
+  border-radius: 5px;
+  padding-right: 30px;
+  /* ระยะห่างของ input กับ icon */
+  padding-left: 15px;
+  box-sizing: border-box;
+
+}
+
+
+.InputNumTime {
+  border: 0.5px solid #000;
+
+}
+
+.ButtonChange{
+  margin-block-start: auto;
+
+}
+

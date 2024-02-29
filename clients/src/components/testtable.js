@@ -4,6 +4,7 @@ import MyImage from "../assets/Vector.png";
 // import RegisResultTable from './RegisResultTable';
 import InputNumNisit from './compoRegisCourse';
 import TimePickerTa from './Timepicker';
+import CheckBoxRe from './Checkbox';
 
 class RegisTa extends React.Component {
 
@@ -62,80 +63,86 @@ class RegisTa extends React.Component {
         <header className="testtable-Texthead">
           <div>ภาคปฏิบัติ</div>
           <div className='box-table-container'>
-          <table className="testtable-bordered-table">
-            <thead>
-              <tr>
-                <th></th>
-                <th>รหัสวิชา</th>
-                <th>ชื่อวิชา</th>
-                <th>นก.</th>
-                <th>lab</th>
-                <th>sec</th>
-                <th>จำนวนนิสิต</th>
-                <th>สาขา,ชั้นปี</th>
-                <th>วัน</th>
-                <th>เวลา</th>
-                <th>ห้องlab</th>
-                <th>หมายเหตุ</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div className="testtable-image-container">
-                    <img src={MyImage} alt=" " className="testtable-centered-image" onClick={this.handleDeleteRow} />
-                  </div>
-                </td>
-                <td>01420112</td>
-                <td>General Physics</td>
-                <td>3</td>
-                <td>1</td>
-                <td>830</td>
-                <td>
-                  <div className='testtable-inputNumNisit'>
-                    <InputNumNisit></InputNumNisit>
+            <table className="testtable-bordered-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>รหัสวิชา</th>
+                  <th>ชื่อวิชา</th>
+                  <th>นก.</th>
+                  <th>lab</th>
+                  <th>sec</th>
+                  <th>จำนวนนิสิต</th>
+                  <th>สาขา,ชั้นปี</th>
+                  <th>วัน</th>
+                  <th>เวลา</th>
+                  <th>ห้องlab</th>
+                  <th>หมายเหตุ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div className="testtable-image-container">
+                      <img src={MyImage} alt=" " className="testtable-centered-image" onClick={this.handleDeleteRow} />
+                    </div>
+                  </td>
+                  <td>01420112</td>
+                  <td>General Physics</td>
+                  <td>3</td>
+                  <td>1</td>
+                  <td>830</td>
+                  <td>
+                    <div className='testtable-inputNumNisit'>
+                      <InputNumNisit></InputNumNisit>
 
-                  </div>
+                    </div>
 
-                </td>
-                <td></td>
-                <td>
-                  <div className='testtable-dropdownposition'>
-                    <select className='testtable-dropdown'>
-                      {/* 2. Dropdown เลือกวัน */}
-                      <option value=""></option>
-                      <option value="Monday">Mon</option>
-                      <option value="Tuesday">Tue</option>
-                      <option value="Wednesday">Wed</option>
-                      <option value="Thursday">Thu</option>
-                      <option value="Friday">Fri</option>
-                      <option value="Friday">Sat</option>
-                      <option value="Friday">Sun</option>
-                    </select>
-                  </div>
-                </td>
-                <td>
-                  <TimePickerTa />
-                </td>
-                <td>
-                  <div className='testtable-dropdownposition'>
-                    <select className='testtable-dropdown'>
-                      {/* 3. Dropdown เลือกห้อง */}
-                      <option value=""></option>
-                      <option value="Room1">ห้อง 1</option>
-                      <option value="Room2">ห้อง 2</option>
-                      <option value="Room3">ห้อง 3</option>
-                      <option value="Room3">ห้อง 4</option>
-                    </select>
-                  </div>
-                </td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-            
+                  </td>
+                  <td>
+                    <div>
+                      <CheckBoxRe />
+                    </div>
+
+
+                  </td>
+                  <td>
+                    <div className='testtable-dropdownposition'>
+                      <select className='testtable-dropdown'>
+                        {/* 2. Dropdown เลือกวัน */}
+                        <option value=""></option>
+                        <option value="Monday">Mon</option>
+                        <option value="Tuesday">Tue</option>
+                        <option value="Wednesday">Wed</option>
+                        <option value="Thursday">Thu</option>
+                        <option value="Friday">Fri</option>
+                        <option value="Friday">Sat</option>
+                        <option value="Friday">Sun</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <TimePickerTa />
+                  </td>
+                  <td>
+                    <div className='testtable-dropdownposition'>
+                      <select className='testtable-dropdown'>
+                        {/* 3. Dropdown เลือกห้อง */}
+                        <option value=""></option>
+                        <option value="Room1">ห้อง 1</option>
+                        <option value="Room2">ห้อง 2</option>
+                        <option value="Room3">ห้อง 3</option>
+                        <option value="Room3">ห้อง 4</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+
           </div>
-          
+
         </header>
         <div>
           <div class="testtable-buttonchange">
@@ -184,7 +191,12 @@ class RegisTa extends React.Component {
 
                   </div>
                 </td>
-                <td> </td>
+                <td>
+                  <div>
+                    <CheckBoxRe />
+                  </div>
+
+                </td>
                 <td>
                   <div className='testtable-dropdownposition'>
                     <select className='testtable-dropdown'>
