@@ -13,7 +13,7 @@
   text-align: center;
 }
 .CheckRegisCoruse-Texthead {
-  margin-top: 70px;
+  /* margin-top: 70px; */
   margin-left: 180px;
   font-family: 'Kanit', sans-serif;
 
@@ -30,6 +30,6 @@
 .CheckRegisCoruse-right{
   position: relative;
   right: 190px;
-  /* margin-top: 110px; */
+  
 
 }
