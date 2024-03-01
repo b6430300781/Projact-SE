@@ -104,12 +104,12 @@ color: #000; /* Text color */
 
 .dropdown8 {
 margin-left: 50px;
-margin-top: 10px;
+margin-top: 5px;
 display: inline-block; /* Change to block to move below text */
 }
 
 .dropdown9 {
 margin-left: 90px; /* Adjust left margin */
-margin-top: 10px;
+margin-top: 5px;
 display: inline-block; /* Change to block to move below text */
 }
