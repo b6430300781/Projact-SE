@@ -48,7 +48,7 @@ const InputEdu = () => {
                             type="text"
                             value={idSubject}
                             onChange={(e) => setIdSubject(e.target.value)}
-                            style={{ marginBottom: '10px', width: '300px' }}
+                            style={{ marginBottom: '10px', width: '300px' , fontFamily: 'Kanit'}}
                         />
                     </div>
                     <div>
@@ -57,7 +57,7 @@ const InputEdu = () => {
                             type="text"
                             value={subjectName}
                             onChange={(e) => setSubjectName(e.target.value)}
-                            style={{ width: '300px' }}
+                            style={{ width: '300px', fontFamily: 'Kanit'}}
                         />
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'end', marginTop: 'auto' }}>

@@ -28,49 +28,21 @@ function RegisResultTable() {
     }
   });
   // สร้างข้อมูลตาราง
-  const tableData = [
-    66,
-    65,
-    64,
-    63,
-    62,
-    61,
-    60,
-    59,
-    58,
-    57,
-    "วิชาบังคับ",
-    "วิชาเลือก",
-    "วิชาเสรี",
-    1,
-    2,
-    3,
-    4,
-  ];
-  const [selectedValue14, setSelectedValue14] = useState("");
-  const [selectedValue15, setSelectedValue15] = useState("");
-  const [selectedValue16, setSelectedValue16] = useState("");
-  const [selectedValue17, setSelectedValue17] = useState("");
-  const [selectedValue18, setSelectedValue18] = useState("");
+  const [selectedValues, setSelectedValues] = useState({
+    year: "",
+    semester: "",
+    numberOfSections: "",
+    type: "",
+    branch: ""
+  });
 
-  const handleDropdownChange14 = (event) => {
-    setSelectedValue14(event.target.value);
+  const handleDropdownChange = (event, field) => {
+    setSelectedValues({
+      ...selectedValues,
+      [field]: event.target.value
+    });
   };
 
-  const handleDropdownChange15 = (event) => {
-    setSelectedValue15(event.target.value);
-  };
-
-  const handleDropdownChange16 = (event) => {
-    setSelectedValue16(event.target.value);
-  };
-  const handleDropdownChange17 = (event) => {
-    setSelectedValue17(event.target.value);
-  };
-
-  const handleDropdownChange18 = (event) => {
-    setSelectedValue18(event.target.value);
-  };
 
   return (
     <div>
@@ -88,8 +60,8 @@ function RegisResultTable() {
                 </div>
                 <div className="dropdown14">
                   <select
-                    value={selectedValue14}
-                    onChange={handleDropdownChange14}
+                    value={selectedValues.year}
+                    onChange={(event) => handleDropdownChange(event, "year")}
                   >
                     <option value=""></option>
                     <option value="66">ปี 66</option>
@@ -106,8 +78,8 @@ function RegisResultTable() {
                 </div>
                 <div className="dropdown15">
                   <select
-                    value={selectedValue15}
-                    onChange={handleDropdownChange15}
+                    value={selectedValues.semester}
+                    onChange={(event) => handleDropdownChange(event, "semester")}
                   >
                     <option value=""></option>
                     <option value="ภาคต้น">ภาคต้น</option>
@@ -137,8 +109,8 @@ function RegisResultTable() {
                 </div>
                 <div className="dropdown16">
                   <select
-                    value={selectedValue16}
-                    onChange={handleDropdownChange16}
+                    value={selectedValues.numberOfSections}
+                    onChange={(event) => handleDropdownChange(event, "numberOfSections")}
                   >
                     <option value=""></option>
                     <option value="1">1</option>
@@ -148,8 +120,8 @@ function RegisResultTable() {
                 </div>
                 <div className="dropdown17">
                   <select
-                    value={selectedValue17}
-                    onChange={handleDropdownChange17}
+                    value={selectedValues.type}
+                    onChange={(event) => handleDropdownChange(event, "type")}
                   >
                     <option value=""></option>
                     <option value="ภาคปฏิบัติ">ภาคปฏิบัติ</option>
@@ -158,8 +130,8 @@ function RegisResultTable() {
                 </div>
                 <div className="dropdown18">
                   <select
-                    value={selectedValue18}
-                    onChange={handleDropdownChange18}
+                    value={selectedValues.branch}
+                    onChange={(event) => handleDropdownChange(event, "branch")}
                   >
                     <option value=""></option>
                     <option value="T05">T05</option>
