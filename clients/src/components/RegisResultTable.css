@@ -38,7 +38,7 @@
 }
 
 .text5 {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   margin-left: 100px;
 
 }
@@ -49,11 +49,13 @@
   font-family: 'Kanit', sans-serif;
   font-weight: 400;
   margin-right: 120px;
+
 }
 
 .text7 {
 
   margin-left: 100px;
+  margin-top: 20px;
   
 
 }
@@ -123,7 +125,7 @@
 }
 
 .dropdown17 select {
-  width: 80px;
+  width: 120px;
   /* Adjust the width as needed */
   height: 30px;
   padding: 5px;
@@ -180,6 +182,7 @@ option {
 .dropdown15 {
  
   margin-left: 100px;
+  margin-top: 10px;
   margin-right: 100px;
   margin-bottom: 20px;
   display: inline-block;
@@ -187,20 +190,20 @@ option {
 }
 
 .dropdown16 {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 100px;
   display: inline-block;
 }
 
 .dropdown17 {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 100px;
   display: inline-block;
 }
 
 .dropdown18 {
-  margin-left: 150px;
-  margin-top: 20px;
+  margin-left: 115px;
+  margin-top: 10px;
   /* Adjust left margin */
   display: inline-block;
   /* Change to block to move below text */
@@ -251,11 +254,11 @@ option {
 
 .RegisResultTable-buttonchange {
   margin-left: 90%;
-  margin-top: 20%;
+  margin-top: 3%;
 
 
 }
 
 .RegisResultTable-searchbar-changposition {
-  margin-left: 7%;
+  margin-left: 9%;
 }

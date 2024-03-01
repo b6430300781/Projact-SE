@@ -5,10 +5,11 @@
     position: relative;
     width: 1100px;
     height: 338px;
-    top: 20px;
+    /* top: 20px; */
     left: 345px;
     border-radius: 10px;
     background-color: #ffffff;
+    contain: strict;
 }
 
 .searchBar-searchBox {
@@ -69,5 +70,7 @@
 
 
 }
+
+
 
 
