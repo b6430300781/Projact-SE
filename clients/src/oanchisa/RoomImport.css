@@ -1,116 +1,115 @@
 @keyframes flash {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-  }
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 .turnleft-all{
-    position: relative;
-    left: 350px;
-    margin-top: 128px;
-  }
+  position: relative;
+  left: 350px;
+  margin-top: 128px;
+}
 
 .course-table {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 200px;
-    /* ปรับตำแหน่งตารางตามความเหมาะสม */
-    flex-basis: calc(51% - 10px);
-    /* ความกว้างของแต่ละคอลัมน์ */
-    padding: 0px;
-    width: 900px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 200px;
+  /* ปรับตำแหน่งตารางตามความเหมาะสม */
+  flex-basis: calc(51% - 10px);
+  /* ความกว้างของแต่ละคอลัมน์ */
+  padding: 0px;
+  width: 900px;
 }
 
 .column1 {
-    flex-basis: calc(51% - 10px);
-    /* ความกว้างของแต่ละคอลัมน์ */
-    padding: 1px;
-    border: 1px solid #000;
-    /* เส้นขอบของแต่ละคอลัมน์ */
-    background-color: #ffffff;
-    display: flex;
-    /* ทำให้เนื้อหาอยู่ในคอลัมน์เรียงตรงกลาง */
-    align-items: center;
-    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวตั้ง */
-    justify-content: center;
-    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวนอน */
+  flex-basis: calc(51% - 10px);
+  /* ความกว้างของแต่ละคอลัมน์ */
+  padding: 1px;
+  border: 1px solid #000;
+  /* เส้นขอบของแต่ละคอลัมน์ */
+  background-color: #ffffff;
+  display: flex;
+  /* ทำให้เนื้อหาอยู่ในคอลัมน์เรียงตรงกลาง */
+  align-items: center;
+  /* จัดให้เนื้อหาอยู่ตรงกลางในแนวตั้ง */
+  justify-content: center;
+  /* จัดให้เนื้อหาอยู่ตรงกลางในแนวนอน */
 
 }
 
 .column2 {
-    display: flex;
-    flex-basis: calc(51% - 10px);
-    /* ความกว้างของแต่ละคอลัมน์ */
-    padding: 1px;
-    border: 1px solid #000;
-    /* เส้นขอบของแต่ละคอลัมน์ */
-    background-color: #ffffff;
-    align-items: center;
-    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวตั้ง */
-    justify-content: center;
-    /* จัดให้เนื้อหาอยู่ตรงกลางในแนวนอน */
+  display: flex;
+  flex-basis: calc(51% - 10px);
+  /* ความกว้างของแต่ละคอลัมน์ */
+  padding: 1px;
+  border: 1px solid #000;
+  /* เส้นขอบของแต่ละคอลัมน์ */
+  background-color: #ffffff;
+  align-items: center;
+  /* จัดให้เนื้อหาอยู่ตรงกลางในแนวตั้ง */
+  justify-content: center;
+  /* จัดให้เนื้อหาอยู่ตรงกลางในแนวนอน */
 
 }
 
 
 .file-button {
-    background-color: transparent;
-    border: none; /* ลบกรอบ */
-    cursor: pointer;
-    padding: 0;
-  }
-  
-  .file-button:hover{
-    animation: flash 1s;
-    color: #127151;
-  }
+  background-color: transparent;
+  border: none; /* ลบกรอบ */
+  cursor: pointer;
+  padding: 0;
+}
+
+.file-button:hover{
+  animation: flash 1s;
+  color: #127151;
+}
 
 .text2 {
-    position: fixed;
-    top: 175px; /* Adjust the top position as needed */
-    left: 400px; /* Adjust the left position as needed */
-    font-family: 'Kanit', sans-serif;
-    font-weight: 600;
+  top: 175px; /* Adjust the top position as needed */
+  left: 350px; /* Adjust the left position as needed */
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
 }
 
 a {
-    margin-right: 120px;
+  margin-right: 120px;
 }
 .dropdown8 select {
-  width: 100px; /* Adjust the width as needed */
-  height: 30px;
-  padding: 5px; /* Adjust padding as needed */
-  font-size: 12px; /* Adjust font size as needed */
-  border: 1px solid #000; /* Ensure the border is always visible */
-  border-radius: 4px; /* Border radius */
-  background-color: #fff; /* Background color */
-  color: #000; /* Text color */
+width: 100px; /* Adjust the width as needed */
+height: 30px;
+padding: 5px; /* Adjust padding as needed */
+font-size: 12px; /* Adjust font size as needed */
+border: 1px solid #000; /* Ensure the border is always visible */
+border-radius: 4px; /* Border radius */
+background-color: #fff; /* Background color */
+color: #000; /* Text color */
 }
 .dropdown9 select {
-  width: 100px; /* Adjust the width as needed */
-  height: 30px;
-  padding: 5px; /* Adjust padding as needed */
-  font-size: 12px; /* Adjust font size as needed */
-  border: 1px solid #000; /* Ensure the border is always visible */
-  border-radius: 4px; /* Border radius */
-  background-color: #fff; /* Background color */
-  color: #000; /* Text color */
+width: 100px; /* Adjust the width as needed */
+height: 30px;
+padding: 5px; /* Adjust padding as needed */
+font-size: 12px; /* Adjust font size as needed */
+border: 1px solid #000; /* Ensure the border is always visible */
+border-radius: 4px; /* Border radius */
+background-color: #fff; /* Background color */
+color: #000; /* Text color */
 }
 
 /* Style for dropdown menu options */
 option {
-  background-color: #fff; /* Background color */
-  color: #000; /* Text color */
+background-color: #fff; /* Background color */
+color: #000; /* Text color */
 }
 
 .dropdown8 {
-  margin-left: 50px;
-  margin-top: 50px;
-  display: inline-block; /* Change to block to move below text */
+margin-left: 50px;
+margin-top: 10px;
+display: inline-block; /* Change to block to move below text */
 }
 
 .dropdown9 {
-  margin-left: 90px; /* Adjust left margin */
-  margin-top: 50px;
-  display: inline-block; /* Change to block to move below text */
+margin-left: 90px; /* Adjust left margin */
+margin-top: 10px;
+display: inline-block; /* Change to block to move below text */
 }
