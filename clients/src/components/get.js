@@ -20,8 +20,8 @@ const UserList = () => {
       <ul>
         {users.map((user, index) => (
           <li key={index}>
+            <span>ชื่อ: {user.name}</span>
             <p>Email: {user.email}</p>
-            <p>Full Name: {user.name}</p>
             {/* เพิ่มข้อมูลอื่น ๆ ตามต้องการ */}
           </li>
         ))}
