@@ -56,9 +56,18 @@ const Pop = ({ onClose }) => {
   };
 
   const handleButtonAdd = () => {
+    if (!isValidEmail(email)) {
+      alert('กรุณาป้อนอีเมลที่ถูกต้อง');
+      return; // หยุดการทำงานถ้าอีเมลไม่ถูกต้อง
+    }
+    if (!email || !fullName) {
+      alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+      return;
+    }
     Axios.post("http://127.0.0.1:3001/create",{
       email: email,
       fullName:fullName,
+      
     }).then(() => {
       setuserList([
         ...userList,
@@ -72,9 +81,10 @@ const Pop = ({ onClose }) => {
 
       // ปิด popup
       onClose();
+      alert(`ทำการเพิ่มข้อมูลผู้ใช้ ${email} เข้าสู่ระบบ`);
       window.location.reload()
     });
-  };
+};
 
 
   const handleDrop = (e) => {
@@ -84,11 +94,13 @@ const Pop = ({ onClose }) => {
       handleFileUpload(file);
     }
   };
+
+  const isValidEmail = (email) => {
+    // Regex สำหรับตรวจสอบรูปแบบของอีเมล
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
   
-  useEffect(() => {
-    // ทำสั่งการที่คุณต้องการที่นี่ เช่น อัพเดต UI
-    console.log("User list updated:", userList);
-  }, [userList]);
 
 
   return (
@@ -178,7 +190,9 @@ const Popup = () => {
   const iconSize = 40; // กำหนดขนาดของไอคอน
 
   return (
-    <div>
+    
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+    <h1 style={{ fontFamily: 'Kanit, sans-serif',marginRight: '800px' }}>อาจารย์</h1>
       {/* ให้ IoIosAddCircleOutline มีการตอบสนองและเรียก togglePopup */}
       <IoIosAddCircleOutline
         onClick={togglePopup}

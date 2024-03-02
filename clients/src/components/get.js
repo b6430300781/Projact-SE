@@ -10,7 +10,6 @@ const UserList = () => {
     Axios.get("http://127.0.0.1:3001/get")
       .then((response) => {
         setUsers(response.data);
-        
       })
       .catch((error) => {
         console.error('Error fetching user data:', error);
@@ -18,28 +17,16 @@ const UserList = () => {
   }, []);
   
 
-  const handleMoveUser = (index, direction) => {
-    const newUsers = [...users];
-    const movedUser = newUsers.splice(index, 1)[0];
-
-    if (direction === 'right') {
-      newUsers.splice(index + 1, 0, movedUser);
-    } else if (direction === 'left') {
-      newUsers.splice(index - 1, 0, movedUser);
-    }
-
-    setUsers(newUsers);
-  };
-
-  const handleDeleteUser = async (userId) => {
+  const handleDeleteUser = async (userEmail) => {
     try {
-      await Axios.delete(`http://localhost:3001/usersaj/${userId}`);
-      setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userId));
-      // Assuming "setUsers" is the correct way to update your state after deletion
+      await Axios.delete(`http://localhost:3001/delete/${userEmail}`);
+      setUsers((prevUsers) => prevUsers.filter((user) => user.email !== userEmail));
     } catch (error) {
       console.error('Error deleting data:', error);
+      alert(`ลบข้อมูล ${userEmail} ไม่สำเร็จ`);
     }
   };
+  
 
   return (
     <div>
@@ -54,8 +41,8 @@ const UserList = () => {
                   alt="User Icon"
                 />
                 <div>
-                  <p>Email: {user.email}</p>
-                  <p>Full Name: {user.name}</p>
+                  <h3>ชื่อ : {user.name}</h3>
+                  <p style={{marginTop:'-30px'}}>Email: {user.email}</p>
                 </div>
               </div>
               <img
@@ -63,10 +50,11 @@ const UserList = () => {
                 src={bin}
                 alt="Delete Icon"
                 onClick={() => {
-                  if (window.confirm('คุณแน่ใจหรือไม่ว่าต้องการลบข้อมูลนี้?')) {
-                    handleDeleteUser(user.id);
+                  if (window.confirm(`คุณแน่ใจหรือไม่ว่าต้องการลบข้อมูลผู้ใช้ Email : ${user.email} ออกจากระบบ?`)) {
+                    handleDeleteUser(user.email);
                   }
                 }}
+                
               />
             </li>
             <hr style={{ width: '900px', color: 'white', margin: '10px auto' }} />
@@ -74,7 +62,6 @@ const UserList = () => {
         ))}
       </ul>
     </div>
-    
   );
 };
 

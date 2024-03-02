@@ -99,7 +99,7 @@ app.post("/create", (req, res) => {
 
 
 app.get('/get',(req,res)=>{
-    db.query("SELECT*FROM usersaj",(err,result)=>{
+    db.query("SELECT*FROM usersaj ORDER BY name",(err,result)=>{
         if(err){
             console.log(err);
         }else{
@@ -108,7 +108,7 @@ app.get('/get',(req,res)=>{
     })
 })
 app.get('/get1',(req,res)=>{
-  db.query("SELECT*FROM usersed",(err,result)=>{
+  db.query("SELECT*FROM usersed ORDER BY name",(err,result)=>{
       if(err){
           console.log(err);
       }else{
@@ -223,6 +223,32 @@ app.get('/time', (req, res) => {
             console.log("ลบสำเร็จ")
         }
     });
+});
+
+app.delete('/delete/:userEmail', (req, res) => {
+  const userEmail = req.params.userEmail;
+  db.query("DELETE FROM usersaj WHERE email = ?", [userEmail], (err, result) => {
+    if (err) {
+      console.error('Error deleting data:', err);
+      res.status(500).send('Error deleting data');
+    } else {
+      console.log('Deleted user with email:', userEmail);
+      res.status(200).send('Data deleted successfully');
+    }
+  });
+});
+
+app.delete('/delete1/:userEmail', (req, res) => {
+  const userEmail = req.params.userEmail;
+  db.query("DELETE FROM usersed WHERE email = ?", [userEmail], (err, result) => {
+    if (err) {
+      console.error('Error deleting data:', err);
+      res.status(500).send('Error deleting data');
+    } else {
+      console.log('Deleted user with email:', userEmail);
+      res.status(200).send('Data deleted successfully');
+    }
+  });
 });
 
 
