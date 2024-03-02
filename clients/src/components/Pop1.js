@@ -50,6 +50,14 @@ const Pop = ({ onClose }) => {
   };
 
   const handleButtonAdd = () => {
+    if (!isValidEmail(email)) {
+      alert('กรุณาป้อนอีเมลที่ถูกต้อง');
+      return; // หยุดการทำงานถ้าอีเมลไม่ถูกต้อง
+    }
+    if (!email || !fullName) {
+      alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+      return;
+    }
     Axios.post("http://127.0.0.1:3001/creates",{
       email: email,
       fullName:fullName,
@@ -67,8 +75,10 @@ const Pop = ({ onClose }) => {
 
       // ปิด popup
       onClose();
+      alert(`ทำการเพิ่มข้อมูลผู้ใช้ ${email} เข้าสู่ระบบ`);
       window.location.reload()
     });
+    
   };
 
 
@@ -78,6 +88,12 @@ const Pop = ({ onClose }) => {
     if (file) {
       handleFileUpload(file);
     }
+  };
+
+  const isValidEmail = (email) => {
+    // Regex สำหรับตรวจสอบรูปแบบของอีเมล
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
 
   return (
@@ -167,7 +183,9 @@ const Popup = () => {
   const iconSize = 40; // กำหนดขนาดของไอคอน
 
   return (
-    <div>
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+    <h1 style={{ fontFamily: 'Kanit, sans-serif',marginRight: '730px' }}>ฝ่ายการศึกษา</h1>
+      
       {/* ให้ IoIosAddCircleOutline มีการตอบสนองและเรียก togglePopup */}
       <IoIosAddCircleOutline
         onClick={togglePopup}
