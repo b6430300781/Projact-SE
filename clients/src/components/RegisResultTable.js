@@ -4,6 +4,7 @@ import MyImage from "../assets/Vector.png";
 import RegisTa from "./testtable";
 // import SearchBar from "./SearchBar";
 import "./SearchBar.css";
+
 import searchIcon from "../assets/searchbar.svg"; // Import รูปไอคอน
 
 function RegisResultTable() {
@@ -27,32 +28,41 @@ function RegisResultTable() {
       });
     }
   });
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const handleCheckboxChange = (e) => {
+    const { value, checked } = e.target;
+    if (checked) {
+      setSelectedOptions([...selectedOptions, value]);
+    } else {
+      setSelectedOptions(selectedOptions.filter((option) => option !== value));
+    }
+  };
   // สร้างข้อมูลตาราง
   const [selectedValues, setSelectedValues] = useState({
     year: "",
     semester: "",
     numberOfSections: "",
     type: "",
-    branch: ""
+    branch: "",
   });
 
   const handleDropdownChange = (event, field) => {
     setSelectedValues({
       ...selectedValues,
-      [field]: event.target.value
+      [field]: event.target.value,
     });
   };
-
 
   return (
     <div>
       <div class="searchBar-texthead">
         <p1>ลงทะเบียนรายวิชา</p1>
       </div>
-      <div style={{ marginTop: '35px'}}>
+      <div style={{ marginTop: "35px" }}>
         <div class="searchBar-container">
-            <div>
-          <div style={{ marginTop: '35px' }}>
+          <div>
+            <div style={{ marginTop: "35px" }}>
               <div>
                 <div className="text5">
                   <a>หลักสูตร</a>
@@ -79,7 +89,9 @@ function RegisResultTable() {
                 <div className="dropdown15">
                   <select
                     value={selectedValues.semester}
-                    onChange={(event) => handleDropdownChange(event, "semester")}
+                    onChange={(event) =>
+                      handleDropdownChange(event, "semester")
+                    }
                   >
                     <option value=""></option>
                     <option value="ภาคต้น">ภาคต้น</option>
@@ -110,7 +122,9 @@ function RegisResultTable() {
                 <div className="dropdown16">
                   <select
                     value={selectedValues.numberOfSections}
-                    onChange={(event) => handleDropdownChange(event, "numberOfSections")}
+                    onChange={(event) =>
+                      handleDropdownChange(event, "numberOfSections")
+                    }
                   >
                     <option value=""></option>
                     <option value="1">1</option>
@@ -128,24 +142,119 @@ function RegisResultTable() {
                     <option value="ภาคบรรยาย">ภาคบรรยาย</option>
                   </select>
                 </div>
-                <div className="dropdown18">
-                  <select
-                    value={selectedValues.branch}
-                    onChange={(event) => handleDropdownChange(event, "branch")}
-                  >
-                    <option value=""></option>
-                    <option value="T05">T05</option>
-                    <option value="T12">T12</option>
-                    <option value="T13">T13</option>
-                    <option value="T14">T14</option>
-                    <option value="T17">T17</option>
-                    <option value="T18">T18</option>
-                    <option value="T19">T19</option>
-                    <option value="T20">T20</option>
-                    <option value="T21">T21</option>
-                    <option value="T22">T22</option>
-                    <option value="T23">T23</option>
-                  </select>
+                <div>
+                  <div className="checkbox-group">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="branch"
+                        value="T05"
+                        checked={selectedOptions.includes("T05")}
+                        onChange={handleCheckboxChange}
+                      />
+                      T05
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="branch"
+                        value="T12"
+                        checked={selectedOptions.includes("T12")}
+                        onChange={handleCheckboxChange}
+                      />
+                      T12
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="branch"
+                        value="T13"
+                        checked={selectedOptions.includes("T13")}
+                        onChange={handleCheckboxChange}
+                      />
+                      T13
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="branch"
+                        value="T14"
+                        checked={selectedOptions.includes("T14")}
+                        onChange={handleCheckboxChange}
+                      />
+                      T14
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="branch"
+                        value="T17"
+                        checked={selectedOptions.includes("T17")}
+                        onChange={handleCheckboxChange}
+                      />
+                      T17
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="branch"
+                        value="T18"
+                        checked={selectedOptions.includes("T18")}
+                        onChange={handleCheckboxChange}
+                      />
+                      T18
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="branch"
+                        value="T19"
+                        checked={selectedOptions.includes("T19")}
+                        onChange={handleCheckboxChange}
+                      />
+                      T19
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="branch"
+                        value="T20"
+                        checked={selectedOptions.includes("T20")}
+                        onChange={handleCheckboxChange}
+                      />
+                      T20
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="branch"
+                        value="T21"
+                        checked={selectedOptions.includes("T21")}
+                        onChange={handleCheckboxChange}
+                      />
+                      T21
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="branch"
+                        value="T22"
+                        checked={selectedOptions.includes("T22")}
+                        onChange={handleCheckboxChange}
+                      />
+                      T22
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="branch"
+                        value="T23"
+                        checked={selectedOptions.includes("T23")}
+                        onChange={handleCheckboxChange}
+                      />
+                      T23
+                    </label>
+                  </div>
                 </div>
                 <div class="RegisResultTable-buttonchange">
                   <div class="RegisResultTable-saveButton">
