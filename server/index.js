@@ -144,6 +144,70 @@ app.get('/api/rowCount1', (req, res) => {
   });
 });
 
+app.post("/addroom", (req, res) => {
+  const excelData = req.body.excelData;
+  // const selectedValue8=req.body.selectedValue8;
+  // const selectedValue9=req.body.selectedValue9;
+
+  const values = excelData.map(() => "( ?)").join(", ");
+
+  const sql = `INSERT INTO roomlab (building,room ,quantity) VALUES ${values}`;
+
+  db.query(sql,excelData, (err, result) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send("Error inserting values");
+    } else {
+      res.send("Values Inserted");
+    }
+  });
+});
+
+app.get('/getsub',(req,res)=>{
+  db.query("SELECT distinct course_year from course",(err,result)=>{
+      if(err){
+          console.log(err);
+      }else{
+          res.send(result);
+      }
+  })
+})
+app.post("/uploaded", (req, res) => {
+  const excelData = req.body.excelData;
+
+  const values = excelData.map(() => "( ?)").join(", ");
+
+  const sql = `INSERT INTO course (course_year,subj_id,subj_name,credit,type,term ) VALUES ${values}`;
+
+  db.query(sql,excelData, (err, result) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send("Error inserting values");
+    } else {
+      res.send("Values Inserted");
+    }
+  });
+});
+
+app.post("/addsub", (req, res) => {
+  const idSubject = req.body.idSubject;
+  const subjectName = req.body.subjectName;
+  const selectedValue2=req.body.selectedValue2;
+  const selectedValue3=req.body.selectedValue3;
+  const selectedValue4=req.body.selectedValue4;
+
+  db.query(
+    "INSERT INTO course (course_year,subj_id,subj_name,credit,type,term ) VALUES (?,?,?,?,?,?)",
+    [selectedValue2,idSubject,subjectName,selectedValue4,selectedValue3,"xx"],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send("Values Inserted");
+      }
+    }
+  );
+});
 
 app.get('/box', (req, res) => {
     db.query("SELECT * FROM box", (err, result) => {
