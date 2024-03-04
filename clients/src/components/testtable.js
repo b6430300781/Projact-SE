@@ -87,9 +87,9 @@ class RegisTa extends React.Component {
                       <img src={MyImage} alt=" " className="testtable-centered-image" onClick={this.handleDeleteRow} />
                     </div>
                   </td>
-                  <td>01420112</td>
-                  <td>General Physics</td>
-                  <td>3</td>
+                  <td>01420114-60</td>
+                  <td>Laboratory in Physics</td>
+                  <td>1</td>
                   <td>1</td>
                   <td>830</td>
                   <td>

@@ -38,8 +38,9 @@ function BoxNoti2() {
             console.log('Saved value:', savedData);
             setInputValue('');
             handlePopupClose();
-            setPopupVisible(false);
             setDataSaved(true);
+            window.alert('คุณต้องการเพิ่มประกาศใหม่'); // แสดงกล่องข้อความเมื่อบันทึกข้อมูลเสร็จสิ้น
+            window.location.reload(); // ย้อนกลับไปหน้าก่อนหน้านี้
         } catch (error) {
             console.error('Error saving data:', error);
         }
@@ -49,11 +50,10 @@ function BoxNoti2() {
         setInputValue(event.target.value);
     };
 
-    const handleFormSubmit = (event) => {
+    const handleFormSubmit = async (event) => {
         event.preventDefault();
         console.log('Submitted Value:', inputValue);
-        handleSaveButtonClick();
-        setInputValue('');
+        await handleSaveButtonClick(); // Wait for saving data
     };
 
     const handleDeleteBox = async (boxId) => {
@@ -65,8 +65,6 @@ function BoxNoti2() {
             console.error('Error deleting data:', error);
         }
     };
-    
-    
 
     const newBoxStyle = {
         width: '1070px',
@@ -89,87 +87,81 @@ function BoxNoti2() {
 
     return (
         <>
-        <div>
-            <div className='turnleft-all'>
-                <h className='DateAdmin-text'>สร้างประกาศ</h>
-                <button className='box-noti' onClick={handleButtonClick} style={{ marginTop: '35px', marginLeft: '-40px' }}>
-                    <img src={plus} className="plus" alt="plus" />
-                    <p className="text-under-img">เพิ่มประกาศใหม่</p>
-                </button>
-                <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
-                {boxes.map((box, index) => (
-                    <div key={box.id} className='box-noti' style={newBoxStyle}>
-                        <span
-                            className="delete-icon-noti"
-                            style={{ position: 'absolute', cursor: 'pointer', color: 'white' }}
-                            onClick={() => {
-                                if (window.confirm('คุณแน่ใจหรือไม่ว่าต้องการลบข้อมูลนี้?')) {
-                                    handleDeleteBox(box.id);
-                                }
-                            }}
-                        >
-                        </span>
-                        <p style={{ marginBottom: '20px' ,marginLeft: '20px',marginRight: '20px',color:'white',whiteSpace: 'pre-line',textAlign:'center'}}>{box.info}</p> 
-                        {index !== boxes.length - 1 && <hr style={{ margin: '10px 0', border: '1px solid white' }} />} 
-                        <div>
-                            <div
-                                style={{ 
-                                    position: 'absolute', 
-                                    cursor: 'pointer', 
-                                    top: '5px',
-                                    color: 'white', 
-                                    right: '5px' ,
-                                    border: 'none',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                }}
-                                onClick={() => {
-                                    if (window.confirm('คุณแน่ใจหรือไม่ว่าต้องการลบข้อมูลนี้?')) {
-                                        handleDeleteBox(box.id);
-                                    }
-                                }}
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
-                                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                                </svg>
+            <div>
+                <div className='turnleft-all'>
+                    <h className='DateAdmin-text'>สร้างประกาศ</h>
+                    <button className='box-noti' onClick={handleButtonClick} style={{ marginTop: '35px', marginLeft: '-40px' }}>
+                        <img src={plus} className="plus" alt="plus" />
+                        <p className="text-under-img">เพิ่มประกาศใหม่</p>
+                    </button>
+                    <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
+                        {boxes.map((box, index) => (
+                            <div key={box.id} className='box-noti' style={newBoxStyle}>
+                                <span
+                                    className="delete-icon-noti"
+                                    style={{ position: 'absolute', cursor: 'pointer', color: 'white' }}
+                                    onClick={() => {
+                                        if (window.confirm('คุณแน่ใจหรือไม่ว่าต้องการลบข้อมูลนี้?')) {
+                                            handleDeleteBox(box.id);
+                                        }
+                                    }}
+                                >
+                                </span>
+                                <p style={{ marginBottom: '20px' ,marginLeft: '20px',marginRight: '20px',color:'white',whiteSpace: 'pre-line',textAlign:'center'}}>{box.info}</p> 
+                                {index !== boxes.length - 1 && <hr style={{ margin: '10px 0', border: '1px solid white' }} />} 
+                                <div>
+                                    <div
+                                        style={{ 
+                                            position: 'absolute', 
+                                            cursor: 'pointer', 
+                                            top: '5px',
+                                            color: 'white', 
+                                            right: '5px' ,
+                                            border: 'none',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                        }}
+                                        onClick={() => {
+                                            if (window.confirm('คุณแน่ใจหรือไม่ว่าต้องการลบข้อมูลนี้?')) {
+                                                handleDeleteBox(box.id);
+                                            }
+                                        }}
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {isPopupVisible && (
+                <div className='popup-addmin'>
+                    <div className='false-noti'>
+                        <div className="popup-noti" style={{ width: '550px', height: '380px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                            <form onSubmit={handleFormSubmit} style={{ width: '100%' }}>
+                                <div className="form-group" style={{ width: '100%' }}>
+                                    <textarea
+                                        className="form-control"
+                                        id="inputField"
+                                        value={inputValue}
+                                        onChange={handleInputChange}
+                                    />
+                                    <div className="popup-buttonnoti">
+                                        <button onClick={handlePopupClose} className="btn-secondary-noti ml-auto" >Cancel</button>
+                                        <button type="submit" className="btn-primary-noti ml-auto">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                ))}
-
-
-            </div>
-            </div>
-
-          {isPopupVisible && (
-              <div className='popup-addmin'>
-                <div className='false-noti'>
-                <div className="popup-noti" style={{ width: '550px', height: '380px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                    <form onSubmit={handleFormSubmit} style={{ width: '100%' }}>
-                        <div className="form-group" style={{ width: '100%' }}>
-                            
-                        <textarea
-                          className="form-control"
-                          id="inputField"
-                          value={inputValue}
-                          onChange={handleInputChange}
-                      />
-
-                            <div className="popup-buttonnoti">
-                                <button onClick={handlePopupClose} className="btn-secondary-noti ml-auto" >Cancel</button>
-                                <button type="submit" className="btn-primary-noti ml-auto" onClick={handleFormSubmit}>Submit</button>
-                                
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                </div>
                 </div>
             )}
-            
-          </div>
         </>
     );
 }
