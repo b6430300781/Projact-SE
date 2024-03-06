@@ -25,7 +25,13 @@ const NavbarEdu = () => {
           <li className="nav-item">
             <img src="subject.jpg" alt="user" />
             <a href="/รายวิชาที่เปิดสอน" className="nav-link">
-              รายวิชาที่เปิดสอน
+              นำเข้ารายวิชา
+            </a>
+          </li>
+          <li className="nav-item">
+            <img src="subject.jpg" alt="user" />
+            <a href="/OpenCourse" className="nav-link">
+              รายวิชาที่สามารถเปิดสอน
             </a>
           </li>
           <li className="nav-item">
