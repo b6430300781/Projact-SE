@@ -59,3 +59,130 @@
     margin-left: 23px;
     border-radius: 5px;
 }
+.CheckboxOpenCourse-NewBox {
+    display: flex;
+    align-items: 10px;
+}
+
+.CheckboxOpenCourse-NewBox input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.CheckboxOpenCourse-NewBox .checkbox-text {
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+.CheckboxOpenCourse-Item {
+    display: flex;
+    align-items: center;
+}
+
+.CheckboxOpenCourse-Item input[type="checkbox"] {
+    margin-right: 25px;
+}
+
+.CheckboxOpenCourse-Item .checkbox-text {
+    font-size: 16px;
+    cursor: pointer;
+    
+    
+}
+.CheckboxOpenCourse-status {
+    position: relative;
+    margin-left: 400px;
+    
+}
+
+.CheckboxOpenCourse-status::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+}
+
+.CheckboxOpenCourse-status::after {
+    background-color: red; /* กำหนดสีสำหรับสถานะแดง */
+}
+
+input[type="checkbox"]:checked ~ .CheckboxOpenCourse-status::after {
+    background-color: green; /* กำหนดสีสำหรับสถานะเขียว เมื่อ checkbox ถูกติ๊ก */
+}
+.CheckboxOpenCourse-status1 {
+    position: relative;
+    margin-left: 292px;
+    
+}
+.CheckboxOpenCourse-status1::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+}
+
+.CheckboxOpenCourse-status1::after {
+    background-color: red; /* กำหนดสีสำหรับสถานะแดง */
+}
+
+input[type="checkbox"]:checked ~ .CheckboxOpenCourse-status1::after {
+    background-color: green; /* กำหนดสีสำหรับสถานะเขียว เมื่อ checkbox ถูกติ๊ก */
+}
+
+
+.CheckboxOpenCourse-status2 {
+    position: relative;
+    margin-left: 290px;
+    
+}
+.CheckboxOpenCourse-status2::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+}
+
+.CheckboxOpenCourse-status2::after {
+    background-color: red; 
+}
+
+input[type="checkbox"]:checked ~ .CheckboxOpenCourse-status2::after {
+    background-color: green; 
+}
+
+.CheckboxOpenCourse-status3 {
+    position: relative;
+    margin-left: 110px;
+    
+}
+.CheckboxOpenCourse-status3::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+}
+
+.CheckboxOpenCourse-status3::after {
+    background-color: red; 
+}
+
+input[type="checkbox"]:checked ~ .CheckboxOpenCourse-status3::after {
+    background-color: green; 
+}
+

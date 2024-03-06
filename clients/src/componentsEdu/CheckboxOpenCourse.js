@@ -6,6 +6,7 @@ function CheckboxOpenCourse() {
 
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked);
+        
     };
     return (
         <div className='turnleft-all'>
@@ -35,8 +36,40 @@ function CheckboxOpenCourse() {
                             </div>
 
                             <div class="CheckboxOpenCourse-NewBox">
-                                <p2> 1. รหัสวิชา  ชื่อวิชา  หน่วยวิชา  วิชาบังคับ/แกน/เลือก</p2>
+                        <div>
+                        <div>
+  <div className='CheckboxOpenCourse-Item'>
+    <input type='checkbox' id='checkText' />
+    <p className='checkbox-text'>1. รหัสวิชา ชื่อวิชา หน่วยวิชา วิชาบังคับ/แกน/เลือก</p>
+    <p className='checkbox-text CheckboxOpenCourse-status'>สถานะ:</p>
+  </div>
+ 
+  <div>
+  <div className='CheckboxOpenCourse-Item'>
+    <input type='checkbox' id='checkText2' />
+    <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
+    <p className='checkbox-text CheckboxOpenCourse-status1'>สถานะ:</p>
+  </div>
+ <div>
+ <div className='CheckboxOpenCourse-Item'>
+    <input type='checkbox' id='checkText2' />
+    <p className='checkbox-text'>3. 65	03603112	Programming Fundamentals II	3(2-3-6)	วิชาแกน</p>
+    <p className='checkbox-text CheckboxOpenCourse-status2'>สถานะ:</p>
+    </div>
+ </div>
+ <div>
+ <div className='CheckboxOpenCourse-Item'>
+    <input type='checkbox' id='checkText2' />
+    <p className='checkbox-text'>4. 65	03603171	Introduction to Computer Engineering and Informatics	3(3-0-6)	วิชาบังคับ</p>
+    <p className='checkbox-text CheckboxOpenCourse-status3'>สถานะ:</p>
+    </div>
+ </div>
+</div>
+</div>
 
+
+            </div>
+                                
 
                             </div>
 
