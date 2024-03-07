@@ -22,7 +22,7 @@ function CheckRoom() {
       <h className='DateAdmin-text'>ตรวจสอบห้องเรียนที่สามารถเปิดสอนได้</h>
       <div className="course-table">
         <div className="column">
-          <p>ปีการศึกษา/ภาคเรียน</p>
+          <p>ปีการศึกษา</p>
         </div>
         <div className="column">
           <div>
@@ -33,7 +33,7 @@ function CheckRoom() {
 
       <div className="course-table1">
         <div className="column1">
-          <p>2566/ต้น</p>
+          <p>2566</p>
         </div>
         <div className="column2">
           {/* ใช้ Link เพื่อเปลี่ยนหน้า */}

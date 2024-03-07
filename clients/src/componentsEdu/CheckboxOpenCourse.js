@@ -31,17 +31,17 @@ function CheckboxOpenCourse() {
     document.addEventListener("DOMContentLoaded", function () {
         // เพิ่มโค้ดที่ต้องการให้ทำงานหลังจากการโหลดหน้าเว็บเสร็จสมบูรณ์ที่นี่
         var saveButtonOpenCourse = document.getElementById('saveButton');
-        
-  
-  
+
+
+
         if (saveButtonOpenCourse) {
             saveButtonOpenCourse.addEventListener('click', function () {
-            console.log("คุณกำลังคลิกปุ่มบันทึก");
-            // สามารถเพิ่มโค้ดอื่น ๆ ต่อจากนี้เพื่อทำงานตามที่ต้องการ
-          });
+                console.log("คุณกำลังคลิกปุ่มบันทึก");
+                // สามารถเพิ่มโค้ดอื่น ๆ ต่อจากนี้เพื่อทำงานตามที่ต้องการ
+            });
         }
-  
-      });
+
+    });
 
 
 
@@ -54,9 +54,22 @@ function CheckboxOpenCourse() {
                 <div className='CheckboxOpenCourse-dropdown' >
                     <p style={{ fontFamily: 'kanit', fontWeight: 'bold' }}>หลักสูตร</p>
                     <select>
-                        <option value='65'>65</option>
-                        <option value='60'>60</option>
-                        <option value='55'>55</option>
+                        <option value=""></option>
+                        <option value="2569">2569</option>
+                        <option value="2568">2568</option>
+                        <option value="2567">2567</option>
+                        <option value="2566">2566</option>
+                        <option value="2565">2565</option>
+                        <option value="2564">2564</option>
+                        <option value="2563">2563</option>
+                        <option value="2562">2562</option>
+                        <option value="2561">2561</option>
+                        <option value="2560">2560</option>
+                        <option value="2559">2559</option>
+                        <option value="2558">2558</option>
+                        <option value="2557">2557</option>
+                        <option value="2556">2556</option>
+                        <option value="2555">2555</option>
                     </select>
 
                     <button className='CheckboxOpenCourse-button'>เลือก</button>
@@ -144,10 +157,10 @@ function CheckboxOpenCourse() {
                 </div>
 
                 <div class="CheckboxOpenCourse-changeButton">
-                <div class="RegisResultTable-saveButton">
-                    <button id="saveButtonOpenCourse">
-                        <p class="RegisResultTable-saveButtontext">บันทึก</p></button>
-                </div>
+                    <div class="RegisResultTable-saveButton">
+                        <button id="saveButtonOpenCourse">
+                            <p class="RegisResultTable-saveButtontext">บันทึก</p></button>
+                    </div>
 
                 </div>
 
