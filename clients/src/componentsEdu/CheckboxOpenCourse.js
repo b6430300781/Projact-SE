@@ -3,10 +3,28 @@ import './CheckboxOpenCourse.css';
 
 function CheckboxOpenCourse() {
     const [isChecked, setIsChecked] = useState(false);
+    const [selectedItems, setSelectedItems] = useState([]);
 
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked);
-        
+        if (!isChecked) {
+            // เมื่อติ๊กที่ "เลือกทั้งหมด"
+            const allItemIds = document.querySelectorAll('.CheckboxOpenCourse-Item input[type="checkbox"]').forEach(checkbox => checkbox.checked = true);
+            setSelectedItems(allItemIds);
+        } else {
+            // เมื่อยกเลิกติ๊กที่ "เลือกทั้งหมด"
+            const allItemIds = document.querySelectorAll('.CheckboxOpenCourse-Item input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
+            setSelectedItems([]);
+        }
+    };
+
+    const handleItemCheckboxChange = (e) => {
+        const itemId = e.target.id;
+        if (e.target.checked) {
+            setSelectedItems(prevSelectedItems => [...prevSelectedItems, itemId]);
+        } else {
+            setSelectedItems(prevSelectedItems => prevSelectedItems.filter(id => id !== itemId));
+        }
     };
     return (
         <div className='turnleft-all'>
@@ -62,6 +80,30 @@ function CheckboxOpenCourse() {
     <input type='checkbox' id='checkText2' />
     <p className='checkbox-text'>4. 65	03603171	Introduction to Computer Engineering and Informatics	3(3-0-6)	วิชาบังคับ</p>
     <p className='checkbox-text CheckboxOpenCourse-status3'>สถานะ:</p>
+    </div>
+ </div>
+ <div>
+ <div className='CheckboxOpenCourse-Item'>
+    <input type='checkbox' id='checkText2' />
+    <p className='checkbox-text'>5. 65	03603352	Laws and Ethics in Information Technology	3(3-0-6)	วิชาบังคับ</p>
+    <p className='checkbox-text CheckboxOpenCourse-status4'>สถานะ:</p>
+    </div>
+ </div>
+
+ <div>
+ <div className='CheckboxOpenCourse-Item'>
+    <input type='checkbox' id='checkText2' />
+    <p className='checkbox-text'>6. 65	03603251	Database Systems	3(3-0-6)	วิชาบังคับ
+</p>
+    <p className='checkbox-text CheckboxOpenCourse-status5'>สถานะ:</p>
+    </div>
+ </div>
+
+ <div>
+ <div className='CheckboxOpenCourse-Item'>
+    <input type='checkbox' id='checkText2' />
+    <p className='checkbox-text'>7. 65	03603252	Database Systems Laboratory	1(0-3-2)	วิชาบังคับ</p>
+    <p className='checkbox-text CheckboxOpenCourse-status6'>สถานะ:</p>
     </div>
  </div>
 </div>
