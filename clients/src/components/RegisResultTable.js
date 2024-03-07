@@ -66,7 +66,7 @@ function RegisResultTable() {
               <div>
                 <div className="text5">
                   <a>หลักสูตร</a>
-                  <a>ภาคการศึกษา</a>
+                  {/* <a>ภาคการศึกษา</a> */}
                 </div>
                 <div className="dropdown14">
                   <select
@@ -74,20 +74,25 @@ function RegisResultTable() {
                     onChange={(event) => handleDropdownChange(event, "year")}
                   >
                     <option value=""></option>
-                    <option value="66">ปี 66</option>
-                    <option value="65">ปี 65</option>
-                    <option value="64">ปี 64</option>
-                    <option value="63">ปี 63</option>
-                    <option value="62">ปี 62</option>
-                    <option value="61">ปี 61</option>
-                    <option value="60">ปี 60</option>
-                    <option value="59">ปี 59</option>
-                    <option value="58">ปี 58</option>
-                    <option value="57">ปี 57</option>
+                    <option value="2569">2569</option>
+                    <option value="2568">2568</option>
+                    <option value="2567">2567</option>
+                    <option value="2566">2566</option>
+                    <option value="2565">2565</option>
+                    <option value="2564">2564</option>
+                    <option value="2563">2563</option>
+                    <option value="2562">2562</option>
+                    <option value="2561">2561</option>
+                    <option value="2560">2560</option>
+                    <option value="2559">2559</option>
+                    <option value="2558">2558</option>
+                    <option value="2557">2557</option>
+                    <option value="2556">2556</option>
+                    <option value="2555">2555</option>
                   </select>
                 </div>
                 <div className="dropdown15">
-                  <select
+                  {/* <select
                     value={selectedValues.semester}
                     onChange={(event) =>
                       handleDropdownChange(event, "semester")
@@ -97,7 +102,7 @@ function RegisResultTable() {
                     <option value="ภาคต้น">ภาคต้น</option>
                     <option value="ภาคปลาย">ภาคปลาย</option>
                     <option value="ภาคฤดูร้อน">ภาคฤดูร้อน</option>
-                  </select>
+                  </select> */}
                 </div>
                 <div className="RegisResultTable-searchbar-changposition">
                   <div class="searchBar-subjectBox">รายวิชา</div>
@@ -130,6 +135,9 @@ function RegisResultTable() {
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
+                    <option value="3">4</option>
+                    <option value="3">5</option>
+                    <option value="3">6</option>
                   </select>
                 </div>
                 <div className="dropdown17">

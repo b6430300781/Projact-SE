@@ -18,7 +18,7 @@ function handleClick(event) {
   
 function CheckCourse() {
     // สร้างข้อมูลตาราง
-    const tableData = [66, 65, 64, 63];
+    const tableData = [2566, 2565, 2564, 2563];
     return (
             <div className='turnleft-all'>
                     <h className='DateAdmin-text'>ตรวจสอบรายวิชาที่สามารถเปิดสอน</h>
@@ -38,7 +38,7 @@ function CheckCourse() {
                     {/* เพิ่มตารางอีก 3 ตาราง */}
                     <div className="course-table1">
                         <div className="column1">
-                            <p>66</p>
+                            <p>2566</p>
                             {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                         </div>
                         <div className="column2">
@@ -51,7 +51,7 @@ function CheckCourse() {
 
                     <div className="course-table2">
                         <div className="column3">
-                            <p>65</p>
+                            <p>2565</p>
                             {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                         </div>
                         <div className="column4">
@@ -64,7 +64,7 @@ function CheckCourse() {
 
                     <div className="course-table3">
                         <div className="column5">
-                            <k>64</k>
+                            <k>2564</k>
                             {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                         </div>
                         <div className="column6">
@@ -76,7 +76,7 @@ function CheckCourse() {
                     </div>
                     <div className="course-table4">
                         <div className="column7">
-                            <p>63</p>
+                            <p>2563</p>
                             {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                         </div>
                         <div className="column8">

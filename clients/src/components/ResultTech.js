@@ -37,7 +37,7 @@ function ResultTeach() {
   return (
     <div className="top">
       <h className="DateAdmin-text">ผลการลงทะเบียน</h>
-      <div style={{ marginTop: '25px'}}>
+      <div style={{ marginTop: '25px' }}>
         <div>
 
           <a>วัน</a>
@@ -61,26 +61,24 @@ function ResultTeach() {
             <div className="dropdown11">
               <select value={selectedValue11} onChange={handleDropdownChange11}>
                 <option value=""></option>
-                <option value="ปี1">ปี 1</option>
-                <option value="ปี2">ปี 2</option>
-                <option value="ปี3">ปี 3</option>
-                <option value="ปี4">ปี 4</option>
-                <option value="ปี5-8">ปี 5-8</option>
+                <option value="year1">ปี 1</option>
+                <option value="year2">ปี 2</option>
+                <option value="year3">ปี 3</option>
+                <option value="year4">ปี 4</option>
+                <option value="year5">ปี 5-8</option>
               </select>
             </div>
             <div className="dropdown12">
               <select value={selectedValue12} onChange={handleDropdownChange12}>
                 <option value=""></option>
-                <option value="15101">15101</option>
-                <option value="15102">15102</option>
-                <option value="15103">15103</option>
-                <option value="LABCOM23">LABCOM23</option>
-                <option value="DAT">DAT</option>
-                <option value="2101">2101</option>
-                <option value="2102">2102</option>
-                <option value="LABEE">LABEE</option>
-                <option value="LABCOM1">LABCOM1</option>
-                <option value="LABCOM2">LABCOM2</option>
+                <option value="LABCOM1">Lab Com1</option>
+                <option value="LABCOM2">Lab Com 2</option>
+                <option value="LABCOM23">Lab Com 23</option>
+                <option value="LABCOMDAT">Lab Com Dat</option>
+                <option value="LABLOGIC15309">Lab Logic 15309</option>
+                <option value="LABLOGIC">Lab Logic</option>
+                <option value="1969/1">1969/1</option>
+                <option value="25202">25202</option>
               </select>
             </div>
             <div className="dropdown13">
@@ -162,11 +160,11 @@ function ResultTeach() {
         </div>
 
       </div>
-      
-      <div style={{ marginTop: '25px'}}>
-      <div className="ChangePosition">
-        <CheckRegisCoruse></CheckRegisCoruse>
-      </div>
+
+      <div style={{ marginTop: '25px' }}>
+        <div className="ChangePosition">
+          <CheckRegisCoruse></CheckRegisCoruse>
+        </div>
 
       </div>
     </div>

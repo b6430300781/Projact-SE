@@ -20,7 +20,7 @@ function handleClick(event) {
 
 function BoxImportCourse() {
     // สร้างข้อมูลตาราง
-    const tableData = [66, 65, 64, 63, 62, 61, 60, 59, 58, 57, 'วิชาบังคับ', 'วิชาเลือก', 'วิชาเสรี', 1, 2, 3, 4];
+    const tableData = [2569, 2568, 2567, 2566, 2565, 2564, 2563, 2562, 2561, 2560, 2559, 2558, 2557, 2556, 2555, 'วิชาบังคับ', 'วิชาเลือก', 'วิชาแกน', 1, 2, 3, 4];
     const [selectedValue1, setSelectedValue1] = useState('');
     const [selectedValue2, setSelectedValue2] = useState('');
     const [selectedValue3, setSelectedValue3] = useState('');
@@ -62,31 +62,41 @@ function BoxImportCourse() {
                             <div className='dropdown1'>
                                 <select value={selectedValue1} onChange={handleDropdownChange1}>
                                     <option value=""></option>
-                                    <option value="66">ปี 66</option>
-                                    <option value="65">ปี 65</option>
-                                    <option value="64">ปี 64</option>
-                                    <option value="63">ปี 63</option>
-                                    <option value="62">ปี 62</option>
-                                    <option value="61">ปี 61</option>
-                                    <option value="60">ปี 60</option>
-                                    <option value="59">ปี 59</option>
-                                    <option value="58">ปี 58</option>
-                                    <option value="57">ปี 57</option>
+                                    <option value="2569">2569</option>
+                                    <option value="2568">2568</option>
+                                    <option value="2567">2567</option>
+                                    <option value="2566">2566</option>
+                                    <option value="2565">2565</option>
+                                    <option value="2564">2564</option>
+                                    <option value="2563">2563</option>
+                                    <option value="2562">2562</option>
+                                    <option value="2561">2561</option>
+                                    <option value="2560">2560</option>
+                                    <option value="2559">2559</option>
+                                    <option value="2558">2558</option>
+                                    <option value="2557">2557</option>
+                                    <option value="2556">2556</option>
+                                    <option value="2555">2555</option>
                                 </select>
                             </div>
                             <div className='dropdown2'>
                                 <select value={selectedValue2} onChange={handleDropdownChange2}>
                                     <option value=""></option>
-                                    <option value="66">ปี 66</option>
-                                    <option value="65">ปี 65</option>
-                                    <option value="64">ปี 64</option>
-                                    <option value="63">ปี 63</option>
-                                    <option value="62">ปี 62</option>
-                                    <option value="61">ปี 61</option>
-                                    <option value="60">ปี 60</option>
-                                    <option value="59">ปี 59</option>
-                                    <option value="58">ปี 58</option>
-                                    <option value="57">ปี 57</option>
+                                    <option value="2569">2569</option>
+                                    <option value="2568">2568</option>
+                                    <option value="2567">2567</option>
+                                    <option value="2566">2566</option>
+                                    <option value="2565">2565</option>
+                                    <option value="2564">2564</option>
+                                    <option value="2563">2563</option>
+                                    <option value="2562">2562</option>
+                                    <option value="2561">2561</option>
+                                    <option value="2560">2560</option>
+                                    <option value="2559">2559</option>
+                                    <option value="2558">2558</option>
+                                    <option value="2557">2557</option>
+                                    <option value="2556">2556</option>
+                                    <option value="2555">2555</option>
                                 </select>
                             </div>
                             <div className='dropdown3'>
@@ -94,7 +104,8 @@ function BoxImportCourse() {
                                     <option value=""></option>
                                     <option value="วิชาบังคับ">วิชาบังคับ</option>
                                     <option value="วิชาเลือก">วิชาเลือก</option>
-                                    <option value="วิชาเสรี">วิชาเสรี</option>
+                                    <option value="วิชาแกน">วิชาแกน</option>
+    
 
                                 </select>
                             </div>
@@ -148,7 +159,7 @@ function BoxImportCourse() {
                         {/* เพิ่มตารางอีก 3 ตาราง */}
                         <div className="course-table1">
                             <div className="column1">
-                                <p>66</p>
+                                <p>2566</p>
                                 {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                             </div>
                             <div className="column2">
@@ -161,7 +172,7 @@ function BoxImportCourse() {
 
                         <div className="course-table2">
                             <div className="column3">
-                                <p>65</p>
+                                <p>2565</p>
                                 {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                             </div>
                             <div className="column4">
@@ -174,7 +185,7 @@ function BoxImportCourse() {
 
                         <div className="course-table3">
                             <div className="column5">
-                                <k>64</k>
+                                <k>2564</k>
                                 {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                             </div>
                             <div className="column6">
@@ -186,7 +197,7 @@ function BoxImportCourse() {
                         </div>
                         <div className="course-table4">
                             <div className="column7">
-                                <p>63</p>
+                                <p>2563</p>
                                 {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                             </div>
                             <div className="column8">

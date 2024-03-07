@@ -18,7 +18,7 @@ function handleClick(event) {
 }
 
 function RoomImport() {
-  const tableData = [2566, 2565, 2564, 2563, 2562, 2561, 2560, 2559, 2558, 2557, 'ภาคต้น', 'ภาคปลาย', 'ภาคฤดูร้อน'];
+  const tableData = [2569,2568,2567,2566, 2565, 2564, 2563, 2562, 2561, 2560, 2559, 2558, 2557, 2556, 2555, 'ภาคต้น', 'ภาคปลาย', 'ภาคฤดูร้อน'];
   const [selectedValue8, setSelectedValue8] = useState('');
   const [selectedValue9, setSelectedValue9] = useState('');
 
@@ -34,12 +34,15 @@ function RoomImport() {
       <h className='DateAdmin-text'>นำข้อมูลห้องเรียนเข้าสู่ระบบ</h>
       <div className="text2">
         <a>ปีการศึกษา</a>
-        <a>ภาคการศึกษา</a>
+        {/* <a>ภาคการศึกษา</a> */}
       </div>
       <div className="dropdown">
         <div className='dropdown8'>
           <select value={selectedValue8} onChange={handleDropdownChange8}>
             <option value=""></option>
+            <option value="2566">2569</option>
+            <option value="2566">2568</option>
+            <option value="2566">2567</option>
             <option value="2566">2566</option>
             <option value="2565">2565</option>
             <option value="2564">2564</option>
@@ -50,16 +53,18 @@ function RoomImport() {
             <option value="2559">2559</option>
             <option value="2558">2558</option>
             <option value="2557">2557</option>
+            <option value="2557">2556</option>
+            <option value="2557">2555</option>
           </select>
         </div>
-        <div className='dropdown9'>
+        {/* <div className='dropdown9'>
           <select value={selectedValue9} onChange={handleDropdownChange9}>
             <option value=""></option>
             <option value="ภาคต้น">ภาคต้น</option>
             <option value="ภาคปลาย">ภาคปลาย</option>
             <option value="ภาคฤดูร้อน">ภาคฤดูร้อน</option>
           </select>
-        </div>
+        </div> */}
       </div>
       <div>
         <UploadRoom />
@@ -77,7 +82,7 @@ function RoomImport() {
 
       <div className="course-table1">
         <div className="column1">
-          <p>2566/ต้น</p>
+          <p>2566</p>
         </div>
         <div className="column2">
           {/* ใช้ Link เพื่อเปลี่ยนหน้า */}
