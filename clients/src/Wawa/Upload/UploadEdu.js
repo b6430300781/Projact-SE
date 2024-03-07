@@ -38,23 +38,20 @@ const UploadEdu = ({selectedValue1}) => {
     });
   };
 
-  useEffect(() => {
-    fetchData();
-}, []);
 
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
-  const fetchData = async () => {
-      try {
-          const response = await axios.get('http://localhost:3001/getsub');
-          setBoxes(response.data);
-      } catch (error) {
-          console.error('Error fetching data:', error);
-      }
-  };
+  // const fetchData = async () => {
+  //     try {
+  //         const response = await axios.get('http://localhost:3001/getsub');
+  //         setBoxes(response.data);
+  //     } catch (error) {
+  //         console.error('Error fetching data:', error);
+  //     }
+  // };
   const handleButtonClick = () => {
     Axios.post("http://localhost:3001/uploaded", {
         excelData: excelData,
