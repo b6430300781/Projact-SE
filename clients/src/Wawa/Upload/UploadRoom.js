@@ -6,10 +6,10 @@ import { FaRegSave } from "react-icons/fa";
 import * as XLSX from 'xlsx';
 import Axios from "axios";
 
-const UploadRoom = () => {
+const UploadRoom = ({selectedValue8, selectedValue9}) => {
   const [excelData, setExcelData] = useState(null);
   const [fileName, setFileName] = useState(null);
-  const [userList,setuserList] = useState([]);
+  const [roomList,setroomList] = useState([]);
 
   const handleFileUpload = (file) => {
     setFileName(file.name);
@@ -31,24 +31,27 @@ const UploadRoom = () => {
 
   const getuser = () => {
     // Axios.get("http://127.0.0.1:3001/add").then((response) => {
-    //     setuserList(response.data);
+    //     setroomList(response.data);
     // });
   };
 
   const handleButtonClick = () => {
-    // Axios.post("http://127.0.0.1:3001/upload",{
-    //   excelData:excelData,
+    Axios.post("http://127.0.0.1:3001/addroom",{
+      excelData:excelData,
 
-    // }).then(() => {
-    //   setuserList([
-    //     ...userList,
-    //     {
-    //       excelData:excelData,
-    //   },
-    //   ]);
-    // });
+    }).then(() => {
+      setroomList([
+        ...roomList,
+        {
+          excelData:excelData,
+          // selectedValue8:selectedValue8,
+          // selectedValue9:selectedValue9
+      },
+      ]);
+    });
 
-    console.log(excelData);
+    // console.log(excelData);
+    console.log(setroomList)
   };
 
 
@@ -62,8 +65,8 @@ const UploadRoom = () => {
 
   useEffect(() => {
     // ทำสั่งการที่คุณต้องการที่นี่ เช่น อัพเดต UI
-    console.log("User list updated:", userList);
-  }, [userList]);
+    console.log("User list updated:", roomList);
+  }, [roomList]);
 
 
   return (
