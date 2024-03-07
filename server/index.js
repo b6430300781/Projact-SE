@@ -116,6 +116,34 @@ app.get('/get1',(req,res)=>{
       }
   })
 })
+
+
+app.get('/searchsubject', (req, res) => {
+  const searchText = req.query.searchText || '';
+
+  // ใช้ prepared statement เพื่อป้องกัน SQL injection
+  const sql = "SELECT * FROM course WHERE name LIKE ?";
+
+  db.query(sql, [`%${searchText}%`], (err, result) => {
+      if (err) {
+          console.log(err);
+          res.status(500).send('Internal Server Error');
+      } else {
+          // ตรวจสอบว่ามีข้อมูลหรือไม่
+          if (result.length > 0) {
+              // แปลงผลลัพธ์เป็น JSON
+              res.json(result);
+          } else {
+              // ถ้าไม่มีข้อมูล
+              res.json({ message: 'No results found.' });
+          }
+      }
+  });
+});
+
+
+
+
 app.get('/api/rowCount', (req, res) => {
   const query = 'SELECT COUNT(*) AS rowCount FROM usersaj';
 
