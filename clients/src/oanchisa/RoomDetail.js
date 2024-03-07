@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 function RoomDetail() {
-  const { building, room, Quantity } = useParams(); // กำหนดตัวแปร building และ room จาก useParams()
+  const { building, room, quantity } = useParams(); // กำหนดตัวแปร building และ room จาก useParams()
   const [roomData, setRoomData] = useState([]); // กำหนดตัวแปร roomData ด้วย useState()
 
   useEffect(() => {
@@ -47,7 +47,7 @@ function RoomDetail() {
             <h3>จำนวนที่นั่ง</h3>
             {roomData.map((item, index) => (
               <div key={index}>
-                <p>{item.Quantity}</p>
+                <p>{item.quantity}</p>
               </div>
             ))}
           </div>

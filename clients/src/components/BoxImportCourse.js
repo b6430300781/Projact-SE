@@ -30,6 +30,7 @@ function BoxImportCourse() {
         setSelectedValue1(event.target.value);
     };
 
+    // ////////////////////////////////////////////////////////////////
     const handleDropdownChange2 = (event) => {
         setSelectedValue2(event.target.value);
     };
@@ -108,22 +109,26 @@ function BoxImportCourse() {
                                 </select>
                             </div>
                             <div className='test'>
-                                <UploadEdu />
-                                <InputEdu/>
+                                <UploadEdu
+                                    selectedValue1={selectedValue1} />
+                                <InputEdu
+                                    selectedValue2={selectedValue2}
+                                    selectedValue3={selectedValue3}
+                                    selectedValue4={selectedValue4} />
                             </div>
                             <w style={{ color: '#8C3941' }}>เพิ่มรายวิชา</w>
                             <t style={{ color: '#838383' }}>(*ครั้งละ 1 วิชา)</t>
                             <f style={{ color: '#000000' }}>หลักสูตร</f>
                             <a style={{ color: '#000000' }}>หมวดวิชา</a>
                             <c style={{ color: '#000000' }}>หน่วยกิต</c>
-                            
+
                             {/* <x style={{ color: '#000000' }}>รหัสวิชา</x>
                             <y style={{ color: '#000000' }}>ชื่อวิชา</y> */}
                             <div className='test'>
-                                
+
                             </div>
                             <p style={{ color: '#8C3941' }}>รายวิชาที่เปิดสอน</p>
-                        
+
                         </div> {/* เพิ่มกล่องสี่เหลี่ยม */}
 
                         <div className="course-table">
@@ -148,7 +153,7 @@ function BoxImportCourse() {
                             </div>
                             <div className="column2">
                                 <Link to="/หลักสูตรปี_66" className="file-button" onClick={handleClick}>
-                                    <FaFileLines style={{ fontSize: '35px', color: 'black',marginLeft:'110px' }} />
+                                    <FaFileLines style={{ fontSize: '35px', color: 'black', marginLeft: '110px' }} />
                                 </Link>
                                 {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                             </div>
@@ -161,7 +166,7 @@ function BoxImportCourse() {
                             </div>
                             <div className="column4">
                                 <Link to="/หลักสูตรปี_65" className="file-button" onClick={handleClick}>
-                                    <FaFileLines style={{ fontSize: '35px', color: 'black' ,marginLeft:'110px'}} />
+                                    <FaFileLines style={{ fontSize: '35px', color: 'black', marginLeft: '110px' }} />
                                 </Link>
                                 {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                             </div>
@@ -174,7 +179,7 @@ function BoxImportCourse() {
                             </div>
                             <div className="column6">
                                 <Link to="/หลักสูตรปี_64" className="file-button" onClick={handleClick}>
-                                    <FaFileLines style={{ fontSize: '35px', color: 'black' ,marginLeft:'110px'}} />
+                                    <FaFileLines style={{ fontSize: '35px', color: 'black', marginLeft: '110px' }} />
                                 </Link>
                                 {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                             </div>
@@ -186,7 +191,7 @@ function BoxImportCourse() {
                             </div>
                             <div className="column8">
                                 <Link to="/หลักสูตรปี_63" className="file-button" onClick={handleClick}>
-                                    <FaFileLines style={{ fontSize: '35px', color: 'black',marginLeft:'110px' }} />
+                                    <FaFileLines style={{ fontSize: '35px', color: 'black', marginLeft: '110px' }} />
                                 </Link>
                                 {/* ใส่ข้อมูลที่ต้องการแสดงในคอลัมนี้ */}
                             </div>

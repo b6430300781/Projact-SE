@@ -6,6 +6,7 @@ import { FaRegSave } from "react-icons/fa";
 import * as XLSX from 'xlsx';
 import Axios from "axios";
 
+
 const InputEdu = ({ selectedValue2, selectedValue3, selectedValue4 }) => {
     const [idSubject, setIdSubject] = useState('');
     const [subjectName, setSubjectName] = useState('');
@@ -27,16 +28,13 @@ const InputEdu = ({ selectedValue2, selectedValue3, selectedValue4 }) => {
     // const [selectedValue4, setSelectedValue4] = useState(null);
 
     const handleButtonAdd = () => {
+        window.alert('เพิ่มข้อมูลวิชาเข้าสู่ระบบสำเร็จ');
         Axios.post("http://127.0.0.1:3001/addsub", {
             selectedValue2: selectedValue2,
             idSubject: idSubject,
             subjectName: subjectName,
             selectedValue4: selectedValue4,
             selectedValue3: selectedValue3,
-
-
-
-
         }).then(() => {
             setsubjectList([
                 ...subjectList,
@@ -46,24 +44,20 @@ const InputEdu = ({ selectedValue2, selectedValue3, selectedValue4 }) => {
                     subjectName: subjectName,
                     selectedValue4: selectedValue4,
                     selectedValue3: selectedValue3,
-                    
-
                 },
             ]);
             setIdSubject('');
             setSubjectName('');
-            // setSelectedValue2('');
-            // setSelectedValue3('');
-            // setSelectedValue4('');
-
-
+        }).catch(error => {
+            console.error('Error adding subject:', error);
+            window.alert('เกิดข้อผิดพลาดในการเพิ่มวิชา');
         });
         console.log(selectedValue2);
         console.log(selectedValue3);
-        console.log(selectedValue4,);
+        console.log(selectedValue4);
         console.log(subjectList);
     };
-
+    
     useEffect(() => {
         // ทำสั่งการที่คุณต้องการที่นี่ เช่น อัพเดต UI
         console.log("User list updated:", subjectList);

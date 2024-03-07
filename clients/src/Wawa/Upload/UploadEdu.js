@@ -11,6 +11,7 @@ const UploadEdu = ({selectedValue1}) => {
   const [excelData, setExcelData] = useState(null);
   const [fileName, setFileName] = useState(null);
   const [subjectList,setsubjectList] = useState([]);
+  
 
   const handleFileUpload = (file) => {
     setFileName(file.name);
@@ -37,25 +38,41 @@ const UploadEdu = ({selectedValue1}) => {
     });
   };
 
-  const handleButtonClick = () => {
-    Axios.post("http://localhost:3001/uploaded",{
-      excelData:excelData,
-      // selectedValue1: selectedValue1,
+  useEffect(() => {
+    fetchData();
+}, []);
 
-    }).then(() => {
-      setsubjectList([
-        ...subjectList,
-        {
-          excelData:excelData,
-          // selectedValue1: selectedValue1,
-      },
-      ]);
-    });
 
-    // console.log(excelData);
-    // console.log(selectedValue1)
-    // console.log(setsubjectList)
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+      try {
+          const response = await axios.get('http://localhost:3001/getsub');
+          setBoxes(response.data);
+      } catch (error) {
+          console.error('Error fetching data:', error);
+      }
   };
+  const handleButtonClick = () => {
+    Axios.post("http://localhost:3001/uploaded", {
+        excelData: excelData,
+        // selectedValue1: selectedValue1,
+    }).then(() => {
+        window.alert('บันทึกข้อมูลรายวิชาสำเร็จ');
+        setsubjectList([
+            ...subjectList,
+            {
+                excelData: excelData,
+                // selectedValue1: selectedValue1,
+            },
+        ]);
+    }).catch(error => {
+        console.error('Error saving data:', error);
+        window.alert('ข้อมูลไม่ถูกต้อง กรุณาเลือกไฟล์ใหม่');
+    });
+};
 
 
   const handleDrop = (e) => {
@@ -104,6 +121,7 @@ const UploadEdu = ({selectedValue1}) => {
                 <FaRegSave style={{ fontFamily: 'Kanit' ,fontSize: '15px', marginRight: '3px' ,paddingTop:'5px'}} />
                 SAVE
               </button>
+              
             </div>
           )}
 
