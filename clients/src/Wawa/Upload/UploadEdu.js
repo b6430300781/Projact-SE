@@ -55,7 +55,7 @@ const UploadEdu = ({selectedValue1}) => {
   const handleButtonClick = () => {
     Axios.post("http://localhost:3001/uploaded", {
         excelData: excelData,
-        // selectedValue1: selectedValue1,
+        selectedValue1: selectedValue1,
     }).then(() => {
         window.alert('บันทึกข้อมูลรายวิชาสำเร็จ');
         setsubjectList([
