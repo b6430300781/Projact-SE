@@ -2,7 +2,7 @@
     width: 1100px; /* กำหนดความกว้างของกล่อง */
     height: 580px; /* กำหนดความสูงของกล่อง */
     background-color: white; /* ตั้งสีพื้นหลังของกล่องเป็นสีขาว */
-    border-radius: 5px; /* เพิ่มมุมโค้งให้กับขอบของกล่อง */
+    border-radius: 20px; /* เพิ่มมุมโค้งให้กับขอบของกล่อง */
     
 
 }
@@ -80,23 +80,32 @@
 .CheckboxOpenCourse-Item {
     display: flex;
     align-items: center;
-}
-
-.CheckboxOpenCourse-Item input[type="checkbox"] {
-    margin-right: 25px;
+     /* จัดแถบสถานะทางซ้ายสุด */
+    width: 860px;
+    height: 48px;
+    /* background-color: #127151; */
+    font-family: 'kanit';
 }
 
 .CheckboxOpenCourse-Item .checkbox-text {
     font-size: 16px;
     cursor: pointer;
-    
-    
+    /* display: flex;
+    justify-content: flex-start; */
+    align-items: center;
+     /* ทำให้ข้อความขยายตามพื้นที่ */
+     /* background-color: aquamarine; */
 }
+
 .CheckboxOpenCourse-status {
     position: relative;
-    margin-left: 400px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: blue; */
+    margin-left: auto;    
     
-}
+} 
 
 .CheckboxOpenCourse-status::after {
     content: '';
@@ -107,160 +116,20 @@
     top: 50%;
     transform: translateY(-50%);
     right: -20px;
-}
-
-.CheckboxOpenCourse-status::after {
-    background-color: red; /* กำหนดสีสำหรับสถานะแดง */
+    background-color: red; /* สีสำหรับสถานะแดงตามค่าเริ่มต้น */
 }
 
 input[type="checkbox"]:checked ~ .CheckboxOpenCourse-status::after {
-    background-color: green; /* กำหนดสีสำหรับสถานะเขียว เมื่อ checkbox ถูกติ๊ก */
+    background-color: green; /* สีสำหรับสถานะเขียวเมื่อ checkbox ถูกติ๊ก */
 }
-.CheckboxOpenCourse-status1 {
+
+
+.CheckboxOpenCourse-changepo{
     position: relative;
-    margin-left: 292px;
-    
-}
-.CheckboxOpenCourse-status1::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -20px;
-}
+    display: flex;
+    justify-content: flex-end;    
 
-.CheckboxOpenCourse-status1::after {
-    background-color: red; /* กำหนดสีสำหรับสถานะแดง */
 }
-
-input[type="checkbox"]:checked ~ .CheckboxOpenCourse-status1::after {
-    background-color: green; /* กำหนดสีสำหรับสถานะเขียว เมื่อ checkbox ถูกติ๊ก */
-}
-
-
-.CheckboxOpenCourse-status2 {
-    position: relative;
-    margin-left: 290px;
-    
-}
-.CheckboxOpenCourse-status2::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -20px;
-}
-
-.CheckboxOpenCourse-status2::after {
-    background-color: red; 
-}
-
-input[type="checkbox"]:checked ~ .CheckboxOpenCourse-status2::after {
-    background-color: green; 
-}
-
-.CheckboxOpenCourse-status3 {
-    position: relative;
-    margin-left: 110px;
-    
-}
-.CheckboxOpenCourse-status3::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -20px;
-}
-
-.CheckboxOpenCourse-status3::after {
-    background-color: red; 
-}
-
-input[type="checkbox"]:checked ~ .CheckboxOpenCourse-status3::after {
-    background-color: green; 
-}
-
-.CheckboxOpenCourse-status4 {
-    position: relative;
-    margin-left: 195px;
-    
-}
-.CheckboxOpenCourse-status4::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -20px;
-}
-
-.CheckboxOpenCourse-status4::after {
-    background-color: red; 
-}
-
-input[type="checkbox"]:checked ~ .CheckboxOpenCourse-status4::after {
-    background-color: green; 
-}
-
-.CheckboxOpenCourse-status5 {
-    position: relative;
-    margin-left: 366px;
-    
-}
-.CheckboxOpenCourse-status5::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -20px;
-}
-
-.CheckboxOpenCourse-status5::after {
-    background-color: red; 
-}
-
-input[type="checkbox"]:checked ~ .CheckboxOpenCourse-status5::after {
-    background-color: green; 
-}
-
-.CheckboxOpenCourse-status6 {
-    position: relative;
-    margin-left: 285px;
-    
-}
-.CheckboxOpenCourse-status6::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -20px;
-}
-
-.CheckboxOpenCourse-status6::after {
-    background-color: red; 
-}
-
-input[type="checkbox"]:checked ~ .CheckboxOpenCourse-status6::after {
-    background-color: green; 
-}
-
 
 /* 
 ////// */
