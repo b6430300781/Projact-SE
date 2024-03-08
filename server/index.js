@@ -7,16 +7,16 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  // host: '127.0.0.1',
-  // user: 'root',
-  // password: '123456',
-  // database: 'db',
-  // port: '3306'
-
-  host: 'localhost',
+  host: '127.0.0.1',
   user: 'root',
-  password: '12345678',
-  database: 'project_se',
+  password: '123456',
+  database: 'databasese',
+  port: '3306'
+
+  // host: 'localhost',
+  // user: 'root',
+  // password: '12345678',
+  // database: 'project_se',
 })
 
 db.connect((err)=>{
@@ -202,12 +202,21 @@ app.get('/getsub',(req,res)=>{
 })
 app.post("/uploaded", (req, res) => {
   const excelData = req.body.excelData;
+  const selectedValue1 = req.body.selectedValue1;
 
-  const values = excelData.map(() => "( ?)").join(", ");
+  console.log(selectedValue1);
+
+  const modifiedExcelData = excelData.map(data => {
+    // data.push(selectedValue1);
+ 
+    return [selectedValue1, ...data];
+  });
+
+  const values = modifiedExcelData.map(() => "(?,?,?,?,?)").join(", ");
 
   const sql = `INSERT INTO course (course_year,subject_id,subject_name,credit,category ) VALUES ${values}`;
 
-  db.query(sql,excelData, (err, result) => {
+  db.query(sql, modifiedExcelData.flat(), (err, result) => {
     if (err) {
       console.log(err);
       res.status(500).send("Error inserting values");
@@ -216,6 +225,8 @@ app.post("/uploaded", (req, res) => {
     }
   });
 });
+
+
 
 app.post("/addsub", (req, res) => {
   const idSubject = req.body.idSubject;
