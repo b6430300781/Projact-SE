@@ -3,6 +3,7 @@
     height: 580px; /* กำหนดความสูงของกล่อง */
     background-color: white; /* ตั้งสีพื้นหลังของกล่องเป็นสีขาว */
     border-radius: 20px; /* เพิ่มมุมโค้งให้กับขอบของกล่อง */
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
     
 
 }
@@ -58,6 +59,7 @@
     margin-top: 20px; /* กำหนดระยะห่างด้านบน */
     margin-left: 23px;
     border-radius: 5px;
+    box-shadow: 0px 0px 20px 0px rgba(85, 95, 85, 0.1);
 }
 .CheckboxOpenCourse-NewBox {
     display: flex;
@@ -137,4 +139,35 @@ input[type="checkbox"]:checked ~ .CheckboxOpenCourse-status::after {
     position: relative;
     margin-left: 85%;
     margin-top: 60px;
+}
+
+
+.CheckboxOpenCourse-boxOpensub{
+    width: 1100px; /* กำหนดความกว้างของกล่อง */
+    height: 200px; /* กำหนดความสูงของกล่อง */
+    background-color: rgb(255, 255, 255); /* ตั้งสีพื้นหลังของกล่องเป็นสีขาว */
+    border-radius: 20px; /* เพิ่มมุมโค้งให้กับขอบของกล่อง */
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+
+}
+
+.course-list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* เพิ่ม CSS สำหรับแต่ละคอลัมน์ตามต้องการ */
+.course-item div {
+    margin-right: 10px;
+}
+
+/* เพิ่ม CSS สำหรับสถานะ */
+.course-item div:last-child {
+    margin-right: 0; /* ลบ margin-right ของสถานะสุดท้าย */
 }

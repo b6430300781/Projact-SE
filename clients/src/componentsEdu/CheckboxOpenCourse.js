@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './CheckboxOpenCourse.css';
+import CourseList from './getsubject';
+import BoxShow from './BoxsTableShowsub';
 
 function CheckboxOpenCourse() {
     const [isChecked, setIsChecked] = useState(false);
@@ -62,7 +64,7 @@ function CheckboxOpenCourse() {
 
                     <button className='CheckboxOpenCourse-button'>เลือก</button>
 
-                 
+
 
                     <div>
 
@@ -76,8 +78,9 @@ function CheckboxOpenCourse() {
                         </div>
 
                         <div class="CheckboxOpenCourse-NewBox">
-                            <div>
-                                <div>
+                            <CourseList></CourseList>
+
+                            {/* <div>
                                     <div className='CheckboxOpenCourse-Item'>
                                         <input type='checkbox' id='checkText' />
                                         <div className='checkbox-text'>1. รหัสวิชาss ชื่อวิชา หน่วยวิชา วิชาบังคับ/แกน/เลือก</div>
@@ -85,91 +88,7 @@ function CheckboxOpenCourse() {
                                     </div>
 
 
-                                    {/* <div className='CheckboxOpenCourse-Item'>
-                                        <input type='checkbox' id='checkText' />
-                                        <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
-                                        <p className='CheckboxOpenCourse-status'>สถานะ:</p>
-                                    </div>
-
-                                    <div className='CheckboxOpenCourse-Item'>
-                                        <input type='checkbox' id='checkText' />
-                                        <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
-                                        <p className='CheckboxOpenCourse-status'>สถานะ:</p>
-                                    </div>
-
-                                    <div className='CheckboxOpenCourse-Item'>
-                                        <input type='checkbox' id='checkText' />
-                                        <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
-                                        <p className='CheckboxOpenCourse-status'>สถานะ:</p>
-                                    </div>
-
-                                    <div className='CheckboxOpenCourse-Item'>
-                                        <input type='checkbox' id='checkText' />
-                                        <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
-                                        <p className='CheckboxOpenCourse-status'>สถานะ:</p>
-                                    </div>
-
-                                    <div className='CheckboxOpenCourse-Item'>
-                                        <input type='checkbox' id='checkText' />
-                                        <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
-                                        <p className='CheckboxOpenCourse-status'>สถานะ:</p>
-                                    </div>
-
-                                    <div className='CheckboxOpenCourse-Item'>
-                                        <input type='checkbox' id='checkText' />
-                                        <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
-                                        <p className='CheckboxOpenCourse-status'>สถานะ:</p>
-                                    </div>
-
-                                    <div className='CheckboxOpenCourse-Item'>
-                                        <input type='checkbox' id='checkText' />
-                                        <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
-                                        <p className='CheckboxOpenCourse-status'>สถานะ:</p>
-                                    </div>
-
-                                    <div className='CheckboxOpenCourse-Item'>
-                                        <input type='checkbox' id='checkText' />
-                                        <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
-                                        <p className='CheckboxOpenCourse-status'>สถานะ:</p>
-                                    </div>
-
-                                    <div className='CheckboxOpenCourse-Item'>
-                                        <input type='checkbox' id='checkText' />
-                                        <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
-                                        <p className='CheckboxOpenCourse-status'>สถานะ:</p>
-                                    </div>
-
-                                    <div className='CheckboxOpenCourse-Item'>
-                                        <input type='checkbox' id='checkText' />
-                                        <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
-                                        <p className='CheckboxOpenCourse-status'>สถานะ:</p>
-                                    </div>
-
-                                    <div className='CheckboxOpenCourse-Item'>
-                                        <input type='checkbox' id='checkText' />
-                                        <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
-                                        <p className='CheckboxOpenCourse-status'>สถานะ:</p>
-                                    </div>
-
-                                    <div className='CheckboxOpenCourse-Item'>
-                                        <input type='checkbox' id='checkText' />
-                                        <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
-                                        <p className='CheckboxOpenCourse-status'>สถานะ:</p>
-                                    </div>
-
-
-                                    <div className='CheckboxOpenCourse-Item'>
-                                        <input type='checkbox' id='checkText' />
-                                        <p className='checkbox-text'>2. 65  03603111  Programming Fundamentals I  3(2-3-6)  วิชาแกน</p>
-                                        <p className='CheckboxOpenCourse-status'>สถานะ:</p>
-                                    </div>
-
- */}
-
-                                </div>
-
-
-                            </div>
+                                </div> */}
 
 
                         </div>
@@ -192,6 +111,7 @@ function CheckboxOpenCourse() {
                 </div>
 
             </div>
+            <BoxShow/>
         </div>
 
     );
