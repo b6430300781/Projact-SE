@@ -16,7 +16,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'dbtest',
+  database: 'project_se',
 
   // host: 'localhost',
   // user: 'root',
@@ -196,15 +196,15 @@ app.post("/addroom", (req, res) => {
   });
 });
 
-app.get('/getsub',(req,res)=>{
-  db.query("SELECT distinct course_year from course",(err,result)=>{
-      if(err){
-          console.log(err);
-      }else{
-          res.send(result);
-      }
-  })
-})
+app.get('/getsub', (req, res) => {
+  db.query("SELECT * FROM course ORDER BY courseid", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
 app.post("/uploaded", (req, res) => {
   const excelData = req.body.excelData;
   const selectedValue1 = req.body.selectedValue1;
