@@ -13,10 +13,14 @@ const db = mysql.createConnection({
   // database: 'db',
   // port: '3306'
 
+  // host: 'localhost',
+  // user: 'root',
+  // password: '12345678',
+  // database: 'dbtest',
   host: 'localhost',
   user: 'root',
-  password: '12345678',
-  database: 'dbtest',
+  password: '',
+  database: 'register',
 })
 
 db.connect((err)=>{

@@ -4,6 +4,7 @@ import MyImage from "../assets/Vector.png";
 import RegisTa from "./testtable";
 // import SearchBar from "./SearchBar";
 import "./SearchBar.css";
+import Axios from 'axios';
 
 import searchIcon from "../assets/searchbar.svg"; // Import รูปไอคอน
 
@@ -66,38 +67,38 @@ function RegisResultTable() {
               <div>
                 <div className="text5">
                   <a>หลักสูตร</a>
-                  <a>ภาคการศึกษา</a>
                 </div>
-                <div className="dropdown14">
-                  <select
-                    value={selectedValues.year}
-                    onChange={(event) => handleDropdownChange(event, "year")}
-                  >
-                    <option value=""></option>
-                    <option value="66">ปี 66</option>
-                    <option value="65">ปี 65</option>
-                    <option value="64">ปี 64</option>
-                    <option value="63">ปี 63</option>
-                    <option value="62">ปี 62</option>
-                    <option value="61">ปี 61</option>
-                    <option value="60">ปี 60</option>
-                    <option value="59">ปี 59</option>
-                    <option value="58">ปี 58</option>
-                    <option value="57">ปี 57</option>
-                  </select>
-                </div>
-                <div className="dropdown15">
-                  <select
-                    value={selectedValues.semester}
-                    onChange={(event) =>
-                      handleDropdownChange(event, "semester")
-                    }
-                  >
-                    <option value=""></option>
-                    <option value="ภาคต้น">ภาคต้น</option>
-                    <option value="ภาคปลาย">ภาคปลาย</option>
-                    <option value="ภาคฤดูร้อน">ภาคฤดูร้อน</option>
-                  </select>
+                <div className="checkbox-group2">
+                <label>
+                  ปี55
+                  <input
+                    type="checkbox"
+                    name="branch"
+                    value="ปี55"
+                    checked={selectedOptions.includes("ปี55")}
+                    onChange={handleCheckboxChange}
+                  />
+                </label>
+                <label>
+                  ปี60
+                  <input
+                    type="checkbox"
+                    name="branch"
+                    value="ปี60"
+                    checked={selectedOptions.includes("ปี60")}
+                    onChange={handleCheckboxChange}
+                  />
+                </label>
+                <label>
+                  ปี65
+                  <input
+                    type="checkbox"
+                    name="branch"
+                    value="ปี65"
+                    checked={selectedOptions.includes("ปี65")}
+                    onChange={handleCheckboxChange}
+                  />
+                </label>
                 </div>
                 <div className="RegisResultTable-searchbar-changposition">
                   <div class="searchBar-subjectBox">รายวิชา</div>
