@@ -68,3 +68,7 @@
     position: relative;
     left: 20px;
   }
+.nav-item.selected{
+    background-color: #000000;
+    height: 50px;
+}

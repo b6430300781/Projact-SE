@@ -23,6 +23,7 @@
     left: 0;
     display: flex;
     margin-bottom: 20px;
+    margin-left: 0;
 
     align-items: flex-start;
     font-family: 'Kanit', sans-serif;
@@ -37,9 +38,10 @@
   
   .navbar-nav {
     list-style-type: none;
-    padding: 10px;
+    padding: 1px;
     margin: 0;
     float: left;
+
   }
   
   .nav-item {
@@ -49,7 +51,6 @@
     text-overflow: ellipsis; /* Display ellipsis (...) for overflowing text */
     text-align: left; /* Align text to the left */
     font-family: 'Kanit', sans-serif;
-    
 
   }
   
@@ -61,11 +62,16 @@
   }
   
   .nav-link {
-    color: white; /* Example link color */
+    color: rgb(0, 0, 0); /* Example link color */
     text-decoration: none;
     flex-grow: 1; /* Allow text to take up remaining space */
   }
   
   .nav-link:hover {
     text-decoration-color: #d9d9d9; /* Example link hover effect */
+  }
+
+  .nav-item.selected{
+    background-color: #ffffff7f;
+    height: 50px;
   }

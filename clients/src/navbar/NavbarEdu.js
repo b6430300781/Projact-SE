@@ -1,44 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './NavbarEdu.css';
+import {Link} from 'react-router-dom'
 
 const NavbarEdu = () => {
+  const [selectItem,setSelectItem] = useState(null);
+
+  const handleItemClick = (index) => {
+    setSelectItem((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
         <img src="profile.png" alt="" />
         <span>ฝ่ายการศึกษา<br />: ######</span>
       </div>
-      <div className='nav-turnlefts'>
+      <div className='nav-left'>
         <ul className="navbar-nav">
-          <li className="nav-item">
-            <img src="index.png" alt="index" />
-            <a href="/" className="nav-link">
+          <li className={`nav-item ${selectItem === 0 ? 'selected' : ''}` }onClick={() => handleItemClick(0)}>
+            <img src="index.png" style={{ marginLeft: "20px" }} alt="index" />
+            <Link to ="/" className="nav-link">
               ประกาศ
-            </a>
+            </Link>
           </li>
-          <li className="nav-item">
-            <img src="resu.jpg" alt="time" />
-            <a href="/ผลการลงทะเบียน" className="nav-link">
+          <li className={`nav-item ${selectItem === 1 ? 'selected' : ''}` }onClick={() => handleItemClick(1)}>
+            <img src="resu.jpg" style={{ marginLeft: "20px" }}  alt="time" />
+            <Link to="/ผลการลงทะเบียน" className="nav-link">
               ผลการลงทะเบียน
-            </a>
+            </Link>
           </li>
-          <li className="nav-item">
-            <img src="subject.jpg" alt="user" />
-            <a href="/รายวิชาที่เปิดสอน" className="nav-link">
+          <li className={`nav-item ${selectItem === 2 ? 'selected' : ''}` }onClick={() => handleItemClick(2)}>
+            <img src="subject.jpg" style={{ marginLeft: "20px" }}  alt="user" />
+            <Link to="/รายวิชาที่เปิดสอน" className="nav-link">
               นำเข้ารายวิชา
-            </a>
+            </Link>
           </li>
-          <li className="nav-item">
-            <img src="subject.jpg" alt="user" />
-            <a href="/OpenCourse" className="nav-link">
+          <li className={`nav-item ${selectItem === 3 ? 'selected' : ''}` }onClick={() => handleItemClick(3)}>
+            <img src="subject.jpg" style={{ marginLeft: "20px" }}  alt="user" />
+            <Link to="/OpenCourse" className="nav-link">
               รายวิชาที่สามารถเปิดสอน
-            </a>
+            </Link>
           </li>
-          <li className="nav-item">
-            <img src="room.jpg" alt="user" />
-            <a href="/ห้องเรียนทั้งหมด" className="nav-link">
+          <li className={`nav-item ${selectItem === 4 ? 'selected' : ''}` }onClick={() => handleItemClick(4)}>
+            <img src="room.jpg" style={{ marginLeft: "20px" }}  alt="user" />
+            <Link to="/ห้องเรียนทั้งหมด" className="nav-link">
               ห้องเรียนทั้งหมด
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
