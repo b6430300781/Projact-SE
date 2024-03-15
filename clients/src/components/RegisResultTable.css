@@ -309,3 +309,30 @@ option {
   margin-right: 5px; /* Space between the checkbox and the label text */
 }
 
+.autocomplete-dropdown {
+  position: absolute;
+  top: 100%; /* ให้ dropdown ขึ้นอยู่ทันทีด้านล่างของ search bar */
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-top: none;
+  z-index: 1000; /* ให้มีค่า z-index มากพอที่จะไม่โดนบังโดย elements อื่น */
+  max-height: 300px; /* หรือความสูงที่ต้องการ */
+  overflow-y: auto; /* เพิ่ม scroll bar ถ้ามีข้อมูลมากเกินไป */
+}
+
+.autocomplete-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-item:hover {
+  background-color: #f2f2f2;
+}
+
+/* เพิ่ม CSS นี้ถ้าคุณต้องการให้ search bar มีเงาหรืออื่นๆ เมื่อ dropdown ขึ้นมา */
+.searchBar-searchBox {
+  position: relative;
+  z-index: 10; /* ให้มีค่า z-index น้อยกว่า dropdown */
+}

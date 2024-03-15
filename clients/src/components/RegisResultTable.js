@@ -81,12 +81,11 @@ function RegisResultTable() {
         branch: branchString,
         // ...
       });
-     
-        // แสดงข้อความแจ้งเตือนหรือดำเนินการต่อ ตามความเหมาะสม
-        alert('Registration successful!');
-        window.location.reload();
-        // ตัวอย่าง: รีเซ็ตฟอร์มหรือ redirect ผู้ใช้
-      
+
+      // แสดงข้อความแจ้งเตือนหรือดำเนินการต่อ ตามความเหมาะสม
+      alert("Registration successful!");
+      window.location.reload();
+      // ตัวอย่าง: รีเซ็ตฟอร์มหรือ redirect ผู้ใช้
     } catch (error) {
       console.error("Error saving course registration:", error);
       // Log the entire error object to see more details
@@ -95,25 +94,24 @@ function RegisResultTable() {
   };
 
   const [selectedYear, setSelectedYear] = useState([]);
-const [selectedBranch, setSelectedBranch] = useState([]);
+  const [selectedBranch, setSelectedBranch] = useState([]);
 
-
-const handleCheckboxChange = (e) => {
-  const { value, checked, name } = e.target;
-  if (name === "year") {
-    if (checked) {
-      setSelectedYear([...selectedYear, value]);
-    } else {
-      setSelectedYear(selectedYear.filter((year) => year !== value));
+  const handleCheckboxChange = (e) => {
+    const { value, checked, name } = e.target;
+    if (name === "year") {
+      if (checked) {
+        setSelectedYear([...selectedYear, value]);
+      } else {
+        setSelectedYear(selectedYear.filter((year) => year !== value));
+      }
+    } else if (name === "branch") {
+      if (checked) {
+        setSelectedBranch([...selectedBranch, value]);
+      } else {
+        setSelectedBranch(selectedBranch.filter((branch) => branch !== value));
+      }
     }
-  } else if (name === "branch") {
-    if (checked) {
-      setSelectedBranch([...selectedBranch, value]);
-    } else {
-      setSelectedBranch(selectedBranch.filter((branch) => branch !== value));
-    }
-  }
-};
+  };
   // สร้างข้อมูลตาราง
   const [selectedValues, setSelectedValues] = useState({
     year: "",
