@@ -10,17 +10,26 @@ const db = mysql.createConnection({
   // host: '127.0.0.1',
   // user: 'root',
   // password: '123456',
-  // database: 'db',
+  // database: 'databasese',
   // port: '3306'
 
   // host: 'localhost',
   // user: 'root',
   // password: '12345678',
   // database: 'dbtest',
+  // host: 'localhost',
+  // user: 'root',
+  // password: '',
+  // database: 'project_se',
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'register',
+  database: 'tarangsorn'
+
+  // host: 'localhost',
+  // user: 'root',
+  // password: '12345678',
+  // database: 'project_se',
 })
 
 db.connect((err)=>{
@@ -120,6 +129,34 @@ app.get('/get1',(req,res)=>{
       }
   })
 })
+
+
+app.get('/searchsubject', (req, res) => {
+  const searchText = req.query.searchText || '';
+
+  // ใช้ prepared statement เพื่อป้องกัน SQL injection
+  const sql = "SELECT * FROM course WHERE name LIKE ?";
+
+  db.query(sql, [`%${searchText}%`], (err, result) => {
+      if (err) {
+          console.log(err);
+          res.status(500).send('Internal Server Error');
+      } else {
+          // ตรวจสอบว่ามีข้อมูลหรือไม่
+          if (result.length > 0) {
+              // แปลงผลลัพธ์เป็น JSON
+              res.json(result);
+          } else {
+              // ถ้าไม่มีข้อมูล
+              res.json({ message: 'No results found.' });
+          }
+      }
+  });
+});
+
+
+
+
 app.get('/api/rowCount', (req, res) => {
   const query = 'SELECT COUNT(*) AS rowCount FROM usersaj';
 
@@ -155,7 +192,7 @@ app.post("/addroom", (req, res) => {
 
   const values = excelData.map(() => "( ?)").join(", ");
 
-  const sql = `INSERT INTO roomlab (building,room ,quantity) VALUES ${values}`;
+  const sql = `INSERT INTO room (building,room ,quantity) VALUES ${values}`;
 
   db.query(sql,excelData, (err, result) => {
     if (err) {
@@ -167,23 +204,32 @@ app.post("/addroom", (req, res) => {
   });
 });
 
-app.get('/getsub',(req,res)=>{
-  db.query("SELECT distinct course_year from course",(err,result)=>{
-      if(err){
-          console.log(err);
-      }else{
-          res.send(result);
-      }
-  })
-})
+app.get('/getsub', (req, res) => {
+  db.query("SELECT * FROM course ORDER BY courseid", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
 app.post("/uploaded", (req, res) => {
   const excelData = req.body.excelData;
+  const selectedValue1 = req.body.selectedValue1;
 
-  const values = excelData.map(() => "( ?)").join(", ");
+  console.log(selectedValue1);
 
-  const sql = `INSERT INTO course (course_year,subj_id,subj_name,credit,type,term ) VALUES ${values}`;
+  const modifiedExcelData = excelData.map(data => {
+    // data.push(selectedValue1);
+ 
+    return [selectedValue1, ...data];
+  });
 
-  db.query(sql,excelData, (err, result) => {
+  const values = modifiedExcelData.map(() => "(?,?,?,?,?)").join(", ");
+
+  const sql = `INSERT INTO course (course_year,subject_id,subject_name,credit,category ) VALUES ${values}`;
+
+  db.query(sql, modifiedExcelData.flat(), (err, result) => {
     if (err) {
       console.log(err);
       res.status(500).send("Error inserting values");
@@ -192,6 +238,8 @@ app.post("/uploaded", (req, res) => {
     }
   });
 });
+
+
 
 app.post("/addsub", (req, res) => {
   const idSubject = req.body.idSubject;
@@ -201,12 +249,14 @@ app.post("/addsub", (req, res) => {
   const selectedValue4=req.body.selectedValue4;
 
   db.query(
-    "INSERT INTO course (course_year,subj_id,subj_name,credit,type,term ) VALUES (?,?,?,?,?,?)",
-    [selectedValue2,idSubject,subjectName,selectedValue4,selectedValue3,"xx"],
+    "INSERT INTO course (course_year,subject_id,subject_name,credit,category ) VALUES (?,?,?,?,?)",
+    [selectedValue2,idSubject,subjectName,selectedValue4,selectedValue3],
     (err, result) => {
       if (err) {
-        console.log(err);
+        console.error(err);
+        res.status(500).send("An error occurred while inserting values into the database.");
       } else {
+        console.log("Values Inserted");
         res.send("Values Inserted");
       }
     }
@@ -332,6 +382,88 @@ app.get('/room', (req, res) => {
       }
     });
   });
+
+  app.get('/search-courses', (req, res) => {
+    const { query } = req.query; // รับคำค้นหาจาก query string
+    // ตัวอย่างคำสั่ง SQL สำหรับค้นหาในตาราง courses
+    const sql = 'SELECT * FROM register WHERE course_code LIKE ? OR course_name LIKE ?';
+    db.query(sql, [`%${query}%`, `%${query}%`], (err, results) => {
+      if (err) {
+        console.error('Error searching courses:', err);
+        return res.status(500).send('Error searching courses');
+      }
+      res.json(results); // ส่งข้อมูลรายวิชาที่ค้นหาได้กลับไปยัง frontend
+    });
+  });
+  
+
+  app.post('/register', (req, res) => {
+    const { course_code, course_name, section, lectureOrLab, branch, year } = req.body;
+    
+    // ตรวจสอบข้อมูลที่จำเป็น
+    if (!course_code || !course_name || !section || !lectureOrLab || !branch || !year) {
+      return res.status(400).send('Missing required fields');
+    }
+  
+    const query = 'INSERT INTO registration_records (course_code, course_name, section, lectureOrLab, branch, year) VALUES (?, ?, ?, ?, ?, ?)';
+    
+    db.query(query, [course_code, course_name, section, lectureOrLab, branch, year], (err, results) => {
+      if (err) {
+        console.error('Failed to insert registration_records: ', err);
+        return res.status(500).send('Error saving registration_records');
+      }
+      res.status(201).send('Registration successful');
+    });
+});
+
+// GET endpoint for retrieving 'ภาคปฏิบัติ' data
+app.get('/practical-courses', (req, res) => {
+  const query = 'SELECT * FROM registration_records WHERE lectureOrLab = "ภาคปฏิบัติ"';
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error('Failed to retrieve practical courses: ', err);
+      return res.status(500).send('Error retrieving practical courses');
+    }
+    res.json(results);
+  });
+});
+
+// GET endpoint for retrieving 'ภาคบรรยาย' data
+app.get('/lecture-courses', (req, res) => {
+  const query = 'SELECT * FROM registration_records WHERE lectureOrLab = "ภาคบรรยาย"';
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error('Failed to retrieve lecture courses: ', err);
+      return res.status(500).send('Error retrieving lecture courses');
+    }
+    res.json(results);
+  });
+});
+
+// GET endpoint for retrieving all registration data
+app.get('/registration-data', (req, res) => {
+  const query = 'SELECT * FROM registration_records';
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error('Failed to retrieve registration data: ', err);
+      return res.status(500).send('Error retrieving registration data');
+    }
+    res.json(results);
+  });
+});
+app.get('/course-sections/:courseId', (req, res) => {
+  const { courseId } = req.params;
+  const query = 'SELECT section FROM registration_records WHERE id = ?';
+  db.query(query, [courseId], (err, results) => {
+    if (err) {
+      console.error('Failed to retrieve sections:', err);
+      return res.status(500).send('Error retrieving sections');
+    }
+    res.json(results);
+  });
+});
+
+
 
 app.listen("3001", () => {
     console.log('Server is running on port 3001');

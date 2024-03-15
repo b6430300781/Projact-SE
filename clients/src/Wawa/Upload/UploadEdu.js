@@ -7,10 +7,11 @@ import * as XLSX from 'xlsx';
 import Axios from "axios";
 import InputEdu from '../Input/InputEdu';
 
-const UploadEdu = () => {
+const UploadEdu = ({selectedValue1}) => {
   const [excelData, setExcelData] = useState(null);
   const [fileName, setFileName] = useState(null);
-  const [userList,setuserList] = useState([]);
+  const [subjectList,setsubjectList] = useState([]);
+  
 
   const handleFileUpload = (file) => {
     setFileName(file.name);
@@ -31,26 +32,44 @@ const UploadEdu = () => {
   };
 
   const getuser = () => {
-    // Axios.get("http://127.0.0.1:3001/add").then((response) => {
-    //     setuserList(response.data);
-    // });
+    Axios.get("http://localhost:3001/add").then((response) => {
+        setsubjectList(response.data);
+        
+    });
   };
 
+
+
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  // const fetchData = async () => {
+  //     try {
+  //         const response = await axios.get('http://localhost:3001/getsub');
+  //         setBoxes(response.data);
+  //     } catch (error) {
+  //         console.error('Error fetching data:', error);
+  //     }
+  // };
   const handleButtonClick = () => {
-    // Axios.post("http://127.0.0.1:3001/upload",{
-    //   excelData:excelData,
-
-    // }).then(() => {
-    //   setuserList([
-    //     ...userList,
-    //     {
-    //       excelData:excelData,
-    //   },
-    //   ]);
-    // });
-
-    console.log(excelData);
-  };
+    Axios.post("http://localhost:3001/uploaded", {
+        excelData: excelData,
+        selectedValue1: selectedValue1,
+    }).then(() => {
+        window.alert('บันทึกข้อมูลรายวิชาสำเร็จ');
+        setsubjectList([
+            ...subjectList,
+            {
+                excelData: excelData,
+                // selectedValue1: selectedValue1,
+            },
+        ]);
+    }).catch(error => {
+        console.error('Error saving data:', error);
+        window.alert('ข้อมูลไม่ถูกต้อง กรุณาเลือกไฟล์ใหม่');
+    });
+};
 
 
   const handleDrop = (e) => {
@@ -63,8 +82,8 @@ const UploadEdu = () => {
 
   useEffect(() => {
     // ทำสั่งการที่คุณต้องการที่นี่ เช่น อัพเดต UI
-    console.log("User list updated:", userList);
-  }, [userList]);
+    console.log("User list updated:", subjectList);
+  }, [subjectList]);
 
 
   return (
@@ -99,6 +118,7 @@ const UploadEdu = () => {
                 <FaRegSave style={{ fontFamily: 'Kanit' ,fontSize: '15px', marginRight: '3px' ,paddingTop:'5px'}} />
                 SAVE
               </button>
+              
             </div>
           )}
 

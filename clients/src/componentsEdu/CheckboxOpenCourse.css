@@ -1,0 +1,173 @@
+.CheckboxOpenCourse-box{
+    width: 1100px; /* กำหนดความกว้างของกล่อง */
+    height: 580px; /* กำหนดความสูงของกล่อง */
+    background-color: white; /* ตั้งสีพื้นหลังของกล่องเป็นสีขาว */
+    border-radius: 20px; /* เพิ่มมุมโค้งให้กับขอบของกล่อง */
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    
+
+}
+
+.CheckboxOpenCourse-dropdown{
+    margin-left: 60px;
+    position: relative;
+    top: 30px;
+    font-size: 16px;
+    
+
+}
+.CheckboxOpenCourse-button {
+    background-color: #127151; /* สีพื้นหลังเป็นสีเขียว */
+    color: white; /* สีข้อความเป็นสีขาว */
+    border: none; /* ไม่มีเส้นขอบ */
+    padding: 5px 20px; /* กำหนดขนาดของปุ่ม */
+    border-radius: 5px; /* กำหนดรูปร่างของมุม */
+    cursor: pointer; /* ตัวชี้เมาส์เป็นรูปของมือ */
+    position: relative;
+    margin-left: 30px;
+    font-family: 'kanit';
+    font-weight: normal;
+}
+
+
+.CheckboxOpenCourse-check-block {
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.CheckboxOpenCourse-check-block input[type="checkbox"] {
+    margin-right: 5px;
+    
+}
+
+.CheckboxOpenCourse-checkbox-text {
+    font-size: 16px;
+    cursor: pointer;
+    color:  #127151;
+}
+
+
+.leftleft{
+    margin-left: 20px;
+}
+.CheckboxOpenCourse-NewBox {
+    background-color:#CCDCD7; /* สีพื้นหลังเป็นสีเทา */
+    width: 90%; /* กำหนดความกว้าง */
+    height: 400px; /* กำหนดความสูง */
+    margin-top: 20px; /* กำหนดระยะห่างด้านบน */
+    margin-left: 23px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 0px rgba(85, 95, 85, 0.1);
+}
+.CheckboxOpenCourse-NewBox {
+    display: flex;
+    align-items: 10px;
+    max-height: 300px; /* ปรับความสูงสูงสุดตามที่ต้องการ */
+  overflow-y: auto;
+    
+}
+
+.CheckboxOpenCourse-NewBox input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.CheckboxOpenCourse-NewBox .checkbox-text {
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+.CheckboxOpenCourse-Item {
+    display: flex;
+    align-items: center;
+     /* จัดแถบสถานะทางซ้ายสุด */
+    width: 860px;
+    height: 48px;
+    /* background-color: #127151; */
+    font-family: 'kanit';
+}
+
+.CheckboxOpenCourse-Item .checkbox-text {
+    font-size: 16px;
+    cursor: pointer;
+    /* display: flex;
+    justify-content: flex-start; */
+    align-items: center;
+     /* ทำให้ข้อความขยายตามพื้นที่ */
+     /* background-color: aquamarine; */
+}
+
+.CheckboxOpenCourse-status {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: blue; */
+    margin-left: auto;    
+    
+} 
+
+.CheckboxOpenCourse-status::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+    background-color: red; /* สีสำหรับสถานะแดงตามค่าเริ่มต้น */
+}
+
+input[type="checkbox"]:checked ~ .CheckboxOpenCourse-status::after {
+    background-color: green; /* สีสำหรับสถานะเขียวเมื่อ checkbox ถูกติ๊ก */
+}
+
+
+.CheckboxOpenCourse-changepo{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;    
+
+}
+
+/* 
+////// */
+.CheckboxOpenCourse-changeButton{
+    position: relative;
+    margin-left: 85%;
+    margin-top: 60px;
+}
+
+
+.CheckboxOpenCourse-boxOpensub{
+    width: 1100px; /* กำหนดความกว้างของกล่อง */
+    height: 200px; /* กำหนดความสูงของกล่อง */
+    background-color: rgb(255, 255, 255); /* ตั้งสีพื้นหลังของกล่องเป็นสีขาว */
+    border-radius: 20px; /* เพิ่มมุมโค้งให้กับขอบของกล่อง */
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+
+}
+
+.course-list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* เพิ่ม CSS สำหรับแต่ละคอลัมน์ตามต้องการ */
+.course-item div {
+    margin-right: 10px;
+}
+
+/* เพิ่ม CSS สำหรับสถานะ */
+.course-item div:last-child {
+    margin-right: 0; /* ลบ margin-right ของสถานะสุดท้าย */
+}

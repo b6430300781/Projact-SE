@@ -6,33 +6,62 @@ import { FaRegSave } from "react-icons/fa";
 import * as XLSX from 'xlsx';
 import Axios from "axios";
 
-const InputEdu = () => {
+
+const InputEdu = ({ selectedValue2, selectedValue3, selectedValue4 }) => {
     const [idSubject, setIdSubject] = useState('');
     const [subjectName, setSubjectName] = useState('');
-    const [userList, setuserList] = useState([]);
+    const [subjectList, setsubjectList] = useState([]);
+    // // const match = selectedValue4.match(/\(([^)]+)\)/);
+    // const regex = /(\d+)\((\d+)-(\d+)-(\d+)\)/;
+
+    // const match =selectedValue4.match(regex);
+    
+    // if (match) {
+    //   const dataList = match.slice(1).map(Number);
+    
+    //   console.log("Data List:", dataList);
+    // } else {
+    //   console.log("ไม่พบข้อมูลที่ต้องการ");
+    // }
+    // const [selectedValue2, setSelectedValue2] = useState(null);
+    // const [selectedValue3, setSelectedValue3] = useState(null);
+    // const [selectedValue4, setSelectedValue4] = useState(null);
 
     const handleButtonAdd = () => {
-        Axios.post("http://127.0.0.1:3001/create", {
-          idSubject: idSubject,
-          subjectName: subjectName,
+        window.alert('เพิ่มข้อมูลวิชาเข้าสู่ระบบสำเร็จ');
+        Axios.post("http://127.0.0.1:3001/addsub", {
+            selectedValue2: selectedValue2,
+            idSubject: idSubject,
+            subjectName: subjectName,
+            selectedValue4: selectedValue4,
+            selectedValue3: selectedValue3,
         }).then(() => {
-          setuserList([
-            ...userList,
-            {
-              idSubject: idSubject,
-              subjectName: subjectName
-            },
-          ]);
-          setIdSubject('');
-          setSubjectName('');
-          
+            setsubjectList([
+                ...subjectList,
+                {
+                    selectedValue2: selectedValue2,
+                    idSubject: idSubject,
+                    subjectName: subjectName,
+                    selectedValue4: selectedValue4,
+                    selectedValue3: selectedValue3,
+                },
+            ]);
+            setIdSubject('');
+            setSubjectName('');
+        }).catch(error => {
+            console.error('Error adding subject:', error);
+            window.alert('เกิดข้อผิดพลาดในการเพิ่มวิชา');
         });
-      };
-
+        console.log(selectedValue2);
+        console.log(selectedValue3);
+        console.log(selectedValue4);
+        console.log(subjectList);
+    };
+    
     useEffect(() => {
         // ทำสั่งการที่คุณต้องการที่นี่ เช่น อัพเดต UI
-        console.log("User list updated:", userList);
-    }, [userList]);
+        console.log("User list updated:", subjectList);
+    }, [subjectList]);
 
 
     return (
@@ -48,7 +77,7 @@ const InputEdu = () => {
                             type="text"
                             value={idSubject}
                             onChange={(e) => setIdSubject(e.target.value)}
-                            style={{ marginBottom: '10px', width: '300px' , fontFamily: 'Kanit'}}
+                            style={{ marginBottom: '10px', width: '300px', fontFamily: 'Kanit' }}
                         />
                     </div>
                     <div>
@@ -57,7 +86,7 @@ const InputEdu = () => {
                             type="text"
                             value={subjectName}
                             onChange={(e) => setSubjectName(e.target.value)}
-                            style={{ width: '300px', fontFamily: 'Kanit'}}
+                            style={{ width: '300px', fontFamily: 'Kanit' }}
                         />
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'end', marginTop: 'auto' }}>
