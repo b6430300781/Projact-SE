@@ -53,14 +53,14 @@ function RegisResultTable() {
   };
 
   const [selectedCourse, setSelectedCourse] = useState({
-    course_code: "",
-    course_name: "",
+    subject_id: "",
+    subject_name: "",
   });
   const handleSelectCourse = (course) => {
-    setSearchText(`${course.course_code} - ${course.course_name}`);
+    setSearchText(`${course.subject_id} - ${course.subject_name}`);
     setSelectedCourse({
-      course_code: course.course_code,
-      course_name: course.course_name,
+      subject_id: course.subject_id,
+      subject_name: course.subject_name,
     });
     setSearchResults([]); // ล้างผลลัพธ์การค้นหาหลังจากเลือกวิชา
   };
@@ -73,8 +73,8 @@ function RegisResultTable() {
     try {
       const response = await Axios.post("http://localhost:3001/register", {
         // ข้อมูลอื่นๆ ที่ต้องการบันทึก
-        course_code: selectedCourse.course_code,
-        course_name: selectedCourse.course_name,
+        subject_id: selectedCourse.subject_id,
+        subject_name: selectedCourse.subject_name,
         year: yearString,
         section: selectedValues.section,
         lectureOrLab: selectedValues.lectureOrLab,
@@ -118,8 +118,8 @@ function RegisResultTable() {
     section: "",
     lectureOrLab: "",
     branch: "",
-    course_name: "",
-    course_code: "",
+    subject_name: "",
+    subject_id: "",
   });
 
   const handleDropdownChange = (event, field) => {
@@ -197,7 +197,7 @@ function RegisResultTable() {
                             key={index}
                             onClick={() => handleSelectCourse(course)}
                           >
-                            {course.course_code} - {course.course_name}
+                            {course.subject_id} - {course.subject_name}
                           </div>
                         ))}
                       </div>
