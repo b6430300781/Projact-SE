@@ -23,8 +23,8 @@ const db = mysql.createConnection({
   // database: 'project_se',
   host: 'localhost',
   user: 'root',
-  password: '',
-  database: 'tarangsorn'
+  password: '12345678',
+  database: 'project_se'
 
   // host: 'localhost',
   // user: 'root',
@@ -386,7 +386,7 @@ app.get('/room', (req, res) => {
   app.get('/search-courses', (req, res) => {
     const { query } = req.query; // รับคำค้นหาจาก query string
     // ตัวอย่างคำสั่ง SQL สำหรับค้นหาในตาราง courses
-    const sql = 'SELECT * FROM register WHERE course_code LIKE ? OR course_name LIKE ?';
+    const sql = 'SELECT * FROM course WHERE subject_id LIKE ? OR subject_name LIKE ?';
     db.query(sql, [`%${query}%`, `%${query}%`], (err, results) => {
       if (err) {
         console.error('Error searching courses:', err);

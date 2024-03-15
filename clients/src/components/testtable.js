@@ -95,8 +95,8 @@ class RegisTa extends React.Component {
           </div>
         </td>
         <td>{course.year}</td> {/* Display the year data here */}
-        <td>{course.course_code}</td>
-        <td>{course.course_name}</td>
+        <td>{course.subject_id}</td>
+        <td>{course.subject_name}</td>
         <td>3</td>
         <td>1</td>
         <td>800</td>
